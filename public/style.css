@@ -1,0 +1,16 @@
+* {
+  font-family: sans-serif;
+  list-style-type: none !important;
+  background-color: #fff;
+}
+
+.klass {
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+
+
+.img-logo img {
+  width: 10%;
+}

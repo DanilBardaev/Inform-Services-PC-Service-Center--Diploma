@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Информ Сервис" - ремонт компьютеров, ноутбуков</title>
+    <script src="https://kit.fontawesome.com/5833c2855b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      * {
+    list-style-type: none !important;
+
+}
+.img-logo img{
+ width: 45%;
+}
+.navbar-brand {
+    max-width: 240px;
+    max-height: 200px;
+}
+
+.nav-item a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8A8A8A;
+    font-family: Roboto, Arial, ArialRuble, sans-serif;
+  }
+
+  a.nav-link1.px-1 {
+    text-decoration: none;
+  }
+  a.nav-link1.px-1 i.fa-solid {
+    color: black;
+  }
+  a.nav-link1.px-1{
+    font-size: 16px;
+    font-weight: 400;
+    color: #8A8A8A;
+    font-family: Roboto, Arial, ArialRuble, sans-serif;
+}
+
+  a.nav-link1.px-1:hover {
+    color: rgb(39, 38, 38);
+    font-weight: 500;  
+}   
+
+i.fa-solid:hover {
+  transform: scale(1.06);
+}
+i.fa-solid {
+  transition: transform 0.4s;
+}
+
+div.text-1 a.wireless-help {
+  width: 100px;
+  height: 100px;
+  
+}
+
+li.mt-4 a {
+  text-decoration: none;
+  color:black;
+  font-weight: 600;
+}
+
+li.mt-4 a:hover {
+  color: #153070;
+}
+
+div.callback a.callback {
+  line-height: 37px;
+    border-bottom: 1px dashed #153070;
+    color: #153070 !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    cursor: pointer;  
+}
+
+.row.header{
+  border: 1px solid #080b111a;
+  border-radius: 15px;
+
+}
+
+
+
+.modal-content.c {
+
+  height: 619px;
+  color: white;
+  background-color: #01123a00;
+  border: 1px solid #0000000e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+}
+
+
+div.col-md-3 a.modal-link {
+  border-bottom: 1px dashed #153070;
+  color: white;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  cursor: pointer; 
+}
+
+* {
+  text-decoration: none !important;
+}
+
+li.cards.col-lg-2{
+  border-right: 2px solid #D9D9D9 !important;
+  border-left: 2px solid #D9D9D9 !important;
+  border-bottom: 2px solid #D9D9D9 !important;
+    border-radius: 15px;
+    max-width: 136px;
+    max-height: 154px;
+    transition: transform 0.7s;
+    margin-left: 25px;
+  }
+  
+  li.cards.col-lg-2:hover {
+     border-right: 2px solid #D9D9D9 !important;
+  border-left: 2px solid #D9D9D9 !important;
+  border-bottom: 2px solid #D9D9D9 !important;
+    box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+    -webkit-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+    -moz-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+    transform: scale(1.04);
+  }
+  .btn.btn-secondary{ 
+    transition: transform 0.7s;
+  }
+  .btn.btn-secondary:hover{
+    transform: scale(1.09)
+  }
+  li.cards a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+   
+  }
+  .carousel-control-prev, .carousel-control-next {
+    background-color: black;
+    border-radius: 50%;
+    
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 25%;
+  }
+  .carousel-inner {
+    border-radius: 13px;
+    box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
+  }
+  
+  .active-info {
+    color: #153070;
+    font-weight: 600;
+  }
+
+  .info-item {
+    display: none;
+  }
+
+  .info-item.active-info {
+    display: block;
+  }
+
+  /* Убираем стандартные маркеры списка */
+  #info-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Оформление списка горизонтально */
+  #info-list ul li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .diagnostics-card img.w {
+    border-radius: 10px;
+    max-height: 250px;
+  }
+
+.info-item {
+  min-width: 500px ;
+}
+
+.diagnostics-cards{
+  border: 1px solid #212b882a;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+  background-image: url("https://kappa.lol/4wqgm");
+  background-repeat: no-repeat; 
+}
+
+#carouselExampleFade {
+  min-width: 880px;
+  
+}
+
+.container.slider {
+  margin-left: 400px;
+}
+.numbers {
+    background: #153070;
+    color: white;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    border-radius: 25px;
+   
+}
+
+.container.work-progress{
+    border: 1px solid #0000003b;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+}
+
+
+.work-image {
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+.row p.text-center {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-content1 {
+    border-radius: 12px;
+}
+.carousel-caption {
+    color: #fff;
+    max-width: 250px; 
+    max-height: 255px; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin-left: 50px;
+    
+   
+}
+
+  .carousel-control-prev, .carousel-control-next {
+    width: auto;
+    background-color: rgba(0, 0, 0, 0); 
+    border-radius: 0;
+    font-size: 2rem; 
+    padding: 10px 20px; 
+  }
+footer .row{
+    background-color: #343434;
+    border-radius: 11px;  
+    padding: 35px;  
+}
+
+.helps-services {
+    display: inline-flex;
+   
+}
+.list-unstyled {
+    margin-top: 50px;
+    margin-left: -170px;
+    min-width: 270px;
+}
+footer h4 {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 3px;
+}
+footer a {
+    text-decoration: none;
+    transition: all .3s;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+footer a, footer li {
+    color: #c8c8c8;
+}
+
+
+hr {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    height: 3px; 
+    max-width: 250px;
+    
+}
+h1.h1 {
+    font-size: 11px;
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.img-footer h5{
+    color: #ccc;
+    
+}
+@media (max-width: 1300px){
+    .map-1 iframe {
+        width: 130%;
+    }
+}
+
+@media (max-width: 1200px){
+    .map iframe {
+        width: 85%;
+    }
+    .container.contacts{
+        width: 70%;
+    }
+    .text-all {
+        width: 60%;
+    }
+    .map-1 iframe{
+        width: 130%;
+    }
+    .container-img img  {
+       width: 350px;
+       height: 350px;
+    }
+   
+}
+@media (max-width:992px){
+    svg{
+        width: 60px;
+        height: 60px;
+    }
+    svg.my-2{
+        width: 60px;
+        height: 60px;
+        margin-left: -5px;
+    }
+    svg.planet{
+        width: 50px;
+        height: 50px;
+    }
+    .col-sm.w img {
+        width: 50px;
+        height: 50px;
+    }
+    svg.bank{
+        width: 50px;
+        height: 50px;
+    }
+    svg.paper{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width:576px) {
+    .map iframe {
+        width: 440px;
+        margin-left: -40px;
+        margin-top: -150px;
+    }
+    .text-contacts.pe-5 h1{
+       opacity: 0;
+        
+    }
+    .text-contacts.pe-5 p{
+        opacity: 0;
+        
+     }
+     .text-contacts.w h1{
+        opacity: 0;
+        
+     }
+     .text-contacts.w a{
+        opacity: 0;
+     }
+    .map-1 iframe {
+        width: 180%;
+    }
+    svg{
+        width: 60px;
+        height: 60px;
+    }
+    svg.my-2{
+        width: 160px;
+        height: 160px;
+        margin-left: -5px;
+    }
+    svg.planet{
+        width: 100px;
+        height: 100px;
+    }
+    .col-sm.w img {
+        width: 50px;
+        height: 50px;
+    }
+    svg.bank{
+        width: 130px;
+        height: 130px;
+    }
+    svg.paper{
+        width: 85px;
+        height: 85px;
+    }
+    p.card-text{
+        font-size: 20px;
+    }
+}
+@media (max-width:450px) {
+    p.card-text {
+        width: 50%;
+        font-size: 25px; 
+        margin: auto;
+    }
+    h5.card-title {
+        font-size: 30px;
+        margin: auto;
+    }
+}
+@media (max-width:575px) {
+    .container-img.www img {
+        width: 100%;
+       
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="pb-2">
+      <%- include('./partials/header'); %>
+          </header>
+    <section class="main-content">
+      <div class="container">
+          <div class="row product-card ps-5 ms-5">
+              <li class="cards col-lg-2 col-md-2 col-sm-12">
+                <a href="./pc">
+                      <div class="img-block text-center pt-4">
+                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABP0lEQVR4nO2aS2rDMBRFPewCdDvNEiQPm0mnCV1LecoKsoGSQbrDtqTQLiLFcexg4keQJX/q3AMGGyyh63csg6UsI6QfkG9WcP4Tzh/DDvko2tb9BLdPdUg5jtNJRCfjB/HlOKqL4Ep2bJcaVONgENesyODvRF8VGfyd+O9qQXmADAJWJA5QLQWqFQmolgLVigRUS4FqRQKqpUC1IgHVUqBakYBqKVCtSEC17k0tzOUHHebyy3QswCBnWJHEgGpNYvr119Ox5rqx/gVOvooVX+NkPd0gUq3qtgdpLllfPkBakDZu3ZN0wsDcgxgn6zJM80uqtVs8bx+M8+/Gym9XTYz1P8bKvugrWZDQdnCyS+a9lbfRghgr38X1Yy5PwYOo+3xdnoMcRqxIGt/RtZ+p7kXJgoOcdgd1CdPv7qDQIH83xqVzAgk60wAAAABJRU5ErkJggg==">
+                      </div>
+                      <div class="text-block text-center">
+                        <p class="col-md-6 pt-4 ps-1 ms-2">Компьютер</p>
+                       </div>
+                </a>
+                </li>
+                <li class="cards col-lg-2 col-md-2 col-sm-12">
+                  <a href="./laptop">
+                        <div class="img-block text-center pt-4">
+                          <img width="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3klEQVR4nO3YvQkCQRAF4I1MDN2nPRg4a6g9WIrMgAV4kT/12IFmYhWCNnGBsoqRoAen3iDvg8mW2ze8izYEIiIi+mf9eSsmXUP0jGQXVyN2iqLLnPHtHjHZqvHA6fVEscXbRfLW+XB3qKM6xcZku+cQuq3zTaTp+NFMhcP3S4NTqJqPi/wI2IgzYCPOgI04AzbiDNiIM2AjzoCNOAM24gzYiDNgI87g7xuBg5fDT0yA2KHpELVHbB96g1m7M7AJRAsk2yDpEaKl39Ba3jLmrKJFzp53aOQ/JyIiovAdV6gPOplvmHT6AAAAAElFTkSuQmCC">
+                        </div>
+                        <div class="text-block text-center">
+                          <p class="col-md-6 pt-3 ps-4 ">Ноутбук</p>
+                         </div>
+                  </a>
+                  </li>
+                  <li class="cards col-lg-2 col-md-2 col-sm-12">
+                    <a href="/index.html">
+                          <div class="img-block text-center pt-4">
+                           <img width="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNklEQVR4nO2aMU4DMRBFfQUi/4rQAQ0KHg6W2MkZgLtEKBXJrYhEkioVaM1uBUQzWnsVxH+Su9WM/vpttd+5/8xoMh37EF8gcQ9JH2VO3HtJKy+zm8FCQOK2XIBvgbajML+sHuTrJvLS15ILm1mQuG7DLF1tOp1qvLWLu8VVDhLiu6tNp8CpZ3xIz5B4/EGbI0J86jt/uCCSDqc+6r7zi6BZ1Lz1X29E0mPf+UWovQgMYoQ3ogRUywjVUgKqZYRqKQHVMkK1lIBqGaFaSkC1jFAtJaBaRqiWElAtI1RLCaiWEaqlBFTLCNVSAqplhGopAdUyQrXOTq2QdrkwMJmO/3RhwEtatb+a1yXD5I5LiJtmdlMTcbXx94tbH9JbzVINHubXbgjaAsyy06zICWmXCztDhThXPgEZa/5Klm1v4gAAAABJRU5ErkJggg==">
+                          </div>
+                          <div class="text-block text-center">
+                            <p class="col-md-6 pt-3 ps-4 ">Телефон</p>
+                           </div>
+                    </a>
+                    </li>
+                    <li class="cards col-lg-2 col-md-2 col-sm-12">
+                      <a href="/index.html">
+                            <div class="img-block text-center pt-4">
+                              <img width="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFUElEQVR4nO1aa2gcVRS+ebWo1ZLsubupj/ogVYzdPXeyjVSkxFoVFdEqrg+0ICgRo5lzJmkpVeyKVeujUgUFqxZEpeJbEFGsiH+UCr6oaKW++8NXa6PRWq1JI2fmzmYTk7o72WQ24Af7Y2fmnnvu3HPOPec7o1QsyNeCoXPA8BMa+RNt6GeNfKqaTpAFaOTt2vBQ8Q8M36ymBVrzMzTyo0WK/xbsCG3zryHdqqoerfkZgPSSVfhvMHz34e3XJ+QWIH0k1xNI16pqR7gTgLQz2eYtLFxv7ZqlDf3l38v0OKqakURaahfxhzYeFt/Thi8OzIx+VB35elW9yNdqw59Zv1g+6mYNIL89LfwjWdgN/mlOtvPg4nsa6Sq7wL7kfDelqhm6EKVow6jrZwHS3sCs3KtVtUNbs0qie6X8l10RM5LIVbTAmpjVzNc2Zt250OZmUxl3/uz0dY2jnwjfuka6RSPdB8i7ig7Bh0RGs+nWMl7kJNN8nMrl6qZE+SR6F4LhFzXSL/86nZG/EIUTGT69paV75pjPGPodkB7ThjdqpO/GkLFHI70Chi6flEiWQDoNDH88YmJRBPk9MPyVRt43UiHaO2xCB/z1gaGtcjAC0s6R8nk7pHlRBRM8vlMb3m+FfwsZ6mk8qeeo0c8ljNuukW4vpB3j/MDwh2D4xibT3Tp6tsasO1cbWiXzWD8a1IbXS3YQfQ25XJ1GesouYB8YzovJlDI0mfbSGmmlRt4ESJu1oadFwbGUHwupTO8hgLQ23FUw/NqRC72DIq1DHNK+xd0J9BarGAAZ9zzfbwL/eqHsKKcdXhY6Z3F+FE92QE+GZimmV/LQxuzK2X6xU3QGxIKOfD0gPWtN+1dA7ixrvB/3rV1OmpLlZAZI21KZG44tvwAy3OfvhkOnqJgAyJfYqLVDty9vLltA0nGXWN/YqmJCS0v3TED6JniZ7pJIQgDpHrud6yquYak6ON5l9lDdHFmINvSm/yYMX6BiAlgHTyBfEVlIyHDEWXpq8QvDQ81O79FRZdQEJSkPpTK9SRUHOvL1flqCPDCRTLgmzKkkRVBxINvZELItE5IT7ojUCSomaEP9okNIGUUUwrsnap8TBRjeYgPOGZGFDDN/8XGx2vAae5Y9EFkIGH7epifXVFS7snRw5wV1CPXPyfZAJCHa8G0207y34hqWowfyJnsoPh5NQIYusjnOuypGNKF3RFj6ArJXvoCTuw8L6m8ajDNyCcTZwfCf1l/uKrvcBeQ3/F1xeJmKGWDcc6UWsQHo06A+yteWOJjJ2uerqgoAmZ7jNdJbBQLD4e6SBspBZOvk/RJBVBUgccKKQ6U5FJwv7pklD9RIj9g3sF5VATTSChuE3i+LgEg6bsYO7I9UoVUQurVrFiB9H3AItLRsAYD8nN2VjZOiYcl60Fp7SG+JRHpLwR8Q0TQIaW5TMQCMOy8IwTSYcHhBdEHIdxQOyGxng5pyOojfGWbvJ2qfhr60wtaoKQQYWm1N6mvh2iYsUGghn4NFHtCOd7aaIqpUy3zIAxVk5H2Huyls9AvrriYRCYcXCFVrTXpVxSfQhh+2SdwuMF7HeM+lkI6RtgEgv+43f/xijXb49o60TiOZcReB3uKQrh3de6wccrm6Ii52QCaSlpkQakJWQIYutXRS0Es54I8+kJpHopK0C2Rx2tAG2w+RZ56Z5N57vjbghoMvFsZs5CDvke9MEg6drx2vRfqLflqe5kVCAILhH8ZdIEofhlaXnBhWJpHj+4POrSxKPlWSxM7r+s8Ik+1ssNzuy/LVg4wHpM8B6cEmh06ckgX8DzW5+AcZmaVcDgpjGQAAAABJRU5ErkJggg==">
+                            </div>
+                            <div class="text-block text-center">
+                              <p class="col-md-6 pt-3 ps-4 ms-2">Apple</p>
+                             </div>
+                      </a>
+                      </li>
+                      <li class="cards col-lg-2 col-md-2 col-sm-12">
+                        <a href="/index.html">
+                              <div class="img-block text-center pt-4">
+                                <img width="60" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByElEQVR4nO2ZP0vDYBDG3wo6iOKfvtcquIiDIJo7KOKgfg0HFd0qiM17ouLYD6B+GjcH8d8i+gl0dtBBRHHpolyahtZWUCQkwfvBQe6SwvP0npSEGqMoipJVckC8bokvAd0LEH+ksSzxmyV3lUe3YUrl7hYHMLXZZ5FPkhYJvy53DbO7I82bOA5OID/kaXt5qLQ/YFLKALpB2UaUGuRbM1XtMRZ5qT5wL0Vva9xkBChVJoD4uR435xsgdxo0yNstF4bztJUlvmzSuBYu4UaaV2mGZypjrUaSFw3fVENjfnKvP1zCeyS4bXXfzJMEOmiKZmokAUA3QnqPxAJotEijFQug0aJMRqvaVUB/VSp8tM/mI0oB/dXGcR55RY2k4GbPySbkDTHT0TI/+FDSgBoh3UgsgEaLNFqxABot0mjFAvyPaCHX5GC0VO7tdEEay4SI5mCGXDMW3X3YzDcbCf7wSYFoaCt3EWmc4cVQ+51880f1xp3Jy5XJDNUuMSXaLboDU5j2ixb5KXR2Dp6/8DVmaWJU4uT5C5EJco9Fb6cQnCx6bi4yk6GygQk31+JUNgPoDiVvjR+AVBZyTTRKnEaoAgkFQ1EUxfyNT/TaAWhrr2kEAAAAAElFTkSuQmCC">
+                              </div>
+                              <div class="text-block text-center">
+                                <p class="col-md-6 pt-3 ps-3 ms-1 ">Планшет</p>
+                               </div>
+                        </a>
+                        </li>
+                        <li class="cards col-lg-2 col-md-2 col-sm-12">
+                          <a href="/index.html">
+                                <div class="img-block text-center pt-4">
+                                  <img width="60" src="data:image/png;base64,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">
+                                </div>
+                                <div class="text-block text-center">
+                                  <p class="col-md-6 pt-3 ps-3 ms-1">Интернет</p>
+                                 </div>
+                          </a>
+                          </li>
+          </div>
+      </div>
+            <div class="container slider">
+              <div class="row pt-3 pb-3 ">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://kappa.lol/MJy-W" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://kappa.lol/TKmbE" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="second-block-content col-md-4">
+                  <div class="first-img pb-5">
+                    <img src="https://kappa.lol/0IY7V" alt="">
+                    <p class="pb-2"style="margin-top: -50px; max-width: 140px; margin-left: 40px; font-size: 19px">Выберете Ваше устройство или услугу</p>
+                  </div>
+                    <div class="second-img">
+                      <img src="https://kappa.lol/8tvGc" alt="">
+                      <p style="margin-top: -120px; max-width: 140px; margin-left: 40px; font-size: 19px">Или выберете наиболее распространенную проблему</p>
+                    </div>
+              </div>
+            </div>
+            </div>
+        <div class="container diagnostics">
+          <div class="row diagnostics pb-4">
+            <div class="diagnostics-card col-md-3">
+              <a href="./services.html"><img src="https://kappa.lol/SnsoI" class="w"></a>
+            </div>
+            <div class="row diagnostics-cards col-md-9" >
+
+            <div id="info-list" class="col-md-3">   
+              <ul>
+                <li class="active-info mt-3" data-info="info1">Домашний компьютер</li>
+                <div id="info1" class="info-item active-info pt-5 ">
+                  <p><a href="#">– Компьютер не включается</a></p>
+                  <p><a href="#">– Включается, но изображения нет</a></p>
+                  <p><a href="#">– Медленно работает, зависает</a></p>
+                  <p><a href="#">– Самопроизвольно выключается при работе</a></p>
+                  
+                </div>
+                <div id="info2" class="info-item pt-5">
+                  <p><a href="#">– Ноутбук сильно греется, выключается</a></p>
+                  <p><a href="#">– Разбили экран ноутбука</a></p>
+                  <p><a href="#">– Залили ноутбук жидкостью</a></p>
+                  <p><a href="#">– Ноутбук включается, но нет изображения</a></p>
+                </div>
+                <div id="info3" class="info-item pt-5">
+                  <p><a href="#">– Windows не загружается</a></p>
+                  <p><a href="#">– Выскочил синий экран</a></p>
+                  <p><a href="#">– Выскочила неизвестная ошибка</a></p>
+                  <p><a href="#">– Забыли пароль на вход в Windows</a></p>
+                </div>
+                <div id="info4" class="info-item pt-5">
+                  <p><a href="#">– Интернет работает нестабильно, отключается</a></p>
+                  <p><a href="#">– Медленно открываются страницы</a></p>
+                  <p><a href="#">– Пропало Wi-Fi подключение</a></p>
+                  <p><a href="#">– В браузере выскакивают баннеры</a></p>
+                </div>
+              </ul>
+             </div> 
+             <div id="info-list" class="col-md-3">
+              <ul>
+                <li data-info="info2" class="mt-3">Ноутбук, ультрабук</li>
+              </ul>
+            </div> 
+            <div id="info-list" class="col-md-3">
+              <ul>
+                <li data-info="info3" class="mt-3">Windows и программы</li>
+              </ul>
+            </div> 
+                <div id="info-list" class="col-md-3">
+                  <ul>
+                <li data-info="info4" class="mt-3">Выход в Интернет</li> 
+              </ul>
+              </div> 
+            </div>
+          </div>  
+        </div>  
+    </section>
+    <section class="footer-content pb-5">
+      <%- include('./partials/footer-content'); %>
+    </section>
+      <footer>
+        <%- include('./partials/footer'); %>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>const infoItems = document.querySelectorAll('#info-list ul li');
+
+      // Добавляем обработчик события для каждого элемента информации
+      infoItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Убираем класс 'active-info' у всех элементов информации
+          infoItems.forEach(item => {
+            item.classList.remove('active-info');
+          });
+    
+          // Добавляем класс 'active-info' только к текущему элементу информации
+          item.classList.add('active-info');
+    
+          // Получаем id информации, на которую было нажато
+          const infoId = item.getAttribute('data-info');
+          // Скрываем все элементы информации
+          document.querySelectorAll('.info-item').forEach(info => {
+            info.classList.remove('active-info');
+          });
+          // Отображаем только активный элемент информации
+          document.getElementById(infoId).classList.add('active-info');
+        });
+      });
+    
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("navbarDropdown").addEventListener("click", function() {
+          var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+            keyboard: false
+          });
+          myModal.show();
+        });
+      });
+    
+      $(document).ready(function(){
+        // Предотвращаем стандартное действие ссылок при клике на них
+        $('.modal-link').click(function(e){
+          e.preventDefault();
+          var url = $(this).attr('href');
+          window.open(url, '_blank');
+        });
+      });
+    </script>
+</body>
+</html>

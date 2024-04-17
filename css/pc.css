@@ -1,0 +1,69 @@
+.text-header-service p {
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 370;
+}
+
+.card-service.col-md-3 {
+    width: 299px;
+    height: 130px;
+    border-right: 2px solid #D9D9D9 !important;
+    border-top: 2px solid #D9D9D9 !important;
+    border-bottom: 2px solid #D9D9D9 !important;
+    transition: transform 0.7s;
+}
+
+.card-service-bottom.col-md-3 {
+    width: 299px;
+    height: 130px;
+    border-right: 2px solid #D9D9D9 !important;
+    border-bottom: 2px solid #D9D9D9 !important;
+    transition: transform 0.7s;
+}
+
+.card-service-right.col-md-3 {
+    color: black;
+    width: 299px;
+    height: 130px;
+    border-top: 2px solid #D9D9D9 !important;
+    border-bottom: 2px solid #D9D9D9 !important;
+    transition: transform 0.7s;
+}
+.card-service-bottom-right.col-md-3 {
+    width: 299px;
+    height: 130px;
+    border-bottom: 2px solid #D9D9D9 !important;
+    transition: transform 0.7s;
+}
+
+.card-service.col-md-3:hover,.card-service-bottom.col-md-3:hover, .card-service-right.col-md-3:hover, .card-service-bottom-right.col-md-3:hover, .text-center.pt-2:hover, .card-service.col-md-3:hover .text-center.pt-2, .card-service-right:hover .text-center.pt-2,.card-service-bottom.col-md-3:hover .text-center.pt-2, .card-service-bottom-right.col-md-3:hover .text-center.pt-2 {
+    transform: scale(1.09);
+    color: #153070;
+}
+.text-center.pt-2 {
+    transition: transform 0.7s;
+    color: black;
+}
+
+.first-text-pc {
+    width: 650px !important;
+    padding-right: 29px !important;
+    border-right: 1px solid #D9D9D9 !important;
+}
+
+.second-text-pc {
+    padding-left: 29px !important;
+}
+
+
+.work-progress-pc{
+    border: 1px solid #00000000;
+    border-radius: 15px;
+}
+
+.cards.active {
+     transform: scale(1.09);
+    box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+    -webkit-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+    -moz-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+}

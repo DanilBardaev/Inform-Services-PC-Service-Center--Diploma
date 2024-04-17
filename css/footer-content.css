@@ -1,0 +1,53 @@
+.numbers {
+    background: #153070;
+    color: white;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    border-radius: 25px;
+   
+}
+
+.container.work-progress{
+    border: 1px solid #0000003b;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+}
+
+
+.work-image {
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+.row p.text-center {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.footer-content1 {
+    border-radius: 12px;
+}
+.carousel-caption {
+    color: #fff; /* Белый текст */
+    max-width: 250px; /* Ширина слайдера */
+    max-height: 255px; /* Высота слайдера */
+    position: absolute; /* Позиционирование текста поверх изображения */
+    top: 0; /* Расположение текста в верхней части слайдера */
+    left: 0; /* Расположение текста в левой части слайдера */
+    margin-left: -50px;
+    
+   
+}
+
+  /* Стили для кнопок листания слайдов */
+  .carousel-control-prev, .carousel-control-next {
+    width: auto; /* Автоматическая ширина кнопок */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+    border-radius: 0; /* Убираем скругления углов */
+    font-size: 2rem; /* Размер шрифта */
+    padding: 10px 20px; /* Поля внутри кнопок */
+  }
