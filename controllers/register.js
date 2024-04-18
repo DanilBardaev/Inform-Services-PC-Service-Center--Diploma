@@ -19,7 +19,7 @@ exports.submit = async (req, res, next) => {
       where: { email: email },
     });
     if (user) {
-      logger.info("Такой пользователь в базе уже существует.");
+      logger.info("Такой пользователь в базе уже существует:", user);
       res.redirect("/entries"); // Перенаправление на страницу entries.ejs
     } else {
       await User.create({
@@ -48,6 +48,7 @@ exports.submit = async (req, res, next) => {
     logger.info("Токен подготовлен: " + token);
     res.redirect("/entries"); // Перенаправление на страницу entries.ejs
   } catch (err) {
+    console.error("Ошибка при регистрации пользователя:", err);
     return next(err);
   }
 };

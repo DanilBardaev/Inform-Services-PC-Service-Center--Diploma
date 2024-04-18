@@ -5,7 +5,6 @@ const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
 const path = require("path");
 const express = require("express");
-const { log } = require("console");
 const router = express.Router();
 
 const storage = multer.diskStorage({
@@ -48,15 +47,19 @@ exports.form = (req, res, next) => {
 
 exports.submit = async (req, res, next) => {
   try {
+    console.log(req.body);
     const username = req.user ? req.user.name : null;
     const data = req.body.entry;
     const imagePath = req.file ? req.file.path : null;
-    
+
     // Проверяем наличие адреса электронной почты получателя в данных запроса
-    if (!data || !data.recipientEmail) {
+    if (!data || !data.email) {
       console.error("Recipient email is missing or invalid.");
       return res.redirect("/entries");
     }
+
+    // Используем email из данных запроса
+    const recipientEmail = data.email;
 
     const entry = {
       username: username,
@@ -66,10 +69,6 @@ exports.submit = async (req, res, next) => {
     };
     await Entry.create(entry);
 
-    // Используем recipientEmail из данных запроса
-    console.log(data.recipientEmail);
-    const recipientEmail = data.recipientEmail;
-
     // Вызываем функцию sendNotificationEmail с recipientEmail
     Entry.sendNotificationEmail(username, data.title, recipientEmail);
     
@@ -78,6 +77,9 @@ exports.submit = async (req, res, next) => {
     return next(err);
   }
 };
+
+
+
 
 exports.updateForm = (req, res) => {
   const id = req.params.id;

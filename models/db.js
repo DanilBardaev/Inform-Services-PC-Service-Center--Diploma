@@ -1,66 +1,79 @@
 const logger = require('../logger/index');
-const { Sequelize } = require('sequelize');
-require ("dotenv").config()
+const { Sequelize, DataTypes } = require('sequelize');
+require ("dotenv").config();
+
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: 'test.sqlite',
     logging: (msg) => {
         logger.info(msg);
     }
-  });
-  // ------------ Class Entry ---------------- //
+});
+
+// Определение моделей
 
 const Entry = sequelize.define("entries", {
     id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    username:{
-        type: Sequelize.STRING,
+    username: {
+        type: DataTypes.STRING,
         allowNull: false,
     },
     title: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
     },
     content: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
     },
     imagePath: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
     },
     timestamp: {
-        type: Sequelize.TEXT, // Изменено на DATE
+        type: DataTypes.DATE, // Изменено на DATE
+        defaultValue: Sequelize.NOW // Добавлено значение по умолчанию
     },
 });
 
 const User = sequelize.define("users", {
     id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
     name: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     email: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     password: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     age: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     isAdmin: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
+        defaultValue: 0 // Добавлено значение по умолчанию
     },
 });
+
+// Синхронизация базы данных с определениями моделей
+sequelize.sync()
+  .then(() => {
+    console.log('База данных синхронизирована');
+  })
+  .catch(err => {
+    console.error('Ошибка синхронизации базы данных:', err);
+  });
 
 module.exports = {
     Entry, User, sequelize

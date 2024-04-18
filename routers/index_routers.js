@@ -34,6 +34,7 @@ router.get("/service_request", ensureAuthenticated, function(req, res) {
   res.render("service_request", { user: req.user });
 });
 
+
 router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   // Пользователь аутентифицирован, можно получить его имя пользователя
   console.log("User data:", req.user);

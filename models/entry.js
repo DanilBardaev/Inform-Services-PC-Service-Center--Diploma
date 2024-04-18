@@ -34,7 +34,7 @@ const createEntriesTableSql = `
 db.run(createEntriesTableSql);
 
 class Entry {
-  static create(data) {
+  static create(data, recipientEmail) {
     const insertEntrySql = `
     INSERT INTO entries (username, title, content, imagePath, timestamp, createdAt)
     VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))
@@ -43,8 +43,9 @@ class Entry {
       if (err) {
         console.error("Error creating entry:", err);
       } else {
+        console.log("Recipient email:", data.recipientEmail); // Выводим адрес получателя в консоль
         // Отправка уведомления о создании новой записи
-        this.sendNotificationEmail(data.username, data.title);
+        this.sendNotificationEmail(data.name, data.title, recipientEmail); // Передача recipientEmail
       }
     });
   }
@@ -82,14 +83,14 @@ class Entry {
     const transporter = nodemailer.createTransport({
       service: "hotmail",
       auth: {
-        user: "dvvaa9wgkznplg@hotmail.com", 
-        pass: "Dzn4x5Qq4HxP" 
+        user: "danillol132v14@hotmail.com", 
+        pass: "password123132132B" 
       }
     });
   
     // Настройка письма
     const mailOptions = {
-      from: "dvvaa9wgkznplg@hotmail.com", // От кого отправляется письмо
+      from: "danillol132v14@hotmail.com", // От кого отправляется письмо
       to: recipientEmail, // Кому отправляется письмо
       subject: "New Entry Created", // Тема письма
       text: `Dear ${username},\n\nA new entry titled "${title}" has been created.\n\nBest regards,\nYour Application` // Содержание письма

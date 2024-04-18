@@ -4,7 +4,7 @@ const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
 
 const sql =
-  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0  )";
+  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP )";
 
 db.run(sql);
 
@@ -46,15 +46,15 @@ class User {
       const transporter = nodemailer.createTransport({
         service: "hotmail",
         auth: {
-          user: "dvvaa9wgkznplg@hotmail.com", 
-          pass: "Dzn4x5Qq4HxP" 
+          user: "danillol132v14@hotmail.com", 
+          pass: "password123132132B" 
         }
       });
 
       // Настройка письма
       const mailOptions = {
-        from: "dvvaa9wgkznplg@hotmail.com", 
-        to: recipientEmail, 
+        from: "danillol132v14@hotmail.com", 
+        to: userEmail, // Вместо recipientEmail здесь нужно использовать userEmail
         subject: subject, // Тема письма
         text: message // Содержание письма
       };
@@ -69,6 +69,7 @@ class User {
       });
     });
   }
+
 }
 
 module.exports = User;

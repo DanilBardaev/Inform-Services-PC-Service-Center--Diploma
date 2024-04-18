@@ -4293,3 +4293,2463 @@
   level: 'info',
   timestamp: '2024-04-18T13:21:30.276Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:22:48.337Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:22:50.291Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:22:50.303Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:22:54.260Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:23:14.974Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:23:58.359Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:24:01.725Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:24:01.733Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:24:05.283Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:25:38.949Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:25:40.331Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:25:40.338Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:25:43.545Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:02.031Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:06.480Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:06.487Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:09.802Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:49.768Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:26:57.754Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:28:01.424Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:28:31.243Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:28:38.550Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:29:04.485Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:29:49.969Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:29:51.039Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:29:51.048Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:29:54.698Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:32:47.422Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T13:32:49.692Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T13:32:49.699Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:32:53.092Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T13:33:51.159Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T13:34:01.131Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:34:42.358Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:40:26.576Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T13:40:35.281Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:46:58.257Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:46:58.266Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:46:58.272Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:46:58.276Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:46:58.277Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T13:47:11.462Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:47:40.665Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:47:40.673Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:47:40.676Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:47:40.678Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:47:40.678Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T13:47:51.932Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.200Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.208Z'
+}
+{
+  message: 'Executing (default): CREATE TABLE IF NOT EXISTS `entries` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `username` VARCHAR(255) NOT NULL, `title` VARCHAR(255), `content` TEXT NOT NULL, `imagePath` VARCHAR(255), `timestamp` DATETIME, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL);',
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.259Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.272Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.273Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:49:41.274Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:49:58.824Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:51:30.989Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:51:30.999Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:51:31.003Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:51:31.007Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:51:31.008Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:51:37.205Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:52:32.174Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T13:52:36.931Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:52:52.060Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:52:52.068Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:52:52.072Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:52:52.073Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:52:52.073Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:12.225Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:56:12.233Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:12.242Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:56:12.243Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:12.244Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:17.923Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T13:56:17.931Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:17.935Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T13:56:17.939Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T13:56:17.941Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:00:59.408Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:00:59.416Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:00:59.419Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:00:59.420Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:00:59.423Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:01:30.534Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:01:30.550Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:01:30.636Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:01:30.637Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:01:30.638Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:01:52.748Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T14:02:01.030Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:02:09.468Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:02:09.474Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuzEiLCJpYXQiOjE3MTM0NDg5MjksImV4cCI6MTcxMzQ1MjUyOX0.JZ1pA4UGg0gUbw5VHX1shzpJDy4osvV_pB2DIDaEjNU',
+  level: 'info',
+  timestamp: '2024-04-18T14:02:09.485Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:02:09.490Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:02:13.157Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:02:14.802Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:02:14.812Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:04:47.680Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:04:47.688Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:04:47.692Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:04:47.696Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:04:47.697Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:12.249Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:08:12.258Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:12.262Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:08:12.266Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:12.268Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:15.723Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:15.730Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:19.549Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:31.210Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:08:33.417Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:37.635Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:47.344Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:28.714Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:28.721Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:28.724Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:28.732Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:28.733Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:31.548Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:31.555Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:44.436Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:44.442Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzEzNDQ5Mzg0LCJleHAiOjE3MTM0NTI5ODR9.ocMZbM95PJKRKeLGYV0HaloMLzE4U1pIELNmvy3sGS0',
+  level: 'info',
+  timestamp: '2024-04-18T14:09:44.454Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:44.458Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:44.495Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:47.683Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:49.102Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:09:49.112Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:04.172Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:04.183Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:04.188Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:04.193Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:04.193Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.735Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.747Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.754Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.755Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.756Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.889Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:05.897Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:10.843Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:35.921Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:35.932Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:35.939Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:10:35.940Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:10:35.941Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:15.201Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:15.208Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:18.911Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:38.564Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:11:38.573Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:38.583Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:11:38.584Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:38.585Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:40.143Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:40.152Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:11:43.282Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:01.847Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:01.855Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:01.862Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:01.868Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:01.869Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:03.533Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:03.540Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:16.866Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:16.873Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuzEzMjEiLCJpYXQiOjE3MTM0NDk2NTYsImV4cCI6MTcxMzQ1MzI1Nn0.tF6j-zQFqZkkCIoWnSIvGGl2qwOjBjQrWMxWowTP50E',
+  level: 'info',
+  timestamp: '2024-04-18T14:14:16.884Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:16.889Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:16.927Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:19.001Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:21.930Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:14:21.940Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:05.306Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:05.315Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:05.320Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:05.331Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:05.332Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:06.856Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:06.863Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:16:13.418Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:30.954Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:30.960Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4xMjMyMzEiLCJpYXQiOjE3MTM0NDk3OTAsImV4cCI6MTcxMzQ1MzM5MH0.BoG-9ZSd1-X_N9hjWCiy-3t4l6GJ6k5U6rcdPy7nvWQ',
+  level: 'info',
+  timestamp: '2024-04-18T14:16:30.971Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:30.977Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:31.018Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:32.696Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:34.023Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:16:34.031Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:32.032Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:18:32.040Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:32.043Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:18:32.048Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:32.048Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:34.825Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:34.832Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:18:39.092Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T14:19:13.103Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:18.786Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:19:18.793Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicnF3ZXZyZXYiLCJpYXQiOjE3MTM0NDk5NTgsImV4cCI6MTcxMzQ1MzU1OH0.sy2Svepo5a_MUO8Ga1QE_1QcV_deGtrGJQeJq1eeO0g',
+  level: 'info',
+  timestamp: '2024-04-18T14:19:18.829Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:18.834Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:18.875Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:20.758Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:22.030Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:19:22.040Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:18.113Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:21.639Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera333@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:21.646Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:35.769Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:35.776Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:35.779Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:35.781Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:35.781Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:36.861Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:36.868Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:46.670Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:46.675Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicXdldnF3ZXYiLCJpYXQiOjE3MTM0NTAwNDYsImV4cCI6MTcxMzQ1MzY0Nn0._KwxSp9dx45ML8_CgcZZMBYMsR2DY7JUP_UaR5umQBA',
+  level: 'info',
+  timestamp: '2024-04-18T14:20:46.687Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:46.692Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:46.731Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:49.553Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:51.181Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'vera331233@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:20:51.190Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:22:14.548Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:14.557Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:22:14.568Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:14.569Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:22:14.569Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:32.690Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:22:32.695Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTM0NTAxNTIsImV4cCI6MTcxMzQ1Mzc1Mn0.1M_WCihCNUIi2E3bf1ua5k4qVoIXAkyNoiNTWYu0R7k',
+  level: 'info',
+  timestamp: '2024-04-18T14:22:32.706Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:32.712Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:32.750Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:34.838Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:42.718Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:22:42.726Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:23:59.620Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:23:59.628Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:23:59.640Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:23:59.641Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:23:59.642Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.054Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.063Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.066Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.067Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.068Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.545Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:07.553Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:15.933Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:15.938Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzEzNDUwMjU1LCJleHAiOjE3MTM0NTM4NTV9.lU-iuu9CxEAdfcYkMpimKetp5zRCp-sdgZAER1vJLPw',
+  level: 'info',
+  timestamp: '2024-04-18T14:24:15.966Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:15.971Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:16.010Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:17.558Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:19.603Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:24:19.689Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:18.830Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:18.838Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:18.841Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:18.842Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:18.843Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:26.211Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:26.221Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:34.723Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:34.730Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicXJ3ZXZycWV3dnF3dnIiLCJpYXQiOjE3MTM0NTAzMzQsImV4cCI6MTcxMzQ1MzkzNH0.ZkF3VGWoNj64kufLSYCj4gfwhDvjuisbCMn72N7ec80',
+  level: 'info',
+  timestamp: '2024-04-18T14:25:34.741Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:34.747Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:34.787Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:36.909Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:38.925Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:25:38.934Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:31:50.485Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:31:50.493Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:31:50.497Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:31:50.501Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:31:50.502Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:32:36.544Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:32:36.551Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:32:36.555Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:32:36.556Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:32:36.559Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:34:32.174Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:32.181Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:34:32.193Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:32.194Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:34:32.195Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:48.543Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:34:48.549Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXZ3cnJ2IiwiaWF0IjoxNzEzNDUwODg4LCJleHAiOjE3MTM0NTQ0ODh9.t5Mz6Jfvc0j2vntf5go_eGKfctIPYpp1WZY6hXt4roY',
+  level: 'info',
+  timestamp: '2024-04-18T14:34:48.561Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:48.569Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:48.607Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:50.207Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:51.576Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'danilgti135@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:34:51.586Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:35:29.698Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:29.710Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:35:29.714Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:29.719Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:35:29.720Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:49.139Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T14:35:49.145Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzdnJ3ZXZ3cmV2IiwiaWF0IjoxNzEzNDUwOTQ5LCJleHAiOjE3MTM0NTQ1NDl9.MRJkBFnYX8ryprmNOvKJ3jJt9rjo-kU4JqGkRSNb298',
+  level: 'info',
+  timestamp: '2024-04-18T14:35:49.156Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:49.162Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:49.200Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:51.419Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:52.875Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T14:35:52.885Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:31.668Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:37:31.708Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:31.712Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:37:31.713Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:31.717Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:33.407Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:37:33.416Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:33.425Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:37:33.428Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:33.428Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:35.133Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:35.140Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:37:39.723Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:29.770Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:41:29.778Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:29.792Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:41:29.799Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:29.800Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:36.635Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:41:36.652Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:36.658Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:41:36.659Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:41:36.660Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:50.986Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:43:50.994Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:51.005Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:43:51.007Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:51.008Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:52.130Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:43:52.144Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:52.150Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:43:52.151Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:43:52.151Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:44:16.869Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:44:16.877Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:44:21.303Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:24.117Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:47:24.125Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:24.139Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:47:24.141Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:24.143Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:33.908Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:47:33.916Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:33.919Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:47:33.920Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:47:33.924Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:51:43.532Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:51:43.540Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:51:43.545Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:51:43.546Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:51:43.547Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:04.661Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:04.675Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:04.681Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:04.682Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:04.683Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:10.943Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:10.951Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:10.954Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:10.955Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:10.956Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:20.994Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:21.003Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:21.006Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:21.008Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:21.011Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:25.569Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:25.576Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:25.587Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T14:52:25.588Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:25.588Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:30.701Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:30.708Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T14:52:33.153Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:33.638Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:11:33.645Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:33.649Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:11:33.650Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:33.650Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:40.001Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:11:40.009Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:40.015Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:11:40.020Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:40.021Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:49.113Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:49.119Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:11:51.956Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:06.693Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:12:06.701Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:06.704Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:12:06.705Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:06.706Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:08.832Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:12:08.840Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:08.843Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:12:08.853Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:08.854Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:09.387Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:09.394Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:12:11.399Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:04.253Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:14:04.262Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:04.273Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:14:04.274Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:04.275Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:15.157Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:15.164Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:14:17.419Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:15:59.335Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:15:59.342Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:15:59.351Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:15:59.352Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:15:59.353Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:02.025Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:16:02.033Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:02.040Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:16:02.044Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:02.047Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:04.828Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:04.835Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:16:08.765Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:18:48.183Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:18:48.192Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:18:48.205Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:18:48.207Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:18:48.208Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:45.446Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:19:45.455Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:45.458Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:19:45.460Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:45.463Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:52.700Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:52.707Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:19:56.439Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123123ewq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:09.200Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:09.207Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTM0NTM2MDksImV4cCI6MTcxMzQ1NzIwOX0.4eMRPdBieJPzs15Y9HdwMbIispeDmGIynva935Ef2hU',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:09.230Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123123ewq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:09.235Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123123ewq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:09.273Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123123ewq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:12.260Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123123ewq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:13.743Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:32.369Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:32.377Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:32.380Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:32.381Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:32.382Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:57.062Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:57.070Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:57.074Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:20:57.078Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:20:57.081Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:21:06.372Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:21:06.379Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:21:09.768Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T15:22:01.058Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:06.950Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`isAdmin`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);',
+  level: 'info',
+  timestamp: '2024-04-18T15:22:06.956Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzEzNDUzNzI2LCJleHAiOjE3MTM0NTczMjZ9.cdLbHL7Y4i3kysq1-8aZI5-mGH_dWP0ioNBmRRD_QVg',
+  level: 'info',
+  timestamp: '2024-04-18T15:22:06.993Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:06.997Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:07.037Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:08.693Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:11.649Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T15:22:11.657Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:29:57.504Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:29:57.512Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:29:57.516Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:29:57.517Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:29:57.520Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:06.477Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:30:06.485Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:06.488Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:30:06.490Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:06.494Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:09.821Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:09.828Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:30:13.813Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:34.876Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='entries';",
+  level: 'info',
+  timestamp: '2024-04-18T15:33:34.884Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`entries`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:34.889Z'
+}
+{
+  message: "Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='users';",
+  level: 'info',
+  timestamp: '2024-04-18T15:33:34.893Z'
+}
+{
+  message: 'Executing (default): PRAGMA INDEX_LIST(`users`)',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:34.894Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:41.353Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:41.360Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T15:33:44.903Z'
+}

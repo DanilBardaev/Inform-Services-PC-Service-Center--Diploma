@@ -38,3 +38,23 @@
   level: 'error',
   timestamp: '2024-04-18T12:09:25.017Z'
 }
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:31.210Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:37.635Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:08:47.344Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T14:16:13.418Z'
+}
