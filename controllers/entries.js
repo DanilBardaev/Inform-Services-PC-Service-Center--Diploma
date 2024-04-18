@@ -57,7 +57,7 @@ exports.submit = async (req, res, next) => {
       imagePath: imagePath,
     };
     await Entry.create(entry);
-    res.redirect("/");
+    res.redirect("/entries");
     // console.log(entry.imagePath);
   } catch (err) {
     return next(err);

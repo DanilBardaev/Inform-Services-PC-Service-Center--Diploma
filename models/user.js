@@ -1,65 +1,74 @@
 const bcrypt = require("bcrypt");
 const sqlite3 = require("sqlite3").verbose();
-const res = require("express/lib/response");
 const db = new sqlite3.Database("test.sqlite");
+const nodemailer = require("nodemailer");
 
 const sql =
   "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0  )";
 
 db.run(sql);
 
-const query = "SELECT * FROM users WHERE name = ?";
-
-db.get(query, (err, user) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  if (user) {
-    const updateQuery = "UPDATE users SET isAdmin = ? WHERE id = ?";
-    db.run(updateQuery);
-  }
-});
 class User {
-  static create(username, password, isAdmin, cb) {
-    db.run('INSERT INTO users (username, password, isAdmin) VALUES (?, ?, ?)', [username, password, isAdmin], function(err) {
-      if (err) {
-        return cb(err);
-      }
-      
-      cb(null);
+  static create(username, email, password, age, isAdmin, cb) {
+    bcrypt.hash(password, 10, (err, hashedPassword) => {
+      if (err) return cb(err);
+      const insertUserQuery = "INSERT INTO users (name, email, password, age, isAdmin) VALUES (?, ?, ?, ?, ?)";
+      db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], cb);
     });
   }
 
   static authenticate(username, password, cb) {
-    db.get('SELECT id, password FROM users WHERE username = ?', [username], function(err, row) {
-      if (err) {
-        return cb(err);
-      }
-      
-      if (!row) {
-        return cb(null, false);
-      }
+    const selectUserQuery = "SELECT id, password FROM users WHERE name = ?";
+    db.get(selectUserQuery, [username], (err, user) => {
+      if (err) return cb(err);
+      if (!user) return cb(null, false);
 
-      if (row.password === password) {
-        cb(null, true);
-      } else {
-        cb(null, false);
-      }
+      bcrypt.compare(password, user.password, (err, result) => {
+        if (err) return cb(err);
+        cb(null, result);
+      });
     });
   }
 
   static updateAdminStatus(id, isAdmin, cb) {
-    db.run('UPDATE users SET isAdmin = ? WHERE id = ?', [isAdmin, id], function(err) {
-      if (err) {
-        return cb(err);
-      }
-      
-      cb(null);
+    const updateAdminQuery = "UPDATE users SET isAdmin = ? WHERE id = ?";
+    db.run(updateAdminQuery, [isAdmin, id], cb);
+  }
+
+  static sendNotificationEmail(userId, subject, message) {
+    const getUserEmailQuery = "SELECT email FROM users WHERE id = ?";
+    db.get(getUserEmailQuery, [userId], (err, user) => {
+      if (err) return console.error("Error retrieving user email:", err);
+
+      const userEmail = user.email;
+
+      // Создаем транспортер для отправки почты
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "your_email@gmail.com", // Ваша почта Gmail
+          pass: "your_password" // Ваш пароль от почты Gmail
+        }
+      });
+
+      // Настройка письма
+      const mailOptions = {
+        from: "your_email@gmail.com", // От кого отправляется письмо
+        to: userEmail, // Кому отправляется письмо (email получателя)
+        subject: subject, // Тема письма
+        text: message // Содержание письма
+      };
+
+      // Отправляем письмо
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.error("Error sending notification email:", err);
+        } else {
+          console.log("Notification email sent:", info.response);
+        }
+      });
     });
   }
 }
 
 module.exports = User;
-
-

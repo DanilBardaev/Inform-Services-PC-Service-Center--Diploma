@@ -2523,3 +2523,1093 @@
   level: 'info',
   timestamp: '2024-04-17T16:12:31.053Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:38:24.869Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:22.950Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:40:22.956Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuzIyOCIsImlhdCI6MTcxMzQzMzIyMiwiZXhwIjoxNzEzNDM2ODIyfQ.D8HciSbV21uLrzSzZl-YWjTizBYZEJ4efbS2ohccAUg',
+  level: 'info',
+  timestamp: '2024-04-18T09:40:22.970Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:22.976Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:40:22.978Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:23.015Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:56.217Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:40:56.224Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:56.237Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:40:56.259Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:41:03.921Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T09:41:03.922Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:41:09.523Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T09:41:09.524Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:41:12.844Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:41:13.609Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T09:41:13.954Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:41:13.958Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:41:16.876Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:42:52.513Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:04.319Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:04.403Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:04.628Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:09.174Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:09.181Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:09.216Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev132@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:43:26.729Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:26.734Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4xMzIiLCJpYXQiOjE3MTM0MzM0MDYsImV4cCI6MTcxMzQzNzAwNn0.lU6mrkXd5aj83L0MgLBr9Lizgc1kOFs3-PivBVVyKhI',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:26.787Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev132@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T09:43:26.793Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:30.348Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:30.581Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:32.487Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:35.786Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:35.791Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:41.521Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:43:56.080Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T09:45:06.617Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:45:06.628Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:46:59.601Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:47:01.466Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:47:09.827Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:47:31.316Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:47:53.917Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:04.027Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:09.395Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:09.979Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:11.445Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:17.046Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:17.051Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:22.213Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:35.700Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:39.367Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:43.273Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:48:49.508Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:43.496Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:50.491Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:50.495Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:53.425Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:53.439Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:58.748Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:49:58.762Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:17.578Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:17.591Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:32.919Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:32.963Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:37.013Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:50:40.891Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:53:00.681Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T09:53:43.988Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T09:54:52.323Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T10:46:33.181Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T10:49:29.207Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T10:49:36.786Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T10:49:36.795Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T10:50:47.021Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T10:51:15.280Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T10:51:26.257Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T10:51:27.021Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T10:51:32.390Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T10:51:32.396Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T11:04:08.829Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.494Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.500Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuzExMjMiLCJpYXQiOjE3MTM0MzgyNTgsImV4cCI6MTcxMzQ0MTg1OH0._I_yVco-5lcz_Pffhn6bS8wSN8jaHjLODUeFupUQkHU',
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.513Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.522Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.523Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.561Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.570Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.571Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:18.572Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:26.780Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:28.392Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'admin312123@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:04:28.398Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:36.870Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:39.531Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:40.714Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:40.722Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:46.217Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:11:46.227Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:12:17.510Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:12:20.230Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:12:25.685Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:12:25.692Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:17:03.918Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:17:04.740Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:17:05.803Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:26.041Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:29.434Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:29.440Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:32.443Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:37.528Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:37.532Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:42.162Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:18:42.166Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:24:35.546Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:30:58.606Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:30:59.142Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:30:59.150Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:03.011Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:03.022Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:15.918Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:21.609Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:21.616Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:25.395Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:25.404Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:53.208Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:53.726Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:53.733Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:58.852Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:31:58.862Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:32:24.965Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:32:25.029Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:32:25.036Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:32:29.710Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:32:29.720Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:09.649Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:10.477Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:10.484Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:13.566Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:13.576Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:30.593Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:31.517Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:31.525Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:34.566Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:34.577Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:33:52.282Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:34:30.067Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:34:31.905Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:34:31.913Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:34:35.172Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:34:35.181Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:35:10.169Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:35:13.479Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:35:13.487Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:35:17.136Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:35:17.145Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-04-18T11:39:44.687Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:55.952Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T11:39:55.957Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMXF2d2Vxdnc0cXJ2IiwiaWF0IjoxNzEzNDQwMzk1LCJleHAiOjE3MTM0NDM5OTV9.di8AjLp5p8IDNKb2m3KLaZ0sEjXlJq6BAqI25jqgILI',
+  level: 'info',
+  timestamp: '2024-04-18T11:39:55.968Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:55.975Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:39:55.976Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:56.016Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:56.019Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:56.024Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:56.026Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:57.737Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:59.603Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaevewrq@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:39:59.611Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:40:29.652Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:40:31.026Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:40:31.033Z'
+}
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-18T11:40:36.357Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev132@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:40:53.113Z'
+}
+{
+  message: 'Такой пользователь в базе уже существует.',
+  level: 'info',
+  timestamp: '2024-04-18T11:40:53.116Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:40:53.124Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:41:09.363Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.861Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.868Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTMyIiwiaWF0IjoxNzEzNDQwNDgyLCJleHAiOjE3MTM0NDQwODJ9.PgtiRQzHmUW6Exrd8s-B-L2kJMJ2LrQ7Jx_Zv3eZ9To',
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.882Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.889Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.891Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.935Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.938Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.939Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:22.947Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:27.216Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:28.688Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '35bardaev13221@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:41:28.698Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:47:31.593Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-18T11:47:34.314Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-18T11:47:34.323Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-04-18T11:47:41.740Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:11.345Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:12.576Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.683Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `users` (`id`,`name`,`email`,`password`,`age`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.689Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuzExMzIiLCJpYXQiOjE3MTM0NDA5MTAsImV4cCI6MTcxMzQ0NDUxMH0.HnZ_zK0Y8Gsz7bwOZMrKIXberK8SDF34vfTChsIk958',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.705Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.710Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.712Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.752Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.761Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.762Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:30.763Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.908Z'
+}
+{
+  message: 'Executing (default): INSERT INTO `entries` (`id`,`username`,`title`,`content`,`imagePath`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4,$5,$6);',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.914Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.930Z'
+}
+{
+  message: 'Executing (default): SELECT `id`, `username`, `title`, `content`, `imagePath`, `timestamp`, `createdAt`, `updatedAt` FROM `entries` AS `entries`;',
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.932Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.963Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.966Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.967Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:34.968Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:41.266Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:44.786Z'
+}
+{
+  message: "Executing (default): SELECT `id`, `name`, `email`, `password`, `age`, `isAdmin`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = '11235bardaev@gmail.com' LIMIT 1;",
+  level: 'info',
+  timestamp: '2024-04-18T11:48:44.794Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-18T11:49:34.821Z'
+}

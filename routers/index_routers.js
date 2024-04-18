@@ -9,8 +9,9 @@ const Entry = require("../models/entry");
 const multer = require("multer");
 const passport = require("passport");
 const ensureAuthenticated = require("../middleware/isAuthenticated");
+
 const link = "https://kappa.lol/OFmCl";
-const messanger = "https://kappa.lol/iSONv"; 
+const messanger = "https://kappa.lol/iSONv";
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
@@ -25,8 +26,43 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.get("/", function(req, res) {
-  res.render("index",{ link: link, messanger: messanger }); 
+  res.render("index", { link: link, messanger: messanger });
 });
+
+router.get("/service_request", ensureAuthenticated, function(req, res) {
+  // Передаем данные пользователя на страницу выбора услуги
+  res.render("service_request", { user: req.user });
+});
+
+router.post("/submit_request", ensureAuthenticated, async (req, res) => {
+  // Пользователь аутентифицирован, можно получить его имя пользователя
+  console.log("User data:", req.user);
+  const username = req.user ? req.user.name : null;
+  
+  const { service } = req.body;
+  const data = {
+    username: username,
+    title: "Новая заявка",
+    content: `Услуга: ${service}`,
+    imagePath: "" // Добавьте путь к изображению, если требуется
+  };
+
+  try {
+    await Entry.create(data);
+    res.redirect("/profile"); // Предполагается, что у вас есть страница профиля
+  } catch (err) {
+    console.error("Error submitting service request:", err);
+    res.status(500).send("Ошибка при отправке заявки");
+  }
+});
+
+router.get("/profile", ensureAuthenticated, function(req, res) {
+  // В этом обработчике вы можете отобразить профиль пользователя
+  // Получите данные пользователя из сессии или запросите их из базы данных
+  // Затем отобразите профиль на странице
+  res.render("profile", { user: req.user }); // Предполагается, что данные пользователя хранятся в объекте запроса req
+});
+
 router.get("/entries", entries.list);
 router.get("/post", entries.form);
 
@@ -62,13 +98,8 @@ router.get("/edit/:id", entries.updateForm);
 router.post("/edit/:id", entries.updateSubmit);
 router.put("/edit/:id", async (req, res, next) => {
   try {
-   
     const { title, content, imagePath } = req.body;
-
-   
     const entry = await Entry.findById(req.params.id);
-
-  
     if (!entry) {
       return res.status(404).json({ error: "Запись не найдена" });
     }
@@ -76,10 +107,7 @@ router.put("/edit/:id", async (req, res, next) => {
     entry.content = content;
     entry.imagePath = imagePath;
     entry.timestamp = new Date();
-
-   
     await entry.save();
-
     // Возвращаем обновленную запись в блоге
     res.json(entry);
   } catch (error) {
@@ -87,12 +115,11 @@ router.put("/edit/:id", async (req, res, next) => {
     next(error);
   }
 });
+
 router.get(
   "/auth/yandex",
   passport.authenticate("yandex"),
-
 );
-
 
 router.get(
   "/auth/yandex/callback",
@@ -102,17 +129,14 @@ router.get(
   }
 );
 
-
 router.get('/auth/google',
-  passport.authenticate('google', { scope:
-      [ 'email', 'profile' ] }
-));
+  passport.authenticate('google', { scope: [ 'email', 'profile' ] })
+);
 
 router.get( '/auth/google/callback',
-    passport.authenticate( 'google', {
-        successRedirect: '/',
-        failureRedirect: '/login'
-}));
+  passport.authenticate( 'google', { successRedirect: '/', failureRedirect: '/login' })
+);
+
 router.get(
   "/auth/github",
   passport.authenticate("github", { scope: ["user:email"] })
@@ -126,6 +150,7 @@ router.get(
     res.redirect("/");
   }
 );
+
 router.get("/auth/vkontakte", passport.authenticate("vkontakte"));
 
 router.get(
@@ -135,11 +160,6 @@ router.get(
     failureRedirect: "/login",
   })
 );
-
-
-
-
-
 
 router.get("/logout", login.logout);
 module.exports = router;
