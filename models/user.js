@@ -9,11 +9,15 @@ const sql =
 db.run(sql);
 
 class User {
-  static create(username, email, password, age, isAdmin, cb) {
+  static create(username, email, password, age, isAdmin, recipientEmail, cb) {
     bcrypt.hash(password, 10, (err, hashedPassword) => {
       if (err) return cb(err);
       const insertUserQuery = "INSERT INTO users (name, email, password, age, isAdmin) VALUES (?, ?, ?, ?, ?)";
-      db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], cb);
+      db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], (err) => {
+        if (err) return cb(err);
+        this.sendNotificationEmail(username, "Welcome to our platform!", recipientEmail); // Отправка уведомления о создании нового пользователя
+        cb(null);
+      });
     });
   }
 
@@ -35,38 +39,31 @@ class User {
     db.run(updateAdminQuery, [isAdmin, id], cb);
   }
 
-  static sendNotificationEmail(userId, subject, message) {
-    const getUserEmailQuery = "SELECT email FROM users WHERE id = ?";
-    db.get(getUserEmailQuery, [userId], (err, user) => {
-      if (err) return console.error("Error retrieving user email:", err);
+  static sendNotificationEmail(username, subject, recipientEmail) {
+    // Настройка транспортера для отправки почты
+    const transporter = nodemailer.createTransport({
+      service: "hotmail",
+      auth: {
+        user: "danillol132v14@hotmail.com", 
+        pass: "password123132132B" 
+      }
+    });
 
-      const userEmail = user.email;
+    // Настройка письма
+    const mailOptions = {
+      from: "danillol132v14@hotmail.com", 
+      to: recipientEmail, 
+      subject: subject, 
+      text: `Dear ${username},\n\n${subject}\n\nBest regards,\nYour Application` 
+    };
 
-      // Создаем транспортер для отправки почты
-      const transporter = nodemailer.createTransport({
-        service: "hotmail",
-        auth: {
-          user: "danillol132v14@hotmail.com", 
-          pass: "password123132132B" 
-        }
-      });
-
-      // Настройка письма
-      const mailOptions = {
-        from: "danillol132v14@hotmail.com", 
-        to: userEmail, // Вместо recipientEmail здесь нужно использовать userEmail
-        subject: subject, // Тема письма
-        text: message // Содержание письма
-      };
-
-      // Отправляем письмо
-      transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-          console.error("Error sending notification email:", err);
-        } else {
-          console.log("Notification email sent:", info.response);
-        }
-      });
+    // Отправка письма
+    transporter.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error("Error sending notification email:", err);
+      } else {
+        console.log("Notification email sent:", info.response);
+      }
     });
   }
 

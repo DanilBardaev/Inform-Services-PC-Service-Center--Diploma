@@ -13,17 +13,31 @@
     <title>Service Request</title>
 </head>
 <body>
-    <%- include('./partials/header_post'); %>
+    <%# Если пользователь аутентифицирован, покажем ему заголовок %>
+    <% if (locals.user) { %>
+      <%- include('./partials/header_post'); %>
+    <% } %>
+    
     <h1>Выберите услугу</h1>
     <form action="/submit_request" method="POST">
-        <label for="service">Услуга:</label>
-        <select id="service" name="service">
-            <option value="Ремонт телефона">Ремонт телефона</option>
-            <option value="Ремонт ноутбука">Ремонт ноутбука</option>
-            <option value="Установка ПО">Установка ПО</option>
-            <!-- Добавьте здесь другие услуги по вашему выбору -->
-        </select>
-        <button type="submit">Отправить заявку</button>
+      <label for="service">Услуга:</label>
+      <select id="service" name="service">
+        <option value="Ремонт телефона">Ремонт телефона</option>
+        <option value="Ремонт ноутбука">Ремонт ноутбука</option>
+        <option value="Установка ПО">Установка ПО</option>
+        <!-- Добавьте здесь другие услуги по вашему выбору -->
+      </select>
+
+      <!-- Добавляем форму для ввода адреса электронной почты получателя -->
+      <div class="form-floating mb-3">
+        <input
+        type="email" class="form-control" name="recipientEmail" id="recipientEmail" aria-describedby="emailHelpId" placeholder="Введите адрес электронной почты"
+        />
+
+        <label for="recipientEmail">Адрес электронной почты получателя</label>
+      </div>
+
+      <button type="submit">Отправить заявку</button>
     </form>
 </body>
 </html>

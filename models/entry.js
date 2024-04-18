@@ -43,9 +43,9 @@ class Entry {
       if (err) {
         console.error("Error creating entry:", err);
       } else {
-        console.log("Recipient email:", data.recipientEmail); // Выводим адрес получателя в консоль
+        console.log("Recipient email:", recipientEmail); // Выводим адрес получателя в консоль
         // Отправка уведомления о создании новой записи
-        this.sendNotificationEmail(data.name, data.title, recipientEmail); // Передача recipientEmail
+        this.sendNotificationEmail(data.username, data.title, recipientEmail); // Передача recipientEmail
       }
     });
   }

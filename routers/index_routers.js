@@ -40,7 +40,8 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   console.log("User data:", req.user);
   const username = req.user ? req.user.name : null;
   
-  const { service } = req.body;
+  const { service, recipientEmail } = req.body; // Получаем адрес электронной почты получателя из запроса
+
   const data = {
     username: username,
     title: "Новая заявка",
@@ -49,13 +50,14 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   };
 
   try {
-    await Entry.create(data);
+    await Entry.create(data, recipientEmail); // Передаем адрес электронной почты получателя
     res.redirect("/profile"); // Предполагается, что у вас есть страница профиля
   } catch (err) {
     console.error("Error submitting service request:", err);
     res.status(500).send("Ошибка при отправке заявки");
   }
 });
+
 
 router.get("/profile", ensureAuthenticated, function(req, res) {
   // В этом обработчике вы можете отобразить профиль пользователя

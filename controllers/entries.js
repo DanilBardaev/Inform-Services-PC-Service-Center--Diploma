@@ -67,7 +67,7 @@ exports.submit = async (req, res, next) => {
       content: data.content,
       imagePath: imagePath,
     };
-    await Entry.create(entry);
+    await Entry.create(entry, recipientEmail); // Передаем адрес электронной почты получателя
 
     // Вызываем функцию sendNotificationEmail с recipientEmail
     Entry.sendNotificationEmail(username, data.title, recipientEmail);
@@ -77,8 +77,6 @@ exports.submit = async (req, res, next) => {
     return next(err);
   }
 };
-
-
 
 
 exports.updateForm = (req, res) => {
