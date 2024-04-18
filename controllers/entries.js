@@ -1,10 +1,11 @@
 const logger = require("../logger/index");
-const { Entry } = require("../models/db");
+const Entry = require("../models/entry"); // Используем правильный путь для импорта
 const multer = require("multer");
 const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
 const path = require("path");
 const express = require("express");
+const { log } = require("console");
 const router = express.Router();
 
 const storage = multer.diskStorage({
@@ -22,7 +23,7 @@ const upload = multer({ storage: storage });
 
 exports.delete = (req, res, next) => {
   const postId = req.params.id;
-  Entry.delete(postId, (err) => {
+  Entry.deleteById(postId, (err) => { // Внесены исправления здесь
     if (err) return next(err);
     res.redirect("/");
   });
@@ -30,13 +31,16 @@ exports.delete = (req, res, next) => {
 
 exports.list = async (req, res, next) => {
   try {
-    const entries = await Entry.findAll();
-    res.render("entries", { title: "Entries", entries: entries, link: link });
+    Entry.selectAll((err, entries) => { // Внесены исправления здесь
+      if (err) {
+        return next(err);
+      }
+      res.render("entries", { title: "Entries", entries: entries, link: link });
+    });
   } catch (err) {
-    next(err); // Передаем ошибку в следующий обработчик middleware
+    next(err);
   }
 };
-
 
 exports.form = (req, res, next) => {
   res.render("post", { title: "Post" });
@@ -46,10 +50,14 @@ exports.submit = async (req, res, next) => {
   try {
     const username = req.user ? req.user.name : null;
     const data = req.body.entry;
-    // if (!data.content) {
-    //   throw new Error("Content is required");
-    // }
     const imagePath = req.file ? req.file.path : null;
+    
+    // Проверяем наличие адреса электронной почты получателя в данных запроса
+    if (!data || !data.recipientEmail) {
+      console.error("Recipient email is missing or invalid.");
+      return res.redirect("/entries");
+    }
+
     const entry = {
       username: username,
       title: data.title,
@@ -57,8 +65,15 @@ exports.submit = async (req, res, next) => {
       imagePath: imagePath,
     };
     await Entry.create(entry);
+
+    // Используем recipientEmail из данных запроса
+    console.log(data.recipientEmail);
+    const recipientEmail = data.recipientEmail;
+
+    // Вызываем функцию sendNotificationEmail с recipientEmail
+    Entry.sendNotificationEmail(username, data.title, recipientEmail);
+    
     res.redirect("/entries");
-    // console.log(entry.imagePath);
   } catch (err) {
     return next(err);
   }
@@ -66,7 +81,7 @@ exports.submit = async (req, res, next) => {
 
 exports.updateForm = (req, res) => {
   const id = req.params.id;
-  Entry.getEntryId(id, (err, entry) => {
+  Entry.getEntryById(id, (err, entry) => { // Внесены исправления здесь
     if (err) {
       return res.redirect("/");
     }
@@ -90,18 +105,10 @@ exports.updateSubmit = (req, res, next) => {
     content: req.body.entry.content,
     imagePath: req.file ? req.file.path : req.body.entry.imagePath,
   };
-  Entry.getEntryId(id, (err, entry) => {
+  Entry.updateById(id, updateInf, (err) => { // Внесены исправления здесь
     if (err) {
       return next(err);
     }
-    if (!updateInf.imagePath) {
-      updateInf.imagePath = entry.imagePath;
-    }
-    Entry.update(id, updateInf, (err) => {
-      if (err) {
-        return next(err);
-      }
-      res.redirect("/");
-    });
+    res.redirect("/");
   });
 };

@@ -44,17 +44,17 @@ class User {
 
       // Создаем транспортер для отправки почты
       const transporter = nodemailer.createTransport({
-        service: "gmail",
+        service: "hotmail",
         auth: {
-          user: "your_email@gmail.com", // Ваша почта Gmail
-          pass: "your_password" // Ваш пароль от почты Gmail
+          user: "dvvaa9wgkznplg@hotmail.com", 
+          pass: "Dzn4x5Qq4HxP" 
         }
       });
 
       // Настройка письма
       const mailOptions = {
-        from: "your_email@gmail.com", // От кого отправляется письмо
-        to: userEmail, // Кому отправляется письмо (email получателя)
+        from: "dvvaa9wgkznplg@hotmail.com", 
+        to: recipientEmail, 
         subject: subject, // Тема письма
         text: message // Содержание письма
       };

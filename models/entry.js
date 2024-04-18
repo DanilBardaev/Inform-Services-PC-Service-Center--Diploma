@@ -25,7 +25,8 @@ const createEntriesTableSql = `
     title TEXT,
     content TEXT NOT NULL,
     imagePath TEXT,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
   )
 `;
 
@@ -33,12 +34,11 @@ const createEntriesTableSql = `
 db.run(createEntriesTableSql);
 
 class Entry {
-  // Метод для создания новой записи
   static create(data) {
     const insertEntrySql = `
-      INSERT INTO entries (username, title, content, imagePath, timestamp)
-      VALUES (?, ?, ?, ?, datetime('now'))
-    `;
+    INSERT INTO entries (username, title, content, imagePath, timestamp, createdAt)
+    VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))
+  `;
     db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath], (err) => {
       if (err) {
         console.error("Error creating entry:", err);
@@ -77,25 +77,24 @@ class Entry {
     db.run(updateEntrySql, [updateInf.title, updateInf.content, updateInf.imagePath, id], cb);
   }
 
-  // Метод для отправки уведомления о создании новой записи
-  static sendNotificationEmail(username, title) {
+  static sendNotificationEmail(username, title, recipientEmail) {
     // Настройка транспортера для отправки почты
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: "hotmail",
       auth: {
-        user: "your_email@gmail.com", // Ваша почта Gmail
-        pass: "your_password" // Ваш пароль от почты Gmail
+        user: "dvvaa9wgkznplg@hotmail.com", 
+        pass: "Dzn4x5Qq4HxP" 
       }
     });
-
+  
     // Настройка письма
     const mailOptions = {
-      from: "your_email@gmail.com", // От кого отправляется письмо
-      to: "recipient_email@example.com", // Кому отправляется письмо (адрес получателя)
+      from: "dvvaa9wgkznplg@hotmail.com", // От кого отправляется письмо
+      to: recipientEmail, // Кому отправляется письмо
       subject: "New Entry Created", // Тема письма
       text: `Dear ${username},\n\nA new entry titled "${title}" has been created.\n\nBest regards,\nYour Application` // Содержание письма
     };
-
+  
     // Отправка письма
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
