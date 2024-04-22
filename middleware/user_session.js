@@ -1,11 +1,9 @@
-const {User} = require("../models/db");
+const { User } = require("../models/user");
 
 module.exports = async function (req, res, next) {
   try {
     if (req.session.userEmail) {
-      const userData = await User.findOne({
-        where: { email: req.session.userEmail },
-      });
+      const userData = await User.findByEmail(req.session.userEmail); // Замените на findByEmail
 
       if (userData) {
         req.user = res.locals.user = userData;
@@ -15,7 +13,7 @@ module.exports = async function (req, res, next) {
     if (req.session.passport) {
       res.locals.user = req.session.passport.user;
     }
- next();
+    next();
   } catch (err) {
     return next(err);
   }

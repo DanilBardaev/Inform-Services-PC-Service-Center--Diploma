@@ -1,4 +1,4 @@
-const User = require("../models/db");
+const User = require("../models/user");
 const validate = require("../middleware/validate");
 const messanger = "https://kappa.lol/iSONv";
 const logger = require("../logger/index");

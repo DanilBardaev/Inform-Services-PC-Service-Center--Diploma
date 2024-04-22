@@ -24,7 +24,7 @@ exports.delete = (req, res, next) => {
   const postId = req.params.id;
   Entry.deleteById(postId, (err) => { // Внесены исправления здесь
     if (err) return next(err);
-    res.redirect("/");
+    res.redirect("/entries");
   });
 };
 
@@ -47,19 +47,16 @@ exports.form = (req, res, next) => {
 
 exports.submit = async (req, res, next) => {
   try {
-    console.log(req.body);
+    // console.log(req.body);
     const username = req.user ? req.user.name : null;
     const data = req.body.entry;
     const imagePath = req.file ? req.file.path : null;
 
-    // Проверяем наличие адреса электронной почты получателя в данных запроса
-    if (!data || !data.email) {
-      console.error("Recipient email is missing or invalid.");
-      return res.redirect("/entries");
+    // Проверяем наличие данных записи в запросе
+    if (!data || !data.title || !data.content) {
+      console.error("Invalid or missing entry data.");
+      return res.status(400).send("Неверные данные записи");
     }
-
-    // Используем email из данных запроса
-    const recipientEmail = data.email;
 
     const entry = {
       username: username,
@@ -67,11 +64,8 @@ exports.submit = async (req, res, next) => {
       content: data.content,
       imagePath: imagePath,
     };
-    await Entry.create(entry, recipientEmail); // Передаем адрес электронной почты получателя
+    await Entry.create(entry); // Убираем передачу recipientEmail, так как она не используется здесь
 
-    // Вызываем функцию sendNotificationEmail с recipientEmail
-    Entry.sendNotificationEmail(username, data.title, recipientEmail);
-    
     res.redirect("/entries");
   } catch (err) {
     return next(err);

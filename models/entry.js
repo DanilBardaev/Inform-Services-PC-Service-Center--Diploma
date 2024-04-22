@@ -55,7 +55,6 @@ class Entry {
     const selectAllSql = "SELECT * FROM entries ORDER BY timestamp DESC";
     db.all(selectAllSql, cb);
   }
-
   // Метод для получения записи по идентификатору
   static getEntryById(id, cb) {
     const selectEntrySql = "SELECT * FROM entries WHERE id = ?";

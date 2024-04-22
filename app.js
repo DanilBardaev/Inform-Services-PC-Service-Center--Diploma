@@ -18,8 +18,7 @@ const passportFunctionYandex = require("./middleware/passport_yandex");
 const passportFunctionGoogle = require("./middleware/passport_go");
 const passportFunctionGitHub = require("./middleware/passport_github");
 const passportFunctionVkontakte = require("./middleware/passport_vkontakte");
-// const {sequelize} = require("./models/db");
-// const morgan = require("morgan");
+
 const winston = require("winston");
 const app = express();
 app.use(bodyParser.json());

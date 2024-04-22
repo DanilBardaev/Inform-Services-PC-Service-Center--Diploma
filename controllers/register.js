@@ -1,7 +1,4 @@
-// const User = require("../models/user");
-// const {emailValidation, passValidation}  = require("../middleware/validation");
-const { User } = require("../models/db");
-
+const {User} = require("../models/user");
 const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
 const logger = require("../logger/index");
@@ -15,37 +12,30 @@ exports.form = (req, res) => {
 exports.submit = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    const user = await User.findOne({
-      where: { email: email },
-    });
-    if (user) {
-      logger.info("Такой пользователь в базе уже существует:", user);
-      res.redirect("/entries"); // Перенаправление на страницу entries.ejs
-    } else {
-      await User.create({
-        name: name,
-        email: email,
-        password: password,
-        age: req.body.age,
-      });
-      req.session.userEmail = email;
-      req.session.userName = name;
-    }
+    const user = await User.create(name, email, password, req.body.age, 0, email); // Создание нового пользователя
+    // Вход пользователя в систему
+    req.session.userEmail = email;
+    req.session.userName = name;
+
+    // Выполнение входа в систему с использованием JWT
     const token = jwt.sign(
       {
-        name: req.body.name,
+        name: name,
       },
       process.env.JWT_SECRET,
       {
         expiresIn: 60 * 60,
       }
     );
+    req.session.token = token; // Сохранение токена в сессии
+
     res.cookie("jwt", token, {
       httpOnly: true,
       maxAge: 60 * 60,
     });
     console.log("Токен подготовлен: " + token);
     logger.info("Токен подготовлен: " + token);
+
     res.redirect("/entries"); // Перенаправление на страницу entries.ejs
   } catch (err) {
     console.error("Ошибка при регистрации пользователя:", err);
