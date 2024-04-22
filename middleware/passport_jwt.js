@@ -2,7 +2,7 @@ const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
-const User = require("../models/user");
+const {User} = require("../models/user"); // Подключите модель пользователя
 
 module.exports = function(passport) {
     passport.use(new JWTStrategy({

@@ -1,5 +1,5 @@
 const logger = require("../logger/index");
-const Entry = require("../models/entry"); // Используем правильный путь для импорта
+const Entry = require("../models/entry"); // Используем модель Entry
 const multer = require("multer");
 const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
@@ -24,7 +24,7 @@ exports.delete = (req, res, next) => {
   const postId = req.params.id;
   Entry.deleteById(postId, (err) => { // Внесены исправления здесь
     if (err) return next(err);
-    res.redirect("/entries");
+    res.redirect("/");
   });
 };
 
@@ -47,7 +47,7 @@ exports.form = (req, res, next) => {
 
 exports.submit = async (req, res, next) => {
   try {
-    // console.log(req.body);
+    console.log(req.body);
     const username = req.user ? req.user.name : null;
     const data = req.body.entry;
     const imagePath = req.file ? req.file.path : null;
@@ -71,6 +71,8 @@ exports.submit = async (req, res, next) => {
     return next(err);
   }
 };
+
+
 
 
 exports.updateForm = (req, res) => {

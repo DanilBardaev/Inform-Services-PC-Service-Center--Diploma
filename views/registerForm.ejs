@@ -64,6 +64,7 @@
                   class="form-control"
                   required
                 />
+                <input type="hidden" name="recipientEmail" id="recipientEmail" value="">
                 <label for="email">Email:</label>
                 <% if (locals.errors && locals.errors.email) { %>
                 <div class="text-bg-light" id="error-message">
@@ -147,6 +148,13 @@
               }, 1000);
             }, delay);
           }
+          document.addEventListener("DOMContentLoaded", function() {
+    const emailField = document.getElementById("email");
+    const recipientEmailField = document.getElementById("recipientEmail");
+    emailField.addEventListener("input", function() {
+      recipientEmailField.value = emailField.value;
+    });
+  });
         </script>
       </div>
     </section>

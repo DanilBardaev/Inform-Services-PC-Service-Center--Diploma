@@ -1,21 +1,6 @@
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
-const multer = require("multer");
-const path = require('path');
 const nodemailer = require("nodemailer");
-
-// Настройка хранилища для загружаемых файлов
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/"); // Папка для сохранения загруженных файлов
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname)); // Генерация уникального имени файла
-  },
-});
-
-// Создание экземпляра multer с настройками хранилища
-const upload = multer({ storage: storage });
 
 // SQL-запрос для создания таблицы записей (если она не существует)
 const createEntriesTableSql = `
@@ -25,6 +10,7 @@ const createEntriesTableSql = `
     title TEXT,
     content TEXT NOT NULL,
     imagePath TEXT,
+    status TEXT DEFAULT 'Pending',
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
   )
@@ -36,10 +22,10 @@ db.run(createEntriesTableSql);
 class Entry {
   static create(data, recipientEmail) {
     const insertEntrySql = `
-    INSERT INTO entries (username, title, content, imagePath, timestamp, createdAt)
-    VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))
-  `;
-    db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath], (err) => {
+      INSERT INTO entries (username, title, content, imagePath, status, timestamp, createdAt)
+      VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+    `;
+    db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath, 'Pending'], (err) => {
       if (err) {
         console.error("Error creating entry:", err);
       } else {
@@ -55,6 +41,7 @@ class Entry {
     const selectAllSql = "SELECT * FROM entries ORDER BY timestamp DESC";
     db.all(selectAllSql, cb);
   }
+
   // Метод для получения записи по идентификатору
   static getEntryById(id, cb) {
     const selectEntrySql = "SELECT * FROM entries WHERE id = ?";
@@ -77,24 +64,31 @@ class Entry {
     db.run(updateEntrySql, [updateInf.title, updateInf.content, updateInf.imagePath, id], cb);
   }
 
+  // Метод для обновления статуса заявки
+  static updateStatusById(id, status, cb) {
+    const updateStatusSql = "UPDATE entries SET status = ? WHERE id = ?";
+    db.run(updateStatusSql, [status, id], cb);
+  }
+
+  // Метод для отправки уведомления о создании новой записи
   static sendNotificationEmail(username, title, recipientEmail) {
     // Настройка транспортера для отправки почты
     const transporter = nodemailer.createTransport({
       service: "hotmail",
       auth: {
-        user: "danillol132v14@hotmail.com", 
-        pass: "password123132132B" 
-      }
+        user: "danillol132v14@hotmail.com",
+        pass: "password123132132B",
+      },
     });
-  
+
     // Настройка письма
     const mailOptions = {
       from: "danillol132v14@hotmail.com", // От кого отправляется письмо
       to: recipientEmail, // Кому отправляется письмо
       subject: "New Entry Created", // Тема письма
-      text: `Dear ${username},\n\nA new entry titled "${title}" has been created.\n\nBest regards,\nYour Application` // Содержание письма
+      text: `Dear ${username},\n\nA new entry titled "${title}" has been created.\n\nBest regards,\nYour Application`, // Содержание письма
     };
-  
+
     // Отправка письма
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {

@@ -5,7 +5,8 @@ const register = require("../controllers/register");
 const login = require("../controllers/login");
 const entries = require("../controllers/entries");
 const validate = require("../middleware/validate");
-const Entry = require("../models/entry");
+const User = require("../models/user"); // Используем модель User
+const Entry = require("../models/entry"); // Используем модель Entry
 const multer = require("multer");
 const passport = require("passport");
 const ensureAuthenticated = require("../middleware/isAuthenticated");
@@ -51,7 +52,8 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
 
   try {
     await Entry.create(data, recipientEmail); // Передаем адрес электронной почты получателя
-    res.redirect("/profile"); // Предполагается, что у вас есть страница профиля
+    res.redirect(`/profile?service=${encodeURIComponent(req.body.service)}`);
+
   } catch (err) {
     console.error("Error submitting service request:", err);
     res.status(500).send("Ошибка при отправке заявки");
@@ -60,10 +62,7 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
 
 
 router.get("/profile", ensureAuthenticated, function(req, res) {
-  // В этом обработчике вы можете отобразить профиль пользователя
-  // Получите данные пользователя из сессии или запросите их из базы данных
-  // Затем отобразите профиль на странице
-  res.render("profile", { user: req.user }); // Предполагается, что данные пользователя хранятся в объекте запроса req
+  res.render("profile", { user: req.user, service: req.query.service }); 
 });
 
 router.get("/entries", entries.list);
@@ -166,3 +165,4 @@ router.get(
 
 router.get("/logout", login.logout);
 module.exports = router;
+
