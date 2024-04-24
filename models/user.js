@@ -17,7 +17,7 @@ class User {
       const insertUserQuery = "INSERT INTO users (name, email, password, age, isAdmin) VALUES (?, ?, ?, ?, ?)";
       db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], (err) => {
         if (err) return cb(err);
-        this.sendNotificationEmail(username, "Добро пожаловать на сайт Информ Сервис!", recipientEmail); // Отправка уведомления о создании нового пользователя
+        this.sendNotificationEmail(username, "Теперь вам доступны наши услуги.", recipientEmail); // Отправка уведомления о создании нового пользователя
         cb(null); // Вызываем колбэк после завершения операции
       });
     });
@@ -65,7 +65,16 @@ class User {
       from: "danillol132v14@hotmail.com", 
       to: recipientEmail, 
       subject: subject, 
-      text: `Дорогой ${username},\n\n${subject}\n\nС уважением,\nИнформ Сервис` 
+      html: `
+      <div style="color: #00000; font-weight: 400;">
+      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Добро пожаловать в Информ Сервис!</p>
+      <p style="color: #000000; font-size: 16x;">Дорогой ${username},</p>
+      <p style="color: #000000; font-size: 16x;">${subject} \nХорошего дня!</p>
+      <p style="color: #000000; font-size: 16x; margin-top: 20px;">С уважением,</p>
+      <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
+      <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
+      </div>
+    `, 
     };
 
     // Отправка письма
