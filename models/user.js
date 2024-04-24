@@ -68,10 +68,10 @@ class User {
       html: `
       <div style="color: #00000; font-weight: 400;">
       <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Добро пожаловать в Информ Сервис!</p>
-      <p style="color: #000000; font-size: 16x;">Дорогой ${username},</p>
-      <p style="color: #000000; font-size: 16x;">${subject} \nХорошего дня!</p>
-      <p style="color: #000000; font-size: 16x; margin-top: 20px;">С уважением,</p>
-      <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
+      <p style="color: #000000; font-size: 18x;">Дорогой ${username},</p>
+      <p style="color: #000000; font-size: 18x;">${subject}</p>
+      <p style="color: #000000; font-size: 18x; margin-top: 20px;">С уважением,</p>
+      <p style="color: #000000; font-size: 18x;">Информ Сервис</p>
       <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
       </div>
     `, 

@@ -8979,3 +8979,61 @@
   level: 'info',
   timestamp: '2024-04-24T11:00:01.020Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T11:00:48.749Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-04-24T11:01:16.812Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-04-24T11:01:16.821Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T11:02:21.086Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T11:02:22.223Z'
+}
+{
+  id: 0,
+  name: 'Данил',
+  email: 'danilgti135@gmail.com',
+  password: '$2b$10$KIdwuvOIlJBQ5GYCn0X9AehFPNFu0pfHwX./JZz26P1B9F9fOa9Xu',
+  age: 19,
+  isAdmin: 0,
+  createdAt: '2024-04-24 11:00:01',
+  updatedAt: '2024-04-24 11:00:01',
+  level: 'info',
+  message: 'Такой пользователь в базе уже существует:',
+  timestamp: '2024-04-24T11:02:44.221Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi0JTQsNC90LjQuyIsImlhdCI6MTcxMzk1NjYwNSwiZXhwIjoxNzEzOTYwMjA1fQ.uHKrwTX_9cCuMbqljous5zPMkX39bm4mPNSn8AnqyJk',
+  level: 'info',
+  timestamp: '2024-04-24T11:03:25.372Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T11:04:00.905Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T11:08:46.008Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-04-24T16:12:25.365Z'
+}

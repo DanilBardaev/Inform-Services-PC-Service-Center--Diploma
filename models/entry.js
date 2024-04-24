@@ -90,9 +90,9 @@ class Entry {
       subject: "Заявка на услугу Информ Сервис", // Тема письма
       html: `
       <div style="color: #00000; font-weight: 400;">
-      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваша заявка принята</p>
+      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваша заявка принята!</p>
       <p style="color: #000000; font-size: 16x;">Дорогой ${username},</p>
-      <p style="color: #000000; font-size: 16x;">"${title}" была создана.</p>
+      <p style="color: #000000; font-size: 16x;">${title} была создана.</p>
       <p style="color: #000000; font-size: 16x;">Услуга: ${service}.</p>
       <p style="margin-top: 20px; color: #000000; font-size: 16x;">С уважением,</p>
       <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
