@@ -6,7 +6,7 @@ const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
 
 const sql =
-  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0,  status TEXT DEFAULT 'Pending', createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP )";
+  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP )";
 
 db.run(sql);
 
@@ -17,7 +17,7 @@ class User {
       const insertUserQuery = "INSERT INTO users (name, email, password, age, isAdmin) VALUES (?, ?, ?, ?, ?)";
       db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], (err) => {
         if (err) return cb(err);
-        this.sendNotificationEmail(username, "Welcome to our platform!", recipientEmail); // Отправка уведомления о создании нового пользователя
+        this.sendNotificationEmail(username, "Добро пожаловать на сайт Информ Сервис!", recipientEmail); // Отправка уведомления о создании нового пользователя
         cb(null); // Вызываем колбэк после завершения операции
       });
     });
@@ -65,7 +65,7 @@ class User {
       from: "danillol132v14@hotmail.com", 
       to: recipientEmail, 
       subject: subject, 
-      text: `Dear ${username},\n\n${subject}\n\nBest regards,\nYour Application` 
+      text: `Дорогой ${username},\n\n${subject}\n\nС уважением,\nИнформ Сервис` 
     };
 
     // Отправка письма

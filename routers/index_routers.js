@@ -35,7 +35,6 @@ router.get("/service_request", ensureAuthenticated, function(req, res) {
   res.render("service_request", { user: req.user });
 });
 
-
 router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   // Пользователь аутентифицирован, можно получить его имя пользователя
   console.log("User data:", req.user);
@@ -47,12 +46,14 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
     username: username,
     title: "Новая заявка",
     content: `Услуга: ${service}`,
-    imagePath: "" // Добавьте путь к изображению, если требуется
+    imagePath: "" 
   };
 
   try {
-    await Entry.create(data, recipientEmail); // Передаем адрес электронной почты получателя
-    res.redirect(`/profile?service=${encodeURIComponent(req.body.service)}`);
+    const randomTicketNumber = generateRandomNumber();
+    await Entry.create(data, recipientEmail, randomTicketNumber, service); 
+
+    res.redirect(`/profile?service=${encodeURIComponent(req.body.service)}&ticket=${randomTicketNumber}`);
 
   } catch (err) {
     console.error("Error submitting service request:", err);
@@ -60,9 +61,21 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   }
 });
 
+function generateRandomNumber() {
+  // Генерируем случайное число от 1000 до 9999
+  return Math.floor(1000 + Math.random() * 9000);
+}
 
-router.get("/profile", ensureAuthenticated, function(req, res) {
-  res.render("profile", { user: req.user, service: req.query.service }); 
+router.get("/profile", ensureAuthenticated, async function(req, res) {
+  try {
+    // Извлекаем номер заявки из параметров запроса
+    const ticketNumber = req.query.ticket;
+
+    res.render("profile", { user: req.user, service: req.query.service, ticketNumber: ticketNumber, link: link }); 
+  } catch (err) {
+    console.error("Error fetching ticket number:", err);
+    res.status(500).send("Ошибка при получении номера заявки");
+  }
 });
 
 router.get("/entries", entries.list);
@@ -165,4 +178,3 @@ router.get(
 
 router.get("/logout", login.logout);
 module.exports = router;
-

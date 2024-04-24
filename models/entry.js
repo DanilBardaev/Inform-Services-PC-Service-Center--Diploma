@@ -1,3 +1,4 @@
+// entry.js
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
@@ -10,7 +11,8 @@ const createEntriesTableSql = `
     title TEXT,
     content TEXT NOT NULL,
     imagePath TEXT,
-    status TEXT DEFAULT 'Pending',
+    status TEXT DEFAULT 'Подана',
+    ticket INTEGER, -- Добавляем поле для номера заявки
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
   )
@@ -20,18 +22,18 @@ const createEntriesTableSql = `
 db.run(createEntriesTableSql);
 
 class Entry {
-  static create(data, recipientEmail) {
+  static create(data, recipientEmail, ticketNumber, service) {
     const insertEntrySql = `
-      INSERT INTO entries (username, title, content, imagePath, status, timestamp, createdAt)
-      VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+      INSERT INTO entries (username, title, content, imagePath, status, ticket, timestamp, createdAt)
+      VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
     `;
-    db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath, 'Pending'], (err) => {
+    db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath, 'Подана', ticketNumber], (err) => {
       if (err) {
         console.error("Error creating entry:", err);
       } else {
         console.log("Recipient email:", recipientEmail); // Выводим адрес получателя в консоль
         // Отправка уведомления о создании новой записи
-        this.sendNotificationEmail(data.username, data.title, recipientEmail); // Передача recipientEmail
+        this.sendNotificationEmail(data.username, data.title, recipientEmail, service); // Передача recipientEmail
       }
     });
   }
@@ -71,7 +73,7 @@ class Entry {
   }
 
   // Метод для отправки уведомления о создании новой записи
-  static sendNotificationEmail(username, title, recipientEmail) {
+  static sendNotificationEmail(username, title, recipientEmail, service) {
     // Настройка транспортера для отправки почты
     const transporter = nodemailer.createTransport({
       service: "hotmail",
@@ -85,8 +87,20 @@ class Entry {
     const mailOptions = {
       from: "danillol132v14@hotmail.com", // От кого отправляется письмо
       to: recipientEmail, // Кому отправляется письмо
-      subject: "New Entry Created", // Тема письма
-      text: `Dear ${username},\n\nA new entry titled "${title}" has been created.\n\nBest regards,\nYour Application`, // Содержание письма
+      subject: "Заявка на услугу Информ Сервис", // Тема письма
+      html: `
+      <div style="color: #00000; font-weight: 400;">
+      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваша заявка принята</p>
+      <p>Дорогой ${username},</p>
+      <p>"${title}" была создана.</p>
+      <p>Услуга: ${service}.</p>
+      <p style="margin-top: 20px;">С уважением,</p>
+      <p>Информ Сервис</p>
+      <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
+      </div>
+      
+     
+    `,
     };
 
     // Отправка письма

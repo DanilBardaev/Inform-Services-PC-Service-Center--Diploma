@@ -58,3 +58,8 @@
   level: 'error',
   timestamp: '2024-04-18T14:16:13.418Z'
 }
+{
+  message: 'Произошла ошибка: TypeError: User.findOne is not a function',
+  level: 'error',
+  timestamp: '2024-04-24T09:56:49.344Z'
+}
