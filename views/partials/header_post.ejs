@@ -227,18 +227,9 @@ cursor: pointer;
           </ul>
               <li class="nav-item">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <div class="social-network pt-2">
-                    <li class="nav-item pe-3 fa">
-                      <i class="fa-brands fa-vk "></i>
-                    </li>
-                    <li class="nav-item pe-3 fa">
-                      <i class="fa-brands fa-square-facebook"></i>
-                    </li>
-                    <li class="nav-item pe-3 fa" >
-                      <i class="fa-brands fa-square-x-twitter" ></i>
-                    </li>
-                  </div>
-                  <div class="text-center p-2 user"><% if(locals.user) { %>  
+                 
+                  <div class="text-center p-3 user"><% if(locals.user) { %>  
+                    <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail " style="width: 30px; height: 30px; margin-top:"> 
                     <%= locals.user.name %>
                   <% } %></div>
                   <li class="nav-item dropdown">
@@ -246,17 +237,17 @@ cursor: pointer;
                       href="#"
                       class="nav-link dropdown-toggle"
                       data-bs-toggle="dropdown"
-                      ><i class=" fa fa-user-o " aria-hidden="true"></i>
+                      ><i class=" fa fa-user-o mt-2 pt-1" aria-hidden="true"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledy="navbarDropdown">
                       <li class="text-center"><% if(locals.user) { %>  
                         <%= locals.user.name %>
                       <% } %></li>
                       <li class="drop-down">
-                        <h4><a class="badge rounded-pill" href="/logout"><i class="fa-solid fa-right-from-bracket m-1"> </i>Выйти</a></h4>
+                        <h4><a class="badge rounded-pill" href="../profile"><i class="fa-regular fa-user m-1"></i>Профиль</a></h4>
                       </li>
                       <li class="drop-down">
-                        <h4><a class="badge rounded-pill" href="#"><i class="fa-regular fa-circle-question m-1"></i>Помощь</a></h4>
+                        <h4><a class="badge rounded-pill" href="/logout"><i class="fa-solid fa-right-from-bracket m-1"> </i>Выйти</a></h4>
                       </li>
                     </ul>
                   </li>

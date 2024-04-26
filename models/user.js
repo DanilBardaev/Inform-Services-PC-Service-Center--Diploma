@@ -1,12 +1,10 @@
-// user.js
-
 const bcrypt = require("bcrypt");
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
 
 const sql =
-  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP )";
+  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP, profile_img TEXT DEFAULT 'https://kappa.lol/Nykez')";
 
 db.run(sql);
 
@@ -22,6 +20,7 @@ class User {
       });
     });
   }
+  
   static findOneByEmail(email, cb) {
     const selectUserQuery = "SELECT * FROM users WHERE email = ?";
     db.get(selectUserQuery, [email], (err, user) => {
@@ -32,24 +31,47 @@ class User {
       cb(null, user); // Вызываем колбэк только если нет ошибок
     });
   }
-  static authenticate(username, password, cb) {
-    const selectUserQuery = "SELECT id, password FROM users WHERE name = ?";
+  
+  static findOneByName(username, cb) {
+    const selectUserQuery = "SELECT * FROM users WHERE name = ?";
     db.get(selectUserQuery, [username], (err, user) => {
-      if (err) return cb(err);
-      if (!user) return cb(null, false);
-
-      bcrypt.compare(password, user.password, (err, result) => {
-        if (err) return cb(err);
-        cb(null, result);
-      });
+      if (err) {
+        console.error("Ошибка при поиске пользователя по имени:", err);
+        return cb(err); // Вернем ошибку через колбэк, если произошла ошибка
+      }
+      cb(null, user); // Вызываем колбэк только если нет ошибок
     });
   }
+  
+  static updateProfile(userId, newData, cb) {
+    const { profile_img } = newData;
+    const updateProfileQuery = "UPDATE users SET profile_img = ? WHERE id = ?";
+    db.run(updateProfileQuery, [profile_img, userId], (err) => {
+      if (err) {
+        console.error("Error updating profile:", err);
+        return cb(err);
+      }
+      cb(null);
+    });
+  }
+
+  static updateName(userId, newName, cb) {
+    const updateNameQuery = "UPDATE users SET name = ? WHERE id = ?";
+    db.run(updateNameQuery, [newName, userId], (err) => {
+      if (err) {
+        console.error("Error updating name:", err);
+        return cb(err);
+      }
+      cb(null);
+    });
+  }
+
   
   static updateAdminStatus(id, isAdmin, cb) {
     const updateAdminQuery = "UPDATE users SET isAdmin = ? WHERE id = ?";
     db.run(updateAdminQuery, [isAdmin, id], cb);
   }
-
+  
   static sendNotificationEmail(username, subject, recipientEmail) {
     // Настройка транспортера для отправки почты
     const transporter = nodemailer.createTransport({
@@ -66,15 +88,15 @@ class User {
       to: recipientEmail, 
       subject: subject, 
       html: `
-      <div style="color: #00000; font-weight: 400;">
-      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Добро пожаловать в Информ Сервис!</p>
-      <p style="color: #000000; font-size: 18x;">Дорогой ${username},</p>
-      <p style="color: #000000; font-size: 18x;">${subject}</p>
-      <p style="color: #000000; font-size: 18x; margin-top: 20px;">С уважением,</p>
-      <p style="color: #000000; font-size: 18x;">Информ Сервис</p>
-      <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
-      </div>
-    `, 
+        <div style="color: #00000; font-weight: 400;">
+          <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Добро пожаловать в Информ Сервис!</p>
+          <p style="color: #000000; font-size: 18x;">Дорогой ${username},</p>
+          <p style="color: #000000; font-size: 18x;">${subject}</p>
+          <p style="color: #000000; font-size: 18x; margin-top: 20px;">С уважением,</p>
+          <p style="color: #000000; font-size: 18x;">Информ Сервис</p>
+          <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
+        </div>
+      `, 
     };
 
     // Отправка письма
@@ -86,7 +108,6 @@ class User {
       }
     });
   }
-
 }
 
 module.exports = User;

@@ -26,21 +26,58 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+router.post("/profile/updateImg", upload.single("profileImg"), ensureAuthenticated, async (req, res) => {
+  const userId = req.user.id;
+  const newProfileImg = req.file ? req.file.path : null;
+
+  try {
+    await User.updateProfile(userId, { profile_img: newProfileImg }, (err) => {
+      if (err) {
+        console.error("Error updating profile image:", err);
+        return res.status(500).send("Ошибка при обновлении фото профиля");
+      }
+      else {
+        return res.redirect("/profile");
+      }
+     
+    });
+  } catch (err) {
+    console.error("Error updating profile image:", err);
+    res.status(500).send("Ошибка при обновлении фото профиля");
+  }
+});
+
+router.post("/profile/updateName", ensureAuthenticated, async (req, res) => {
+  const userId = req.user.id;
+  const newName = req.body.name;
+
+  try {
+    await User.updateName(userId, newName, (err) => {
+      if (err) {
+        console.error("Error updating name:", err);
+        return res.status(500).send("Ошибка при обновлении имени пользователя");
+      }
+      else {
+        return res.redirect("/profile");
+      }
+    });
+  } catch (err) {
+    console.error("Error updating name:", err);
+    res.status(500).send("Ошибка при обновлении имени пользователя");
+  }
+});
+
 router.get("/", function(req, res) {
   res.render("index", { link: link, messanger: messanger });
 });
 
 router.get("/service_request", ensureAuthenticated, function(req, res) {
-  // Передаем данные пользователя на страницу выбора услуги
   res.render("service_request", { user: req.user });
 });
 
 router.post("/submit_request", ensureAuthenticated, async (req, res) => {
-  // Пользователь аутентифицирован, можно получить его имя пользователя
-  console.log("User data:", req.user);
   const username = req.user ? req.user.name : null;
-  
-  const { service, recipientEmail } = req.body; // Получаем адрес электронной почты получателя из запроса
+  const { service, recipientEmail } = req.body;
 
   const data = {
     username: username,
@@ -62,15 +99,12 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
 });
 
 function generateRandomNumber() {
-  // Генерируем случайное число от 1000 до 9999
   return Math.floor(1000 + Math.random() * 9000);
 }
 
 router.get("/profile", ensureAuthenticated, async function(req, res) {
   try {
-    // Извлекаем номер заявки из параметров запроса
     const ticketNumber = req.query.ticket;
-
     res.render("profile", { user: req.user, service: req.query.service, ticketNumber: ticketNumber, link: link }); 
   } catch (err) {
     console.error("Error fetching ticket number:", err);
@@ -102,6 +136,7 @@ router.post("/login", login.submit);
 router.get("/pc", function(req, res) {
   res.render("pc",{ link: link, messanger: messanger }); 
 });
+
 router.get("/laptop", function(req, res) {
   res.render("laptop",{ link: link, messanger: messanger }); 
 });
@@ -111,6 +146,7 @@ router.get("/delete/:id", entries.delete);
 router.get("/edit/:id", entries.updateForm);
 
 router.post("/edit/:id", entries.updateSubmit);
+
 router.put("/edit/:id", async (req, res, next) => {
   try {
     const { title, content, imagePath } = req.body;
@@ -123,10 +159,8 @@ router.put("/edit/:id", async (req, res, next) => {
     entry.imagePath = imagePath;
     entry.timestamp = new Date();
     await entry.save();
-    // Возвращаем обновленную запись в блоге
     res.json(entry);
   } catch (error) {
-    // Обработка ошибок
     next(error);
   }
 });
@@ -161,7 +195,6 @@ router.get(
   "/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   function (req, res) {
-    // Successful authentication, redirect home.
     res.redirect("/");
   }
 );
@@ -177,4 +210,5 @@ router.get(
 );
 
 router.get("/logout", login.logout);
+
 module.exports = router;
