@@ -227,18 +227,26 @@ cursor: pointer;
           </ul>
               <li class="nav-item">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <div class="social-network pt-3">
+                    <li class="nav-item pe-3 fa">
+                      <i class="fa-brands fa-vk "></i>
+                    </li>
+                    <li class="nav-item pe-3 fa">
+                      <i class="fa-brands fa-square-facebook"></i>
+                    </li>
+                    <li class="nav-item pe-3 fa" >
+                      <i class="fa-brands fa-square-x-twitter" ></i>
+                    </li>
+                  </div>
                  
-                  <div class="text-center p-3 user"><% if(locals.user) { %>  
-                    <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail " style="width: 30px; height: 30px; margin-top:"> 
-                    <%= locals.user.name %>
-                  <% } %></div>
+                 
                   <li class="nav-item dropdown">
                     <a
-                      href="#"
-                      class="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      ><i class=" fa fa-user-o mt-2 pt-1" aria-hidden="true"></i>
-                    </a>
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"> 
+                    <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail col-md-6" style="width: 50px; height: 50px;"> 
+                  </a>
                     <ul class="dropdown-menu" aria-labelledy="navbarDropdown">
                       <li class="text-center"><% if(locals.user) { %>  
                         <%= locals.user.name %>
