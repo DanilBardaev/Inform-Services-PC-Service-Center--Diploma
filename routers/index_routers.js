@@ -35,11 +35,10 @@ router.post("/profile/updateImg", upload.single("profileImg"), ensureAuthenticat
       if (err) {
         console.error("Error updating profile image:", err);
         return res.status(500).send("Ошибка при обновлении фото профиля");
-      }
-      else {
+      } else {
+        // Редирект на страницу профиля
         return res.redirect("/profile");
       }
-     
     });
   } catch (err) {
     console.error("Error updating profile image:", err);
@@ -50,15 +49,17 @@ router.post("/profile/updateImg", upload.single("profileImg"), ensureAuthenticat
 router.post("/profile/updateName", ensureAuthenticated, async (req, res) => {
   const userId = req.user.id;
   const newName = req.body.name;
+  const ticketNumber = req.query.ticket; // Получаем ticketNumber из запроса
+  const service = req.query.service; // Получаем service из запроса
 
   try {
     await User.updateName(userId, newName, (err) => {
       if (err) {
         console.error("Error updating name:", err);
         return res.status(500).send("Ошибка при обновлении имени пользователя");
-      }
-      else {
-        return res.redirect("/profile");
+      } else {
+        // Передаем обратно параметры service и ticketNumber
+        return res.redirect(`/profile?service=${encodeURIComponent(service)}&ticket=${ticketNumber}`);
       }
     });
   } catch (err) {
@@ -66,6 +67,7 @@ router.post("/profile/updateName", ensureAuthenticated, async (req, res) => {
     res.status(500).send("Ошибка при обновлении имени пользователя");
   }
 });
+
 
 router.get("/", function(req, res) {
   res.render("index", { link: link, messanger: messanger });
@@ -85,12 +87,14 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
     content: `Услуга: ${service}`,
     imagePath: "" 
   };
-
   try {
     const randomTicketNumber = generateRandomNumber();
+    req.session.service = service;
+    req.session.ticketNumber = randomTicketNumber;
+
     await Entry.create(data, recipientEmail, randomTicketNumber, service); 
 
-    res.redirect(`/profile?service=${encodeURIComponent(req.body.service)}&ticket=${randomTicketNumber}`);
+    res.redirect("/profile");
 
   } catch (err) {
     console.error("Error submitting service request:", err);
@@ -104,14 +108,19 @@ function generateRandomNumber() {
 
 router.get("/profile", ensureAuthenticated, async function(req, res) {
   try {
-    const ticketNumber = req.query.ticket;
-    res.render("profile", { user: req.user, service: req.query.service, ticketNumber: ticketNumber, link: link }); 
+    // Проверяем наличие значения service и ticket в сессии
+    const service = req.session.service;
+    const ticketNumber = req.session.ticketNumber;
+    // Очищаем значения из сессии
+    delete req.session.service;
+    delete req.session.ticketNumber;
+
+    res.render("profile", { user: req.user, service: service, ticketNumber: ticketNumber, link: link }); 
   } catch (err) {
     console.error("Error fetching ticket number:", err);
     res.status(500).send("Ошибка при получении номера заявки");
   }
 });
-
 router.get("/entries", entries.list);
 router.get("/post", entries.form);
 

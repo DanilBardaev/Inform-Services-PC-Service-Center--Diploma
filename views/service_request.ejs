@@ -13,7 +13,6 @@
     <title>Service Request</title>
 </head>
 <body>
-    <%# Если пользователь аутентифицирован, покажем ему заголовок %>
     <% if (locals.user) { %>
       <%- include('./partials/header_post'); %>
     <% } %>
@@ -28,7 +27,6 @@
         <!-- Добавьте здесь другие услуги по вашему выбору -->
       </select>
 
-      <!-- Добавляем форму для ввода адреса электронной почты получателя -->
       <div class="form-floating mb-3">
         <input
         type="email" class="form-control" name="recipientEmail" id="recipientEmail" aria-describedby="emailHelpId" placeholder="Введите адрес электронной почты"

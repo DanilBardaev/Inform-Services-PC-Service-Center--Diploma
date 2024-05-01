@@ -449,9 +449,12 @@ h1.h1 {
     </style>
 </head>
 <body>
-    <header class="pb-2">
-      <%- include('./partials/header'); %>
-          </header>
+  <% if (locals.user==null) { %>
+    <header> <%- include('./partials/header_for_index'); %></header>
+    <% } %>
+    <% if (locals.user) { %>
+    <%- include('./partials/header_for_index_auth'); %>
+    <% } %>
     <section class="main-content">
       <div class="container">
           <div class="row product-card ps-5 ms-5">
