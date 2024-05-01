@@ -152,7 +152,9 @@ router.get("/laptop", function(req, res) {
 router.get("/services", function(req, res) {
   res.render("services",{ link: link, messanger: messanger }); 
 });
-
+router.get("/discounts", function(req, res) {
+  res.render("discounts",{ link: link, messanger: messanger }); 
+});
 router.get("/delete/:id", entries.delete);
 
 router.get("/edit/:id", entries.updateForm);

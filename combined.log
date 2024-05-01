@@ -10395,3 +10395,28 @@
   level: 'info',
   timestamp: '2024-05-01T16:17:09.577Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-01T17:14:10.518Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-01T17:58:04.730Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-01T17:59:47.710Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidmVyYTMzMyIsImlhdCI6MTcxNDU4NjM5NiwiZXhwIjoxNzE0NTg5OTk2fQ.wQx80PTGmGhdnB5n7kiWsqqtjLqcOgOg5_WqjEzSPho',
+  level: 'info',
+  timestamp: '2024-05-01T17:59:56.376Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-01T18:21:17.868Z'
+}
