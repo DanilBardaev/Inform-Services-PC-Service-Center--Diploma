@@ -149,6 +149,9 @@ router.get("/pc", function(req, res) {
 router.get("/laptop", function(req, res) {
   res.render("laptop",{ link: link, messanger: messanger }); 
 });
+router.get("/services", function(req, res) {
+  res.render("services",{ link: link, messanger: messanger }); 
+});
 
 router.get("/delete/:id", entries.delete);
 
