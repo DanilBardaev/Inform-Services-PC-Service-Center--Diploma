@@ -10,76 +10,73 @@
   <link rel="stylesheet" href="../css/index.css" />
 </head>
 <body>
-  <%# Если пользователь аутентифицирован, покажем ему заголовок %>
-  <% if (locals.user) { %>
-    <%- include('./partials/header_post'); %>
-  <% } %>
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-md-8"> 
-        <div class="card shadow-sm"> 
-          <div class="card-body">
-            <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail mb-3" style="width: 200px; height: 200px;"> <!-- Используем классы Bootstrap для закругления углов и добавления тени -->
-            <% if (user.email) { %> 
-              <form id="profileImgForm" action="/profile/updateImg" method="post" enctype="multipart/form-data">
-                <input type="file" name="profileImg" id="avatarInput" onchange="submitProfileImgForm()" style="display: none;">
-                <button type="button" onclick="triggerFileInput()" class="btn btn-primary btn-sm">Изменить фото фото</button> <!-- Используем классы Bootstrap для стилизации кнопки -->
-              </form>
-              <br>
-              <form id="nameForm" action="/profile/updateName" method="post">
-                <label for="nameInput">Имя:</label>
-                <input type="text" name="name" id="nameInput" value="<%= user.name %>" required class="form-control-plaintext text-center" > <!-- Используем класс Bootstrap для стилизации текстового поля -->
-                <button type="submit" class="btn btn-primary btn-sm">Изменить имя</button> <!-- Используем классы Bootstrap для стилизации кнопки -->
-              </form>
-            <% } %>
-            <% if (user.email == null) { %> 
-              Имя: 
-              <% } %>
-          </div>
+<%- include('./partials/header_post'); %>
+<div class="container text-center">
+  <div class="row justify-content-center">
+    <div class="col-md-8"> 
+      <div class="card shadow-sm"> 
+        <div class="card-body">
+          <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail mb-3" style="width: 200px; height: 200px;">
+          <% if (user.email) { %> 
+            <form id="profileImgForm" action="/profile/updateImg" method="post" enctype="multipart/form-data">
+              <input type="file" name="profileImg" id="avatarInput" onchange="submitProfileImgForm()" style="display: none;">
+              <button type="button" onclick="triggerFileInput()" class="btn btn-primary btn-sm">Изменить фото фото</button>
+            </form>
+            <br>
+            <form id="nameForm" action="/profile/updateName" method="post">
+              <label for="nameInput">Имя:</label>
+              <input type="text" name="name" id="nameInput" value="<%= user.name %>" required class="form-control-plaintext text-center" >
+              <button type="submit" class="btn btn-primary btn-sm">Изменить имя</button>
+            </form>
+          <% } %>
+          <% if (user.email == null) { %> 
+            Имя: 
+          <% } %>
         </div>
-      </div>      
-    </div>
+      </div>
+    </div>      
   </div>
-  
-  <%# Проверяем наличие номера заявки %>
-  <% if (ticketNumber) { %>
-    <div class="container mt-5 pb-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6"> 
-          <div class="card">
-            <div class="card-header">
-              Ваша Заявка
-            </div>
-            <div class="card-body">
-              <p>Имя пользователя: <%= user.name %></p>
-              <p>Номер заявки: <%= ticketNumber %></p>
-              <% if (user.email) { %>
-                <p>Электронная почта: <%= user.email %></p>
-              <% } %>
-              <% if (user.status) { %>
-                <p>Статус заявки: <%= user.status %></p>
-              <% } else { %>
-                <p>Статус заявки: Подана</p>
-              <% } %>
-              <p>Выбранная услуга: <%= service %></p>
-            </div>
+</div>
+
+<% if (ticketNumber) { %>
+  <div class="container mt-5 pb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6"> 
+        <div class="card">
+          <div class="card-header">
+            Ваша Заявка
+          </div>
+          <div class="card-body">
+            <p>Имя пользователя: <%= user.name %></p>
+            <p>Номер заявки: <%= ticketNumber %></p>
+            <% if (user.email) { %>
+              <p>Электронная почта: <%= user.email %></p>
+            <% } %>
+            <% if (user.status) { %>
+              <p>Статус заявки: <%= user.status %></p>
+            <% } else { %>
+              <p>Статус заявки: Подана</p>
+            <% } %>
+            <p>Выбранная услуга: <%= service %></p>
           </div>
         </div>
       </div>
     </div>
-  <% } %>
-  <footer class="pt-5"><%- include('./partials/footer')%></footer>
-  <script>
-    function triggerFileInput() {
-      document.getElementById('avatarInput').click();
-    }
+  </div>
+<% } %>
 
-    function submitProfileImgForm() {
-      var input = document.getElementById('avatarInput');
-      if(input.files.length > 0) {
-        document.getElementById('profileImgForm').submit();
-      }
+<footer class="pt-5"><%- include('./partials/footer')%></footer>
+<script>
+  function triggerFileInput() {
+    document.getElementById('avatarInput').click();
+  }
+
+  function submitProfileImgForm() {
+    var input = document.getElementById('avatarInput');
+    if(input.files.length > 0) {
+      document.getElementById('profileImgForm').submit();
     }
-  </script>
+  }
+</script>
 </body>
 </html>
