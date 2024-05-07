@@ -75,31 +75,33 @@ router.get("/", function(req, res) {
 router.get("/service_request", ensureAuthenticated, function(req, res) {
   res.render("service_request", { user: req.user });
 });
-
 router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   const username = req.user ? req.user.name : null;
-  const { service, recipientEmail } = req.body;
+  const { service, comments } = req.body; 
+  const recipientEmail = req.user.email; 
 
   const data = {
-    username: username,
-    title: "Новая заявка",
-    content: `Услуга: ${service}`,
-    imagePath: "" 
+      username: username,
+      title: "Новая заявка",
+      content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
+      imagePath: ""
   };
+
   try {
-    const randomTicketNumber = generateRandomNumber();
-    req.session.service = service;
-    req.session.ticketNumber = randomTicketNumber;
+      const randomTicketNumber = generateRandomNumber();
+      req.session.service = service;
+      req.session.ticketNumber = randomTicketNumber;
 
-    await Entry.create(data, recipientEmail, randomTicketNumber, service); 
+      await Entry.create(data, recipientEmail, randomTicketNumber, service);
 
-    res.redirect("/profile");
-
+      // Передаем параметр service при перенаправлении на страницу профиля
+      res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
   } catch (err) {
-    console.error("Error submitting service request:", err);
-    res.status(500).send("Ошибка при отправке заявки");
+      console.error("Error submitting service request:", err);
+      res.status(500).send("Ошибка при отправке заявки");
   }
 });
+
 
 function generateRandomNumber() {
   return Math.floor(1000 + Math.random() * 9000);

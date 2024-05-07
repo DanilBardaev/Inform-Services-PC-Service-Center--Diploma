@@ -644,75 +644,83 @@ h5.uslugi-price-button {
                             </li>
             </div>
         </div>
+        <form action="/submit_request" method="POST">
             <section class="second-content pb-5">
                 <div class="container">
                     <div class="row ms-2">
                         <div class="text-header-service" style="color:#153070 ">
                             <p>Услуги и цены по ремонту ноутбуков</p>
                             <hr style="color:black; min-width:1180px;">
-                        </div>
-                            <div class="first-text-pc col-md-6">
-                                    <div class="cards-service-laptop" >
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="margin-top: 17px;">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                            
-                                                <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Ремонт ноутбука</h6>
-                                                </label>
-                                                    <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
-                                            </a>
+                        </div> 
+                        <div class="first-text-pc col-md-6">
+                            <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="111">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="123">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="144">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="111">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="111">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <div class="cards-service-laptop">
+                                    <label class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="service" value="111">
+                                        <h6 class="uslugi-price-button">111</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary mt-3" id="orderButton" data-bs-toggle="modal" data-bs-target="#confirmationModal">Заказать</button>
+                            </div>
+                            
+                            <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="confirmationModalLabel">Подтверждение заказа</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p id="selectedServices"></p>
+                                        <div class="mb-3">
+                                            <label for="comments" class="form-label">Комментарий:</label>
+                                            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
                                         </div>
                                     </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Настройка ноутбука</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 150 ₽</h5>
-                                        </a>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button> 
+                                        <button type="submit" class="btn btn-primary" id="confirmOrderButton">Подтвердить заказ</button>
                                     </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Установка Windows</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Чистка ноутбука</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 800 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Ускорение ноутбука</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 300 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Замена экрана</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 770 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Замена клавиатуры</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 540 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Замена разъемов</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 800 ₽</h5>
-                                        </a>
-                                    </div>
-                                    <div class="cards-service-laptop" >
-                                        <a class="" href="/remont-noutbukov/">
-                                                    <h6 class="uslugi-price-button ">Модернизация ноутбука</h6>
-                                                <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
-                                        </a>
-                                    </div>
+                                
+                                
+                                </div>
                             </div>
+                        </div>
                             <div class="second-text-pc col-md-6">
                                 <div class="img text-center pb-3">
                                     <img src="https://kappa.lol/oTNvx" alt="" width="350">
@@ -736,11 +744,52 @@ h5.uslugi-price-button {
                     </div>
                 </div>
             </section>
+        </form>
             <section class="footer-content pb-5">
               <%- include('./partials/footer-content'); %></section>
     <footer>
       <%- include('./partials/footer'); %>
     </footer>
+    <script>
+      document.getElementById('orderButton').addEventListener('click', function (event) {
+    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+    var selectedServices = document.querySelectorAll('input[name="service"]:checked');
+    var selectedServicesText = Array.from(selectedServices).map(function (checkbox) {
+        return checkbox.value;
+    }).join(', ');
+    document.getElementById('selectedServices').textContent = "Выбранные услуги: " + selectedServicesText;
+    $('#confirmationModal').modal('show');
+});
+document.getElementById('confirmOrderButton').addEventListener('click', function () {
+    var selectedServices = document.querySelectorAll('input[name="service"]:checked');
+    var selectedServicesValues = Array.from(selectedServices).map(function (checkbox) {
+        return checkbox.value;
+    });
+    var comments = document.getElementById('comments').value;
+    fetch('/submit_request', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            services: selectedServicesValues,
+            comments: comments
+        })
+    }).then(function (response) {
+        if (response.ok) {
+            // Ответ успешно получен, можно выполнить какие-то действия, например, закрыть модальное окно
+            $('#confirmationModal').modal('hide');
+        } else {
+            // Ошибка при отправке запроса
+            console.error('Ошибка при отправке запроса на сервер');
+        }
+    }).catch(function (error) {
+        // Ошибка при выполнении fetch
+        console.error('Ошибка при выполнении fetch:', error);
+    });
+});
+
+    </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
