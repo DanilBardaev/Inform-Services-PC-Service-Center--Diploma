@@ -77,14 +77,14 @@ class User {
     const transporter = nodemailer.createTransport({
       service: "hotmail",
       auth: {
-        user: "danillol132v14@hotmail.com", 
+        user: "qwevdanil1231weqqewqvwv@outlook.com", 
         pass: "password123132132B" 
       }
     });
 
     // Настройка письма
     const mailOptions = {
-      from: "danillol132v14@hotmail.com", 
+      from: "qwevdanil1231weqqewqvwv@outlook.com", 
       to: recipientEmail, 
       subject: subject, 
       html: `

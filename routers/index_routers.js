@@ -1,4 +1,3 @@
-
 const express = require("express");
 const path = require("path");
 const router = express.Router();
@@ -71,7 +70,7 @@ router.post("/profile/updateName", ensureAuthenticated, async (req, res) => {
 router.get("/", function(req, res) {
   res.render("index", { link: link, messanger: messanger });
 });
-
+// const { comments } = req.body; 
 router.get("/service_request", ensureAuthenticated, function(req, res) {
   res.render("service_request", { user: req.user });
 });
@@ -93,6 +92,9 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
       req.session.ticketNumber = randomTicketNumber;
 
       await Entry.create(data, recipientEmail, randomTicketNumber, service);
+
+      // Передаем значение service в функцию sendNotificationEmail
+      Entry.sendNotificationEmail(username, data.title, recipientEmail, service);
 
       // Передаем параметр service при перенаправлении на страницу профиля
       res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
@@ -223,8 +225,4 @@ router.get(
 
 router.get("/logout", login.logout);
 
-module
-
-.exports = router;
-
-
+module.exports = router;
