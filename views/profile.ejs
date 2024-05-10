@@ -37,7 +37,6 @@
     </div>      
   </div>
 </div>
-
 <% if (ticketNumber) { %>
   <div class="container mt-5 pb-5">
     <div class="row justify-content-center">
@@ -50,7 +49,7 @@
             <p>Имя пользователя: <%= user.name %></p>
             <p>Номер заявки: <%= ticketNumber %></p>
             <% if (user.email) { %>
-              <p>Электронная почта: <%= user.email %></p>
+              <p>Электронная почта пользователя: <%= user.email %></p>
             <% } %>
             <% if (user.status) { %>
               <p>Статус заявки: <%= user.status %></p>

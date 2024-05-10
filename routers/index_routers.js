@@ -104,7 +104,35 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   }
 });
 
+router.post("/submit_request_service_request", ensureAuthenticated, async (req, res) => {
+  const username = req.user ? req.user.name : null;
+  const { service, comments, recipientEmail } = req.body; 
+ 
 
+  const data = {
+      username: username,
+      title: "Новая заявка",
+      content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
+      imagePath: ""
+  };
+
+  try {
+      const randomTicketNumber = generateRandomNumber();
+      req.session.service = service;
+      req.session.ticketNumber = randomTicketNumber;
+
+      await Entry.create(data, recipientEmail, randomTicketNumber, service);
+
+      // Передаем значение service в функцию sendNotificationEmail
+      Entry.sendNotificationEmail(username, data.title, recipientEmail, service);
+
+      // Передаем параметр service при перенаправлении на страницу профиля
+      res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
+  } catch (err) {
+      console.error("Error submitting service request:", err);
+      res.status(500).send("Ошибка при отправке заявки");
+  }
+});
 function generateRandomNumber() {
   return Math.floor(1000 + Math.random() * 9000);
 }
