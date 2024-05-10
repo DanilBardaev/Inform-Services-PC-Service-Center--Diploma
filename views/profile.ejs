@@ -11,60 +11,58 @@
 </head>
 <body>
 <%- include('./partials/header_post'); %>
-<div class="container text-center">
+<div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-8"> 
       <div class="card shadow-sm"> 
-        <div class="card-body">
+        <div class="card-body text-center">
           <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail mb-3" style="width: 200px; height: 200px;">
           <% if (user.email) { %> 
             <form id="profileImgForm" action="/profile/updateImg" method="post" enctype="multipart/form-data">
               <input type="file" name="profileImg" id="avatarInput" onchange="submitProfileImgForm()" style="display: none;">
-              <button type="button" onclick="triggerFileInput()" class="btn btn-primary btn-sm">Изменить фото фото</button>
+              <button type="button" onclick="triggerFileInput()" class="btn btn-primary btn-sm">Изменить фото</button>
             </form>
             <br>
             <form id="nameForm" action="/profile/updateName" method="post">
               <label for="nameInput">Имя:</label>
-              <input type="text" name="name" id="nameInput" value="<%= user.name %>" required class="form-control-plaintext text-center" >
+              <input type="text" name="name" id="nameInput" value="<%= user.name %>" required class="form-control-plaintext text-center mb-3" >
               <button type="submit" class="btn btn-primary btn-sm">Изменить имя</button>
             </form>
           <% } %>
           <% if (user.email == null) { %> 
-            Имя: 
+           <br><h3>Имя: <%= user.name %></h3>
           <% } %>
         </div>
       </div>
     </div>      
   </div>
 </div>
-<% if (ticketNumbers && ticketNumbers.length > 0) { %>
-  <% ticketNumbers.forEach(function(ticketNumber) { %>
-      <div class="container mt-5 pb-5">
-          <div class="row justify-content-center">
-              <div class="col-md-6"> 
-                  <div class="card">
-                      <div class="card-header">
-                          Ваша Заявка
-                      </div>
-                      <div class="card-body">
-                          <p>Имя пользователя: <%= user.name %></p>
-                          <p>Номер заявки: <%= ticketNumber %></p>
-                          <% if (user.email) { %>
-                              <p>Электронная почта пользователя: <%= user.email %></p>
-                          <% } %>
-                          <% if (user.status) { %>
-                              <p>Статус заявки: <%= user.status %></p>
-                          <% } else { %>
-                              <p>Статус заявки: Подана</p>
-                          <% } %>
-                          <p>Выбранная услуга: <%= service %></p>
-                      </div>
+<% ticketNumbers.forEach(function(ticketNumber) { %>
+  <div class="container mt-5">
+      <div class="row justify-content-center">
+          <div class="col-md-8"> 
+              <div class="card">
+                  <div class="card-header">
+                      Ваша Заявка
+                  </div>
+                  <div class="card-body">
+                      <p>Имя пользователя: <%= user.name %></p>
+                      <p>Номер заявки: <%= ticketNumber %></p>
+                      <% if (user.email) { %>
+                          <p>Электронная почта пользователя: <%= user.email %></p>
+                      <% } %>
+                      <% if (user.status) { %>
+                          <p>Статус заявки: <%= user.status %></p>
+                      <% } else { %>
+                          <p>Статус заявки: Подана</p>
+                      <% } %>
+                      <p>Выбранная услуга: <%= services[ticketNumber] %></p> <!-- Используйте ticketNumber для получения соответствующей услуги -->
                   </div>
               </div>
           </div>
       </div>
-  <% }) %>
-<% } %>
+  </div>
+<% }) %>
 
 <footer class="pt-5"><%- include('./partials/footer')%></footer>
 <script>

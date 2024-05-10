@@ -1,5 +1,3 @@
-<!-- service_request.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,22 +12,28 @@
 </head>
 <body>
 <%- include('./partials/header_post'); %>
-<h1>Выберите услугу</h1>
-<form action="/submit_request_service_request" method="POST">
-  <label for="service">Услуга:</label>
-  <select id="service" name="service">
-    <option value="Ремонт телефона">Ремонт телефона</option>
-    <option value="Ремонт ноутбука">Ремонт ноутбука</option>
-    <option value="Установка ПО">Установка ПО</option>
-    <!-- Добавьте здесь другие услуги по вашему выбору -->
-  </select>
-
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" name="recipientEmail" id="recipientEmail" aria-describedby="emailHelpId" placeholder="Введите адрес электронной почты" />
-    <label for="recipientEmail">Адрес электронной почты получателя</label>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center">Выберите услугу</h1>
+      <form action="/submit_request_service_request" method="POST">
+        <div class="form-group mb-3">
+          <label for="service">Услуга:</label>
+          <select id="service" name="service" class="form-select">
+            <option value="Ремонт телефона">Ремонт телефона</option>
+            <option value="Ремонт ноутбука">Ремонт ноутбука</option>
+            <option value="Установка ПО">Установка ПО</option>
+            <!-- Добавьте здесь другие услуги по вашему выбору -->
+          </select>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" name="recipientEmail" id="recipientEmail" aria-describedby="emailHelpId" placeholder="Введите адрес электронной почты" />
+          <label for="recipientEmail">Адрес электронной почты получателя</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+      </form>
+    </div>
   </div>
-
-  <button type="submit">Отправить заявку</button>
-</form>
+</div>
 </body>
 </html>
