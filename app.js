@@ -18,13 +18,12 @@ const passportFunctionYandex = require("./middleware/passport_yandex");
 const passportFunctionGoogle = require("./middleware/passport_go");
 const passportFunctionGitHub = require("./middleware/passport_github");
 const passportFunctionVkontakte = require("./middleware/passport_vkontakte");
-// const {sequelize} = require("./models/db");
-// const morgan = require("morgan");
+
 const winston = require("winston");
 const app = express();
 app.use(bodyParser.json());
 
-// Parse incoming requests with URL-encoded payloads
+
 app.use(bodyParser.urlencoded({ extended: true }));
 const myRoutes = require("./routers/index_routers");
 const userSession = require("./middleware/user_session");
@@ -43,7 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "css")));
 app.use(express.static(path.join(__dirname, "views")));
 app.use("/uploads", express.static("uploads"));
-// app.use(morgan("tiny"));
+
 app.use(
   session({
     secret: process.env.SECRET,

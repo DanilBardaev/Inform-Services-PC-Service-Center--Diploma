@@ -10950,3 +10950,268 @@
   level: 'info',
   timestamp: '2024-05-10T17:30:05.115Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:45:29.402Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T17:45:31.608Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T17:45:31.615Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1MzYzMTQ1LCJleHAiOjE3MTUzNjY3NDV9.xSiHfopSGkdkjTG9f_REKIdk60LMyoApUCQO4sfOrCw',
+  level: 'info',
+  timestamp: '2024-05-10T17:45:45.352Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-10T17:51:45.917Z'
+}
+{
+  message: 'Получили профиль от Google [object Object]',
+  level: 'info',
+  timestamp: '2024-05-10T17:51:57.381Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-10T17:52:00.666Z'
+}
+{
+  message: 'Получили профиль от VK [object Object]',
+  level: 'info',
+  timestamp: '2024-05-10T17:52:16.777Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-10T17:54:07.651Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-10T17:54:34.426Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:56:31.751Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-10T17:56:41.637Z'
+}
+{
+  message: 'Зашли на страницу edit post',
+  level: 'info',
+  timestamp: '2024-05-10T17:57:07.039Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:57:46.886Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:58:35.548Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:58:53.256Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:58:56.500Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T17:59:08.035Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:00:02.218Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:04:05.627Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:04:31.102Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:04:37.186Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMzMiLCJpYXQiOjE3MTUzNjQyOTEsImV4cCI6MTcxNTM2Nzg5MX0.TYaOXI6SkSH2T7ekgz9trtr1hnMH3qHuLgeyEqdW3BI',
+  level: 'info',
+  timestamp: '2024-05-10T18:04:51.999Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:09:21.161Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:09:47.159Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:09:47.167Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:10:21.171Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTUzNjQ2MzMsImV4cCI6MTcxNTM2ODIzM30.6FOcl5QiT0iIqsVlGRqKrwjlPZF2iju1NMSgXzhE8uI',
+  level: 'info',
+  timestamp: '2024-05-10T18:10:33.117Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:11:19.809Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:11:19.998Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:11:20.005Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTMyIiwiaWF0IjoxNzE1MzY0Njg1LCJleHAiOjE3MTUzNjgyODV9.iwiMbg_mrttose3b8CEWNLdgZfeu9eggaKM23UDUoSQ',
+  level: 'info',
+  timestamp: '2024-05-10T18:11:25.911Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-10T18:12:47.135Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1MzY0Nzc0LCJleHAiOjE3MTUzNjgzNzR9.EEtoEbhscms6BwDLm2MMNI_EL01tnPZ8h1UGeqZhfg0',
+  level: 'info',
+  timestamp: '2024-05-10T18:12:54.169Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:14:08.067Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:14:39.895Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:14:43.506Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:14:43.514Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTUzNjQ4OTIsImV4cCI6MTcxNTM2ODQ5Mn0.WTvisVAXZt2kxLu2KgmF7o7Iasz6WktQ7lFOasO1-i4',
+  level: 'info',
+  timestamp: '2024-05-10T18:14:52.087Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:16:35.082Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:16:44.260Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:16:46.434Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:16:46.442Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1MzY1MDE0LCJleHAiOjE3MTUzNjg2MTR9.m0rL0EFp9I_vK4Jy-VV5P3ZomuX_BfoBkuFEl2s1e_k',
+  level: 'info',
+  timestamp: '2024-05-10T18:16:54.719Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:21:12.502Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:22:13.346Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:22:15.554Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:22:15.561Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1MzY1MzQzLCJleHAiOjE3MTUzNjg5NDN9.LuppuSKlEaZmLDLQvo07gfGIE7yqByrUjFhu0lLAJSk',
+  level: 'info',
+  timestamp: '2024-05-10T18:22:23.022Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-10T18:31:10.715Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-10T18:31:18.992Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-10T18:31:19.000Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1MzY1ODg4LCJleHAiOjE3MTUzNjk0ODh9.11JZuHsKJvH7vo88YM3M1aW004KAFxBsL5Az_LGwC14',
+  level: 'info',
+  timestamp: '2024-05-10T18:31:28.035Z'
+}

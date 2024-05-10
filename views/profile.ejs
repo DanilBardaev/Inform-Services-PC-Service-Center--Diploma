@@ -37,32 +37,37 @@
     </div>      
   </div>
 </div>
-<% if (ticketNumber) { %>
-  <div class="container mt-5 pb-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6"> 
-        <div class="card">
-          <div class="card-header">
-            Ваша Заявка
+<% if (ticketNumbers && ticketNumbers.length > 0) { %>
+  <% ticketNumbers.forEach(function(ticketNumber) { %>
+      <div class="container mt-5 pb-5">
+          <div class="row justify-content-center">
+              <div class="col-md-6"> 
+                  <div class="card">
+                      <div class="card-header">
+                          Ваша Заявка
+                      </div>
+                      <div class="card-body">
+                          <p>Имя пользователя: <%= user.name %></p>
+                          <p>Номер заявки: <%= ticketNumber %></p>
+                          <% if (user.email) { %>
+                              <p>Электронная почта пользователя: <%= user.email %></p>
+                          <% } %>
+                          <% if (user.status) { %>
+                              <p>Статус заявки: <%= user.status %></p>
+                          <% } else { %>
+                              <p>Статус заявки: Подана</p>
+                          <% } %>
+                          <!-- Добавляем отображение выбранной услуги -->
+                          <p>Выбранная услуга: <%= service %></p>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="card-body">
-            <p>Имя пользователя: <%= user.name %></p>
-            <p>Номер заявки: <%= ticketNumber %></p>
-            <% if (user.email) { %>
-              <p>Электронная почта пользователя: <%= user.email %></p>
-            <% } %>
-            <% if (user.status) { %>
-              <p>Статус заявки: <%= user.status %></p>
-            <% } else { %>
-              <p>Статус заявки: Подана</p>
-            <% } %>
-            <p>Выбранная услуга: <%= service %></p>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
+  <% }) %>
 <% } %>
+
+
 
 <footer class="pt-5"><%- include('./partials/footer')%></footer>
 <script>
