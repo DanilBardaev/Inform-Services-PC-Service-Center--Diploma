@@ -75,40 +75,10 @@ router.get("/service_request", ensureAuthenticated, function(req, res) {
   res.render("service_request", { user: req.user });
 });
 
-router.post("/submit_request", ensureAuthenticated, async (req, res) => {
-  const username = req.user ? req.user.name : null;
-  const { service, comments } = req.body; 
-  const recipientEmail = req.user.email; 
-
-  const data = {
-      username: username,
-      title: "Новая заявка",
-      content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
-      imagePath: ""
-  };
-
-  try {
-      const randomTicketNumber = generateRandomNumber();
-      const ticketNumber = req.session.ticketNumber || []; // Получаем массив номеров заявок из сессии
-      ticketNumber.push(randomTicketNumber); // Добавляем новый номер заявки
-      req.session.ticketNumber = ticketNumber; // Сохраняем обновленный массив номеров заявок в сессии
-      req.session.service = service;
-      await Entry.create(data, recipientEmail, randomTicketNumber, service);
-
-      // Передаем значение service в функцию sendNotificationEmail
-      Entry.sendNotificationEmail(username, data.title, recipientEmail, service);
-
-      // Передаем параметр service при перенаправлении на страницу профиля
-      res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
-  } catch (err) {
-      console.error("Error submitting service request:", err);
-      res.status(500).send("Ошибка при отправке заявки");
-  }
-});
-  
-  router.post("/submit_request_service_request", ensureAuthenticated, async (req, res) => {
+  router.post("/submit_request", ensureAuthenticated, async (req, res) => {
     const username = req.user ? req.user.name : null;
-    const { service, comments, recipientEmail, source } = req.body; 
+    const { service, comments } = req.body; 
+    const recipientEmail = req.user.email; 
   
     const data = {
         username: username,
@@ -122,8 +92,7 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
         const ticketNumber = req.session.ticketNumber || []; // Получаем массив номеров заявок из сессии
         ticketNumber.push(randomTicketNumber); // Добавляем новый номер заявки
         req.session.ticketNumber = ticketNumber; // Сохраняем обновленный массив номеров заявок в сессии
-        req.session[`${source}_service`] = service; // Устанавливаем значение service в сессии для конкретного источника
-  
+        req.session.service = service;
         await Entry.create(data, recipientEmail, randomTicketNumber, service);
   
         // Передаем значение service в функцию sendNotificationEmail
@@ -138,13 +107,43 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   });
   
   
+  router.post("/submit_request_service_request", ensureAuthenticated, async (req, res) => {
+    const username = req.user ? req.user.name : null;
+    const { service, comments, recipientEmail } = req.body; 
+  
+    const data = {
+        username: username,
+        title: "Новая заявка",
+        content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
+        imagePath: ""
+    };
+  
+    try {
+        const randomTicketNumber = generateRandomNumber();
+        const ticketNumber = req.session.ticketNumber || []; // Получаем массив номеров заявок из сессии
+        ticketNumber.push(randomTicketNumber); // Добавляем новый номер заявки
+        req.session.ticketNumber = ticketNumber; // Сохраняем обновленный массив номеров заявок в сессии
+        req.session.service = service;
+        await Entry.create(data, recipientEmail, randomTicketNumber, service);
+  
+        // Передаем значение service в функцию sendNotificationEmail
+        Entry.sendNotificationEmail(username, data.title, recipientEmail, service);
+  
+        // Передаем параметр service при перенаправлении на страницу профиля
+        res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
+    } catch (err) {
+        console.error("Error submitting service request:", err);
+        res.status(500).send("Ошибка при отправке заявки");
+    }
+  });
+  
 function generateRandomNumber() {
   return Math.floor(1000 + Math.random() * 9000);
 }
 
 router.get("/profile", ensureAuthenticated, async function(req, res) {
   try {
-      const service = req.session[`${req.query.source}_service`];
+      const service = req.session.service;
       const ticketNumbers = req.session.ticketNumber || []; // Получаем массив номеров заявок из сессии
 
       // Рендеринг страницы профиля с массивом номеров заявок
