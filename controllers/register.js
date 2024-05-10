@@ -15,22 +15,22 @@ exports.form = (req, res) => {
 exports.submit = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    User.findOneByEmail(email, (err, user) => { // Передаем колбэк
+    User.findOneByEmail(email, (err, user) => { 
       if (err) {
         console.error("Ошибка при поиске пользователя:", err);
         return next(err);
       }
       if (user) {
         logger.info("Такой пользователь в базе уже существует:", user);
-        res.redirect("/entries"); // Перенаправление на страницу entries.ejs
+        res.redirect("/index"); 
       } else {
         User.create(
           name,
           email,
           password,
           req.body.age,
-          0, // isAdmin
-          req.body.recipientEmail, // recipientEmail передается здесь
+          0, 
+          req.body.recipientEmail, 
           (err) => {
             if (err) {
               console.error("Ошибка при создании пользователя:", err);
@@ -38,7 +38,7 @@ exports.submit = async (req, res, next) => {
             }
             req.session.userEmail = email;
             req.session.userName = name;
-            // Далее код для создания токена и перенаправления
+         
             const token = jwt.sign(
               {
                 name: req.body.name,
@@ -54,7 +54,7 @@ exports.submit = async (req, res, next) => {
             });
             console.log("Токен подготовлен: " + token);
             logger.info("Токен подготовлен: " + token);
-            res.redirect("/entries"); // Перенаправление на страницу entries.ejs
+            res.redirect("/index"); 
           }
         );
       }
