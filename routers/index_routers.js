@@ -71,8 +71,8 @@ router.get("/", function(req, res) {
   res.render("index", { link: link, messanger: messanger });
 });
 // const { comments } = req.body; 
-router.get("/service_request", ensureAuthenticated, function(req, res) {
-  res.render("service_request", { user: req.user });
+router.get("/service_request", function(req, res) {
+  res.render("service_request", { user: req.user, link: link, messanger: messanger});
 });
 
 router.post("/submit_request_service_request", ensureAuthenticated, async (req, res) => {
