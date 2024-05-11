@@ -11960,3 +11960,73 @@
   level: 'info',
   timestamp: '2024-05-11T19:38:12.141Z'
 }
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-11T19:39:51.969Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-11T19:39:51.973Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-11T19:40:02.025Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-11T19:45:25.368Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTMyIiwiaWF0IjoxNzE1NDU2NzQwLCJleHAiOjE3MTU0NjAzNDB9.tgKVNALM2XOPp6ClfXwf3nzjksoGG3nyMDAICUf-OFE',
+  level: 'info',
+  timestamp: '2024-05-11T19:45:40.523Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T19:49:13.763Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-11T19:49:18.431Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-11T19:49:18.439Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTU0NTY5NjUsImV4cCI6MTcxNTQ2MDU2NX0.HKsm_9aGvN6pAHEqcLISBeUtMnR31U_BF_R5R0VLQSE',
+  level: 'info',
+  timestamp: '2024-05-11T19:49:25.164Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T19:52:04.467Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T19:53:12.069Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-11T19:53:21.703Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-11T19:53:21.710Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTU0NTcyMTgsImV4cCI6MTcxNTQ2MDgxOH0.WedEzRQJ7AoFmPnHjblhuWe_pV3LiRlfR9KogP1iVJk',
+  level: 'info',
+  timestamp: '2024-05-11T19:53:38.848Z'
+}
