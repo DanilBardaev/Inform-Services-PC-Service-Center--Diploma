@@ -74,17 +74,26 @@ class User {
   
   static sendNotificationEmail(username, subject, recipientEmail) {
     // Настройка транспортера для отправки почты
-    const transporter = nodemailer.createTransport({
-      service: "hotmail",
+    const transporter = nodemailer.createTransport({    
+      host: 'smtp.mail.ru',
+      service: 'mail',
+      port: 465,
+      secure: true,
+      logger: true,
+      debug: true,
+      secureConnection: false,
       auth: {
-        user: "qwevdanil1231weqqewqvwv@outlook.com", 
-        pass: "password123132132B" 
+        user: "informserice1234@mail.ru",
+        pass: "nknihRYFEHpYEGpCmjcd",
+      },
+      smtp:{
+        rejectUnAuthorized: true,
       }
     });
 
     // Настройка письма
     const mailOptions = {
-      from: "qwevdanil1231weqqewqvwv@outlook.com", 
+      from: "informserice1234@mail.ru", 
       to: recipientEmail, 
       subject: subject, 
       html: `

@@ -87,7 +87,7 @@ textarea.form-control {
     </header>
     <% } %>
     <% if (locals.user) { %>
-    <%- include('./partials/header_for_index_auth'); %>
+    <%- include('./partials/header_post'); %>
     <% } %>
 <div class="container contacts">
     <div class="row">
@@ -126,7 +126,7 @@ textarea.form-control {
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="email">Адрес электронной почты</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" name="recipientEmail" id="recipientEmail" aria-describedby="emailHelpId" placeholder="Введите адрес электронной почты" required>
                 </div>
             </div>
         </div>

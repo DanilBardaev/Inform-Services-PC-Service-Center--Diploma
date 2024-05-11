@@ -138,27 +138,48 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
 
 router.post("/submit_contact_form", async (req, res) => {
   const { name, email, phone, message } = req.body;
-
+  const { service, comments, recipientEmail } = req.body; 
   // Создание транспортера для отправки писем
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
+  const transporter = nodemailer.createTransport({    
+    host: 'smtp.mail.ru',
+    service: 'mail',
+    port: 465,
+    secure: true,
+    logger: true,
+    debug: true,
+    secureConnection: false,
     auth: {
-      user: 'your_email@gmail.com', // замените на вашу почту
-      pass: 'your_password' // замените на ваш пароль
+      user: "informserice1234@mail.ru",
+      pass: "nknihRYFEHpYEGpCmjcd",
+    },
+    smtp:{
+      rejectUnAuthorized: true,
     }
   });
-
+ 
   // Настройка письма
   const mailOptions = {
-    from: 'your_email@gmail.com', // замените на вашу почту
-    to: 'recipient_email@example.com', // замените на адрес получателя
-    subject: 'Сообщение с формы контактов',
-    text: `Имя: ${name}\nEmail: ${email}\nТелефон: ${phone}\nСообщение: ${message}`
+    
+    from: "informserice1234@mail.ru", // От кого отправляется письмо
+      to: recipientEmail, // Кому отправляется письмо
+    subject: 'Мы получили ваше сообщение',
+    html: `
+      <div style="color: #00000; font-weight: 400;">
+      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваше сообщение отправлено нам на почту!</p>
+      <p style="color: #000000; font-size: 16x;">Дорогой ${name},</p>
+      <p style="color: #000000; font-size: 16x;">Почта отправителя: ${recipientEmail}</p>
+      <p style="color: #000000; font-size: 16x;">Телефон: ${phone}</p>
+      <p style="color: #000000; font-size: 16x;">Ваше сообщение: ${message}</p>
+      <p style="margin-top: 20px; color: #000000; font-size: 16x;">С уважением,</p>
+      <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
+      <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
+      </div>
+    `,
   };
 
   try {
     // Отправка письма
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions, recipientEmail);
     res.status(200).send("Ваше сообщение отправлено нам на почту, с уважением Информ Сервис.");
   } catch (error) {
     console.error("Ошибка отправки сообщения:", error);

@@ -75,17 +75,26 @@ class Entry {
   // Метод для отправки уведомления о создании новой записи
   static sendNotificationEmail(username, title, recipientEmail, service) {
     // Настройка транспортера для отправки почты
-    const transporter = nodemailer.createTransport({
-      service: "hotmail",
+    const transporter = nodemailer.createTransport({    
+      host: 'smtp.mail.ru',
+      service: 'mail',
+      port: 465,
+      secure: true,
+      logger: true,
+      debug: true,
+      secureConnection: false,
       auth: {
-        user: "qwevdanil1231weqqewqvwv@outlook.com",
-        pass: "password123132132B",
+        user: "informserice1234@mail.ru",
+        pass: "nknihRYFEHpYEGpCmjcd",
       },
+      smtp:{
+        rejectUnAuthorized: true,
+      }
     });
 
     // Настройка письма
     const mailOptions = {
-      from: "qwevdanil1231weqqewqvwv@outlook.com", // От кого отправляется письмо
+      from: "informserice1234@mail.ru", // От кого отправляется письмо
       to: recipientEmail, // Кому отправляется письмо
       subject: "Заявка на услугу Информ Сервис", // Тема письма
       html: `
