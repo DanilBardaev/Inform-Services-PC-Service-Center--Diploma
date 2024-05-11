@@ -11610,3 +11610,68 @@
   level: 'info',
   timestamp: '2024-05-10T20:33:44.806Z'
 }
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T16:51:50.615Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T17:05:57.767Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T17:28:50.207Z'
+}
+{
+  message: 'Сервер запущен на порту 80 База данных синхронизирована',
+  level: 'info',
+  timestamp: '2024-05-11T17:31:51.062Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTMxMiIsImlhdCI6MTcxNTQ0ODgyMiwiZXhwIjoxNzE1NDUyNDIyfQ.u_KlJoFwpT3YGVcwKzEC1sdnnbeeM8anvOOMAdcx-j4',
+  level: 'info',
+  timestamp: '2024-05-11T17:33:42.204Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMzEyIiwiaWF0IjoxNzE1NDQ4ODM2LCJleHAiOjE3MTU0NTI0MzZ9.DwClE2HqSzIpZkKS_Tzve0H6-5YGRyvF4mGB10_QIuo',
+  level: 'info',
+  timestamp: '2024-05-11T17:33:56.146Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-11T17:34:09.646Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MTU0NDg4NzAsImV4cCI6MTcxNTQ1MjQ3MH0.Nr1PnzvJBwfZhoWptqsLENt9b8Y0N3d0TTN92jxEc8g',
+  level: 'info',
+  timestamp: '2024-05-11T17:34:30.528Z'
+}
+{
+  message: 'Получили профиль от Yandex [object Object]',
+  level: 'info',
+  timestamp: '2024-05-11T17:35:02.198Z'
+}
+{
+  message: 'Пользователь вышел',
+  level: 'info',
+  timestamp: '2024-05-11T17:35:58.130Z'
+}
+{
+  message: 'Работает клиент от Yandex',
+  level: 'info',
+  timestamp: '2024-05-11T17:36:42.804Z'
+}
+{
+  message: 'Пользователь зашёл на страницу логина',
+  level: 'info',
+  timestamp: '2024-05-11T17:36:42.808Z'
+}
+{
+  message: 'Токен подготовлен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiMTIzIiwiaWF0IjoxNzE1NDQ5MDExLCJleHAiOjE3MTU0NTI2MTF9.dOXuvJTBiyOh_kGNlIupBZf6WZR7ihjfIUwLaK40zvA',
+  level: 'info',
+  timestamp: '2024-05-11T17:36:51.958Z'
+}

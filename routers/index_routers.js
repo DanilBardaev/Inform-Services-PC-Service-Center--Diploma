@@ -10,7 +10,7 @@ const Entry = require("../models/entry");
 const multer = require("multer");
 const passport = require("passport");
 const ensureAuthenticated = require("../middleware/isAuthenticated");
-
+const nodemailer = require("nodemailer");
 const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
 const storage = multer.diskStorage({
@@ -136,7 +136,35 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   }
 });
 
-  
+router.post("/submit_contact_form", async (req, res) => {
+  const { name, email, phone, message } = req.body;
+
+  // Создание транспортера для отправки писем
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'your_email@gmail.com', // замените на вашу почту
+      pass: 'your_password' // замените на ваш пароль
+    }
+  });
+
+  // Настройка письма
+  const mailOptions = {
+    from: 'your_email@gmail.com', // замените на вашу почту
+    to: 'recipient_email@example.com', // замените на адрес получателя
+    subject: 'Сообщение с формы контактов',
+    text: `Имя: ${name}\nEmail: ${email}\nТелефон: ${phone}\nСообщение: ${message}`
+  };
+
+  try {
+    // Отправка письма
+    await transporter.sendMail(mailOptions);
+    res.status(200).send("Ваше сообщение отправлено нам на почту, с уважением Информ Сервис.");
+  } catch (error) {
+    console.error("Ошибка отправки сообщения:", error);
+    res.status(500).send("Ошибка при отправке сообщения");
+  }
+});
   
 function generateRandomNumber() {
   return Math.floor(1000 + Math.random() * 9000);
@@ -184,6 +212,9 @@ router.get("/pc", function(req, res) {
 
 router.get("/laptop", function(req, res) {
   res.render("laptop",{ link: link, messanger: messanger }); 
+});
+router.get("/contacts", function(req, res) {
+  res.render("contacts",{ link: link, messanger: messanger }); 
 });
 router.get("/index", function(req, res) {
   res.render("index",{ link: link, messanger: messanger }); 

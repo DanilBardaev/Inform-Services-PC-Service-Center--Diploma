@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <script src="https://kit.fontawesome.com/5833c2855b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    
+a{
+    text-decoration: none;
+    color:black
+}
+a:hover{
+    color: #cc8330ef;
+}
+.row.contacts h1 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+
+hr.hr {
+    border: none; 
+    background-color: rgb(255, 255, 255); 
+    height: 1px; 
+    max-width: 250px;
+    
+}
+
+.text-all{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+input.sms{
+    min-height: 150px;
+}
+
+h1.text-center span {
+    opacity: 0.5;
+    font-size: 28px;
+}
+
+p.text-center {
+    font-size: 21px;
+    opacity: 0.7;
+}
+
+hr.requisites {
+    border-left: thick solid #ff0000;
+
+    height: 1px; 
+    max-width: 250px;
+   
+}
+.requisites-lists {
+    display: flex;
+   max-width:1200px;
+    
+}
+.requisites-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+h1.text-center{
+    font-weight: 600;
+}
+textarea.form-control {
+    min-height: 150px;
+   
+}
+</style>
+<% if (locals.user==null) { %>
+    <header>
+      <%- include('./partials/header_for_index'); %>
+    </header>
+    <% } %>
+    <% if (locals.user) { %>
+    <%- include('./partials/header_for_index_auth'); %>
+    <% } %>
+<div class="container contacts">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="mt-5">Контакты</h1>
+            <ul class="list-unstyled">
+                <li><a href="tel:+78137832326">+7 (813) 783-23-26</a></li>
+                <li><a href="mailto:InformServices@gmail.com">InformServices@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h1 class="mt-5">Мы на карте</h1>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://yandex.ru/map-widget/v1/?um=constructor%3A94d511661eb235d35ef25c9f4e5aa89b0c7f3124f747cf61157f61f2ed08261f&amp;source=constructor" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Оставьте свое сообщение</h1>
+    <form action="/submit_contact_form" id="contactForm" method="POST">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="text" class="form-control" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="email">Адрес электронной почты</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
+
+<%- include('./partials/footer'); %>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+
+<script>
+ $(document).ready(function () {
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/submit_contact_form',
+            data: $(this).serialize(),
+            success: function (response) {
+                alert(response);
+                $('#contactForm')[0].reset();
+            },
+            error: function (error) {
+                console.error('Ошибка отправки сообщения:', error);
+                alert('Ошибка отправки сообщения');
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
