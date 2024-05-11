@@ -128,7 +128,7 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
       req.session.services[randomTicketNumber] = service;
 
       await Entry.create(data, recipientEmail, randomTicketNumber, service);
-      Entry.sendNotificationEmail(username, data.title, recipientEmail, service);
+   
       res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
   } catch (err) {
       console.error("Error submitting service request:", err);

@@ -22,7 +22,7 @@ const createEntriesTableSql = `
 db.run(createEntriesTableSql);
 
 class Entry {
-  static create(data, recipientEmail, ticketNumber, service) {
+  static create(data, recipientEmail, ticketNumber, service, comments) {
     const insertEntrySql = `
       INSERT INTO entries (username, title, content, imagePath, status, ticket, timestamp, createdAt)
       VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
@@ -33,7 +33,7 @@ class Entry {
       } else {
         console.log("Recipient email:", recipientEmail); // Выводим адрес получателя в консоль
         // Отправка уведомления о создании новой записи
-        this.sendNotificationEmail(data.username, data.title, recipientEmail, service); // Передача recipientEmail
+        this.sendNotificationEmail(data.username, data.title, recipientEmail, service,comments); // Передача recipientEmail
       }
     });
   }
@@ -73,7 +73,7 @@ class Entry {
   }
 
   // Метод для отправки уведомления о создании новой записи
-  static sendNotificationEmail(username, title, recipientEmail, service) {
+  static sendNotificationEmail(username, title, recipientEmail, service,comments) {
     // Настройка транспортера для отправки почты
     const transporter = nodemailer.createTransport({    
       host: 'smtp.mail.ru',
