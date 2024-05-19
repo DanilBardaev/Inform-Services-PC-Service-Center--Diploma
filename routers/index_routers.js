@@ -3,7 +3,6 @@ const path = require("path");
 const router = express.Router();
 const register = require("../controllers/register");
 const login = require("../controllers/login");
-
 const validate = require("../middleware/validate");
 const User = require("../models/user"); 
 const Entry = require("../models/entry"); 
@@ -145,7 +144,7 @@ router.post("/submit_contact_form", async (req, res) => {
     service: 'mail',
     port: 465,
     secure: true,
-    logger: true,
+  
     debug: true,
     secureConnection: false,
     auth: {

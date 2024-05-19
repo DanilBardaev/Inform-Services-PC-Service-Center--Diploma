@@ -80,7 +80,7 @@ class Entry {
       service: 'mail',
       port: 465,
       secure: true,
-      logger: true,
+   
       debug: true,
       secureConnection: false,
       auth: {

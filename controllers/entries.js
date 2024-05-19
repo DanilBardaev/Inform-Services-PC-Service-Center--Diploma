@@ -1,4 +1,4 @@
-const logger = require("../logger/index");
+
 const Entry = require("../models/entry"); // Используем модель Entry
 const multer = require("multer");
 const link = "https://kappa.lol/OFmCl";
@@ -87,7 +87,7 @@ exports.updateForm = (req, res) => {
       link: link,
       messanger: messanger,
     });
-    logger.info("Зашли на страницу edit post");
+  
   });
 };
 

@@ -1,5 +1,5 @@
 const GitHubStrategy = require("passport-github2").Strategy;
-const logger = require("../logger");
+
 require("dotenv").config();
 
 function passportFunctionGitHub(passport) {
@@ -24,7 +24,7 @@ function passportFunctionGitHub(passport) {
       },
       function (accessToken, refreshToken, profile, done) {
         process.nextTick(function () {
-          logger.info(`Получили профиль от GitHub ${profile.name}`);
+     
           return done(null, profile);
         });
       }

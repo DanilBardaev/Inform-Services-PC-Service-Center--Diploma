@@ -1,5 +1,5 @@
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
-const logger = require("../logger");
+
 require("dotenv").config();
 
 function passportFunctionGoogle(passport) {
@@ -24,7 +24,7 @@ function passportFunctionGoogle(passport) {
         passReqToCallback: true,
       },
       function (request, accessToken, refreshToken, profile, done) {
-        logger.info(`Получили профиль от Google ${profile.name}`);
+       
         return done(null, profile);
       }
     )

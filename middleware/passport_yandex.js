@@ -1,6 +1,6 @@
 const YandexStrategy = require("passport-yandex").Strategy;
 const User = require("../models/user");
-const logger = require("../logger");
+
 require("dotenv").config();
 
 function passportFunction(passport) {
@@ -38,7 +38,7 @@ function passportFunction(passport) {
           // to represent the logged-in user.  In a typical application, you would
           // want to associate the Yandex account with a user record in your
           // database, and return that user instead.
-          logger.info(`Получили профиль от Yandex ${profile.name}`);
+       
           return done(null, profile);
         });
       }

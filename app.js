@@ -11,7 +11,7 @@ const session = require("express-session");
 const messanger = "https://kappa.lol/iSONv";
 const link = "https://kappa.lol/OFmCl";
 const bodyParser = require("body-parser");
-const logger = require("./logger/index");
+
 const passport = require("passport");
 const passportFunction = require("./middleware/passport_jwt");
 const passportFunctionYandex = require("./middleware/passport_yandex");
@@ -80,7 +80,7 @@ app.get("/", (req, res) => {
 
 app.listen(port, async () => {
   // await sequelize.sync({force: true})
-  logger.info(`Сервер запущен на порту ` + port + " База данных синхронизирована");
+ 
   console.log(`Сервер запущен на порту ` + port + " База данных синхронизирована");
 
 });

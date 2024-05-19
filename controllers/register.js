@@ -2,7 +2,6 @@ const User = require("../models/user");
 
 const link = "https://kappa.lol/OFmCl";
 const messanger = "https://kappa.lol/iSONv";
-const logger = require("../logger/index");
 const winston = require("winston");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -21,7 +20,7 @@ exports.submit = async (req, res, next) => {
         return next(err);
       }
       if (user) {
-        logger.info("Такой пользователь в базе уже существует:", user);
+
         res.redirect("/index"); 
       } else {
         User.create(
@@ -53,7 +52,7 @@ exports.submit = async (req, res, next) => {
               maxAge: 60 * 60,
             });
             console.log("Токен подготовлен: " + token);
-            logger.info("Токен подготовлен: " + token);
+          
             res.redirect("/index"); 
           }
         );

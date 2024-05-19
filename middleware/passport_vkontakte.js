@@ -1,5 +1,5 @@
 const VKontakteStrategy = require("passport-vkontakte").Strategy;
-const logger = require("../logger");
+
 require("dotenv").config();
 
 function passportFunctionVK(passport) {
@@ -24,7 +24,7 @@ function passportFunctionVK(passport) {
       },
       function (accessToken, refreshToken, profile, done) {
         process.nextTick(function () {
-          logger.info(`Получили профиль от VK ${profile.name}`);
+        
           return done(null, profile);
         });
       }
