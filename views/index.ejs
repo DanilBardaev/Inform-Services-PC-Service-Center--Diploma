@@ -9,322 +9,355 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-      * {
-    list-style-type: none !important;
+     * {
+        list-style-type: none !important;
+        text-decoration: none !important;
+      }
 
-}
-.img-logo img{
- width: 45%;
-}
-.navbar-brand {
-    max-width: 240px;
+      .img-logo img {
+        width: 45%;
+      }
+
+      .navbar-brand {
+        max-width: 240px;
+        max-height: 200px;
+      }
+
+      .nav-item a {
+        font-size: 14px;
+        font-weight: 400;
+        color: #8A8A8A;
+        font-family: Roboto, Arial, ArialRuble, sans-serif;
+      }
+
+      a.nav-link1.px-1 {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: #8A8A8A;
+        font-family: Roboto, Arial, ArialRuble, sans-serif;
+      }
+
+      a.nav-link1.px-1 i.fa-solid {
+        color: black;
+      }
+
+      a.nav-link1.px-1:hover {
+        color: rgb(39, 38, 38);
+        font-weight: 500;  
+      }
+
+      i.fa-solid:hover {
+        transform: scale(1.06);
+      }
+
+      i.fa-solid {
+        transition: transform 0.4s;
+      }
+
+      div.text-1 a.wireless-help {
+        width: 100px;
+        height: 100px;
+      }
+
+      li.mt-4 a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+      }
+
+      li.mt-4 a:hover {
+        color: #153070;
+      }
+
+      div.callback a.callback {
+        line-height: 37px;
+        border-bottom: 1px dashed #153070;
+        color: #153070 !important;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        cursor: pointer;  
+      }
+
+      .row.header {
+        border: 1px solid #080b111a;
+        border-radius: 15px;
+      }
+
+      .modal-content.c {
+        height: 619px;
+        color: white;
+        background-color: #01123a00;
+        border: 1px solid #0000000e;
+        border-radius: 8px;
+        box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+      }
+
+      div.col-md-3 a.modal-link {
+        border-bottom: 1px dashed #153070;
+        color: white;
+        transition: all 0.3s;
+        cursor: pointer; 
+      }
+
+      li.cards.col-lg-2 {
+        border: 2px solid #D9D9D9;
+        border-radius: 15px;
+        max-width: 136px;
+        max-height: 154px;
+        transition: transform 0.7s;
+        margin-left: 25px;
+      }
+
+      li.cards.col-lg-2:hover {
+        box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
+        transform: scale(1.04);
+      }
+
+      .btn.btn-secondary { 
+        transition: transform 0.7s;
+      }
+
+      .btn.btn-secondary:hover {
+        transform: scale(1.09)
+      }
+
+      li.cards a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
+
+      .carousel-control-prev, .carousel-control-next {
+        background-color: black;
+        border-radius: 50%;
+      }
+
+      .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: black;
+        border-radius: 25%;
+      }
+
+      .carousel-inner {
+        border-radius: 13px;
+        box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
+      }
+
+      .active-info {
+        color: #153070;
+        font-weight: 600;
+      }
+
+      .info-item {
+        display: none;
+      }
+
+      .info-item.active-info {
+        display: block;
+      }
+
+      #info-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #info-list ul li {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .diagnostics-card img.w {
+        border-radius: 10px;
+        max-height: 250px;
+      }
+
+      .info-item {
+        min-width: 500px;
+      }
+
+      .diagnostics-cards {
+        border: 1px solid #212b882a;
+        border-radius: 16px;
+        box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+        background-image: url("https://kappa.lol/4wqgm");
+        background-repeat: no-repeat; 
+      }
+
+      #carouselExampleFade {
+        min-width: 880px;
+      }
+
+      .container.slider {
+        margin-left: 400px;
+      }
+
+      .numbers {
+        background: #153070;
+        color: white;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 15px;
+        border-radius: 25px;
+      }
+
+      .container.work-progress {
+        border: 1px solid #0000003b;
+        border-radius: 15px;
+        box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+      }
+
+      .work-image {
+        padding-top: 45px;
+        padding-bottom: 25px;
+      }
+
+      .row p.text-center {
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      .footer-content1 {
+        border-radius: 12px;
+      }
+
+      .carousel-caption {
+        color: #fff;
+        max-width: 250px; 
+        max-height: 255px; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        margin-left: 50px;
+      }
+
+      .carousel-control-prev, .carousel-control-next {
+        width: auto;
+        background-color: rgba(0, 0, 0, 0); 
+        border-radius: 0;
+        font-size: 2rem; 
+        padding: 10px 20px; 
+      }
+
+      footer .row {
+        background-color: #343434;
+        border-radius: 11px;  
+        padding: 35px;  
+      }
+
+      .helps-services {
+        display: inline-flex;
+      }
+
+      .list-unstyled {
+        margin-top: 50px;
+        margin-left: -170px;
+        min-width: 270px;
+      }
+
+      footer h4 {
+        color: #ccc;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding-bottom: 3px;
+      }
+
+      footer a {
+        text-decoration: none;
+        transition: all .3s;
+      }
+
+      footer a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      footer a, footer li {
+        color: #c8c8c8;
+      }
+
+      hr {
+        border: none; 
+        background-color: rgb(255, 255, 255); 
+        height: 3px; 
+        max-width: 250px;
+      }
+
+      h1.h1 {
+        font-size: 11px;
+        color: white;
+        opacity: 0.5;
+        text-align: center;
+      }
+
+      .img-footer h5 {
+        color: #ccc;
+      }
+
+
+      @media (max-width: 1440px) {
+        .container {
+          padding: 0;
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 1200px) {
+        .container {
+          padding: 0;
+          margin-left: 0;
+        }
+        li.cards.col-lg-2 {
+        margin-left: 0;
+        
+        }
+        
+      }
+      @media (max-width: 1199px) {
+  .container.slider {
+    margin-left: 0;
+  }
+  .second-block-content {
+    display: none;
+  }
+  #carouselExampleFade {
+    min-width: 100%;
+  }
+
+  .carousel-caption {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .diagnostics-card img.w {
     max-height: 200px;
-}
-
-.nav-item a {
-    font-size: 14px;
-    font-weight: 400;
-    color: #8A8A8A;
-    font-family: Roboto, Arial, ArialRuble, sans-serif;
-  }
-
-  a.nav-link1.px-1 {
-    text-decoration: none;
-  }
-  a.nav-link1.px-1 i.fa-solid {
-    color: black;
-  }
-  a.nav-link1.px-1{
-    font-size: 16px;
-    font-weight: 400;
-    color: #8A8A8A;
-    font-family: Roboto, Arial, ArialRuble, sans-serif;
-}
-
-  a.nav-link1.px-1:hover {
-    color: rgb(39, 38, 38);
-    font-weight: 500;  
-}   
-
-i.fa-solid:hover {
-  transform: scale(1.06);
-}
-i.fa-solid {
-  transition: transform 0.4s;
-}
-
-div.text-1 a.wireless-help {
-  width: 100px;
-  height: 100px;
-  
-}
-
-li.mt-4 a {
-  text-decoration: none;
-  color:black;
-  font-weight: 600;
-}
-
-li.mt-4 a:hover {
-  color: #153070;
-}
-
-div.callback a.callback {
-  line-height: 37px;
-    border-bottom: 1px dashed #153070;
-    color: #153070 !important;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    text-decoration: none;
-    cursor: pointer;  
-}
-
-.row.header{
-  border: 1px solid #080b111a;
-  border-radius: 15px;
-
-}
-
-
-
-.modal-content.c {
-
-  height: 619px;
-  color: white;
-  background-color: #01123a00;
-  border: 1px solid #0000000e;
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-}
-
-
-div.col-md-3 a.modal-link {
-  border-bottom: 1px dashed #153070;
-  color: white;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  text-decoration: none;
-  cursor: pointer; 
-}
-
-* {
-  text-decoration: none !important;
-}
-
-li.cards.col-lg-2{
-  border-right: 2px solid #D9D9D9 !important;
-  border-left: 2px solid #D9D9D9 !important;
-  border-bottom: 2px solid #D9D9D9 !important;
-    border-radius: 15px;
-    max-width: 136px;
-    max-height: 154px;
-    transition: transform 0.7s;
-    margin-left: 25px;
-  }
-  
-  li.cards.col-lg-2:hover {
-     border-right: 2px solid #D9D9D9 !important;
-  border-left: 2px solid #D9D9D9 !important;
-  border-bottom: 2px solid #D9D9D9 !important;
-    box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
-    -webkit-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
-    -moz-box-shadow: 0px 8px 25px -3px rgba(21,48,112,0.75);
-    transform: scale(1.04);
-  }
-  .btn.btn-secondary{ 
-    transition: transform 0.7s;
-  }
-  .btn.btn-secondary:hover{
-    transform: scale(1.09)
-  }
-  li.cards a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-   
-  }
-  .carousel-control-prev, .carousel-control-next {
-    background-color: black;
-    border-radius: 50%;
-    
-  }
-
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
-    border-radius: 25%;
-  }
-  .carousel-inner {
-    border-radius: 13px;
-    box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px -6px 8px -7px rgba(0,0,0,0.75);
-  }
-  
-  .active-info {
-    color: #153070;
-    font-weight: 600;
   }
 
   .info-item {
-    display: none;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    max-width: 120px;
+    max-height: 100px;
   }
 
-  .info-item.active-info {
-    display: block;
+  .carousel-caption {
+    font-size: 14px;
+    max-width: 100%;
   }
 
-  /* Убираем стандартные маркеры списка */
-  #info-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .list-unstyled {
+    margin-left: 0;
+    min-width: 100%;
   }
-
-  /* Оформление списка горизонтально */
-  #info-list ul li {
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  .diagnostics-card img.w {
-    border-radius: 10px;
-    max-height: 250px;
-  }
-
-.info-item {
-  min-width: 500px ;
 }
-
-.diagnostics-cards{
-  border: 1px solid #212b882a;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-  -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-  -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-  background-image: url("https://kappa.lol/4wqgm");
-  background-repeat: no-repeat; 
-}
-
-#carouselExampleFade {
-  min-width: 880px;
-  
-}
-
-.container.slider {
-  margin-left: 400px;
-}
-.numbers {
-    background: #153070;
-    color: white;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    font-size: 15px;
-    border-radius: 25px;
-   
-}
-
-.container.work-progress{
-    border: 1px solid #0000003b;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-}
-
-
-.work-image {
-    padding-top: 45px;
-    padding-bottom: 25px;
-}
-.row p.text-center {
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.footer-content1 {
-    border-radius: 12px;
-}
-.carousel-caption {
-    color: #fff;
-    max-width: 250px; 
-    max-height: 255px; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    margin-left: 50px;
-    
-   
-}
-
-  .carousel-control-prev, .carousel-control-next {
-    width: auto;
-    background-color: rgba(0, 0, 0, 0); 
-    border-radius: 0;
-    font-size: 2rem; 
-    padding: 10px 20px; 
-  }
-footer .row{
-    background-color: #343434;
-    border-radius: 11px;  
-    padding: 35px;  
-}
-
-.helps-services {
-    display: inline-flex;
-   
-}
-.list-unstyled {
-    margin-top: 50px;
-    margin-left: -170px;
-    min-width: 270px;
-}
-footer h4 {
-    color: #ccc;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding-bottom: 3px;
-}
-footer a {
-    text-decoration: none;
-    transition: all .3s;
-}
-footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-footer a, footer li {
-    color: #c8c8c8;
-}
-
-
-hr {
-    border: none; 
-    background-color: rgb(255, 255, 255); 
-    height: 3px; 
-    max-width: 250px;
-    
-}
-h1.h1 {
-    font-size: 11px;
-    color: white;
-    opacity: 0.5;
-    text-align: center;
-}
-
-.img-footer h5{
-    color: #ccc;
-    
-}
-
     </style>
 </head>
 <body>
@@ -355,7 +388,7 @@ h1.h1 {
               <img width="60" src="https://kappa.lol/aOLEr">
             </div>
             <div class="text-block text-center">
-              <p class="col-md-6 pt-3 ps-4 ">Ноутбук</p>
+              <p class="col-md-6 pt-3 ps-4">Ноутбук</p>
             </div>
           </a>
         </li>
@@ -365,7 +398,7 @@ h1.h1 {
               <img width="60" src="https://kappa.lol/9zCiY">
             </div>
             <div class="text-block text-center">
-              <p class="col-md-6 pt-3 ps-4 ">Телефон</p>
+              <p class="col-md-6 pt-3 ps-4">Телефон</p>
             </div>
           </a>
         </li>
@@ -402,7 +435,7 @@ h1.h1 {
       </div>
     </div>
     <div class="container slider">
-      <div class="row pt-3 pb-3 ">
+      <div class="row pt-3 pb-3">
         <div id="carouselExampleFade" class="carousel slide carousel-fade col-md-7" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -424,15 +457,16 @@ h1.h1 {
         <div class="second-block-content col-md-4">
           <div class="first-img pb-5">
             <img src="https://kappa.lol/0IY7V" alt="">
-            <p class="pb-2" style="margin-top: -50px; max-width: 140px; margin-left: 40px; font-size: 19px">Выберете Ваше устройство или услугу</p>
+            <p class="pb-2" style="margin-top: -50px; max-width: 140px; margin-left: 40px; font-size: 19px">Выберите Ваше устройство или услугу</p>
           </div>
           <div class="second-img">
             <img src="https://kappa.lol/8tvGc" alt="">
-            <p style="margin-top: -120px; max-width: 140px; margin-left: 40px; font-size: 19px">Или выберете наиболее распространенную проблему</p>
+            <p style="margin-top: -120px; max-width: 140px; margin-left: 40px; font-size: 19px">Или выберите наиболее распространенную проблему</p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="container diagnostics">
       <div class="row diagnostics pb-4">
         <div class="diagnostics-card col-md-3">
@@ -442,7 +476,7 @@ h1.h1 {
           <div id="info-list" class="col-md-3">
             <ul>
               <li class="active-info mt-3" data-info="info1">Домашний компьютер</li>
-              <div id="info1" class="info-item active-info pt-5 ">
+              <div id="info1" class="info-item active-info pt-5">
                 <p><a href="#">– Компьютер не включается</a></p>
                 <p><a href="#">– Включается, но изображения нет</a></p>
                 <p><a href="#">– Медленно работает, зависает</a></p>

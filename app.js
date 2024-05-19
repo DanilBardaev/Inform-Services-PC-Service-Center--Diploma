@@ -5,9 +5,9 @@ const path = require("path");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const adminRoutes = require("./controllers/admin");
+
 const session = require("express-session");
-const message = require("./middleware/message");
+
 const messanger = "https://kappa.lol/iSONv";
 const link = "https://kappa.lol/OFmCl";
 const bodyParser = require("body-parser");
@@ -69,14 +69,14 @@ app.use(
 );
 app.use(favicon(__dirname + "/image/logo-png.png"));
 app.use(userSession);
-app.use(message);
+
 app.use(myRoutes);
 
 app.get("/", (req, res) => {
   res.render("registerForm.ejs", { link: link, messanger: messanger });
 });
 
-app.use(adminRoutes);
+
 
 app.listen(port, async () => {
   // await sequelize.sync({force: true})

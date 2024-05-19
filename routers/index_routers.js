@@ -3,7 +3,7 @@ const path = require("path");
 const router = express.Router();
 const register = require("../controllers/register");
 const login = require("../controllers/login");
-const entries = require("../controllers/entries");
+
 const validate = require("../middleware/validate");
 const User = require("../models/user"); 
 const Entry = require("../models/entry"); 
@@ -206,18 +206,7 @@ router.get("/profile", ensureAuthenticated, async function(req, res) {
 
 
 
-router.get("/entries", entries.list);
-router.get("/post", entries.form);
 
-router.post(
-  "/post",
-  upload.single("entryImage"),
-  ensureAuthenticated,
-  validate.required("[entry[title]]"),
-  validate.required("[entry[content]]"),
-  validate.lengthAbove("[entry[title]]", 4),
-  entries.submit
-);
 
 router.get("/register", register.form);
 
@@ -246,11 +235,7 @@ router.get("/services", function(req, res) {
 router.get("/discounts", function(req, res) {
   res.render("discounts",{ link: link, messanger: messanger }); 
 });
-router.get("/delete/:id", entries.delete);
 
-router.get("/edit/:id", entries.updateForm);
-
-router.post("/edit/:id", entries.updateSubmit);
 
 router.put("/edit/:id", async (req, res, next) => {
   try {
@@ -279,7 +264,7 @@ router.get(
   "/auth/yandex/callback",
   passport.authenticate("yandex", { failureRedirect: "/login" }),
   function (req, res) {
-    res.redirect("/entries");
+    res.redirect("/index");
   }
 );
 
