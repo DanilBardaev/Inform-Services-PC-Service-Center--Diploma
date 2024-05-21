@@ -3,41 +3,42 @@ const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
 
-// SQL-запрос для создания таблицы записей (если она не существует)
 const createEntriesTableSql = `
   CREATE TABLE IF NOT EXISTS entries (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER, 
     username TEXT NOT NULL,
     title TEXT,
     content TEXT NOT NULL,
     imagePath TEXT,
     status TEXT DEFAULT 'Подана',
-    ticket INTEGER, -- Добавляем поле для номера заявки
+    ticket INTEGER, -- Поле для номера заявки
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) 
   )
 `;
-
-// Создание таблицы записей (если она не существует)
 db.run(createEntriesTableSql);
 
 class Entry {
   static create(data, recipientEmail, ticketNumber, service, comments) {
     const insertEntrySql = `
-      INSERT INTO entries (username, title, content, imagePath, status, ticket, timestamp, createdAt)
-      VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+      INSERT INTO entries (user_id, username, title, content, imagePath, status, ticket, timestamp, createdAt)
+      VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
     `;
-    db.run(insertEntrySql, [data.username, data.title, data.content, data.imagePath, 'Подана', ticketNumber], (err) => {
+    db.run(insertEntrySql, [data.user_id, data.username, data.title, data.content, data.imagePath, 'Подана', ticketNumber], (err) => {
       if (err) {
         console.error("Error creating entry:", err);
       } else {
-        console.log("Recipient email:", recipientEmail); // Выводим адрес получателя в консоль
-        // Отправка уведомления о создании новой записи
-        this.sendNotificationEmail(data.username, data.title, recipientEmail, service,comments); // Передача recipientEmail
+        console.log("Recipient email:", recipientEmail);
+        this.sendNotificationEmail(data.username, data.title, recipientEmail, service, comments);
       }
     });
   }
-
+  static getUserEntries(userId, cb) {
+    const selectEntriesSql = "SELECT * FROM entries WHERE user_id = ? ORDER BY timestamp DESC";
+    db.all(selectEntriesSql, [userId], cb);
+  }
   // Метод для получения всех записей
   static selectAll(cb) {
     const selectAllSql = "SELECT * FROM entries ORDER BY timestamp DESC";
@@ -99,10 +100,11 @@ class Entry {
       subject: "Заявка на услугу Информ Сервис", // Тема письма
       html: `
       <div style="color: #00000; font-weight: 400;">
-      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваша заявка принята!</p>
+      <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваше заявка отправлена нам на почту!</p>
       <p style="color: #000000; font-size: 16x;">Дорогой ${username},</p>
       <p style="color: #000000; font-size: 16x;">${title} была создана.</p>
       <p style="color: #000000; font-size: 16x;">Услуга: ${service}.</p>
+      <p style="color: #000000; font-size: 16x;">Ваше сообщение: ${comments}</p>
       <p style="margin-top: 20px; color: #000000; font-size: 16x;">С уважением,</p>
       <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
       <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">

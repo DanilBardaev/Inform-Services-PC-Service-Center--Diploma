@@ -76,69 +76,61 @@ router.get("/service_request", function(req, res) {
 
 router.post("/submit_request_service_request", ensureAuthenticated, async (req, res) => {
   const username = req.user ? req.user.name : null;
-  const { service, comments, recipientEmail } = req.body; 
+  const { service, comments } = req.body;
+  const recipientEmail = req.user.email;
 
   const data = {
-      username: username,
-      title: "Новая заявка",
-      content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
-      imagePath: ""
+    user_id: req.user.id,
+    username: username,
+    title: "Новая заявка",
+    content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
+    imagePath: ""
   };
 
   try {
-      const randomTicketNumber = generateRandomNumber();
-      const ticketNumber = req.session.ticketNumber || [];
-      ticketNumber.push(randomTicketNumber);
-      req.session.ticketNumber = ticketNumber;
-      
-      // Сохраняем информацию о выбранной услуге для этой заявки в объекте services
-      req.session.services = req.session.services || {};
-      req.session.services[randomTicketNumber] = service;
+    const randomTicketNumber = generateRandomNumber();
 
-      await Entry.create(data, recipientEmail, randomTicketNumber, service);
-    
-      res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
+    // Сохраняем информацию о заявке в базе данных
+    await Entry.create(data, recipientEmail, randomTicketNumber, service, comments);
+
+    res.redirect(`/profile`);
   } catch (err) {
-      console.error("Error submitting service request:", err);
-      res.status(500).send("Ошибка при отправке заявки");
+    console.error("Error submitting service request:", err);
+    res.status(500).send("Ошибка при отправке заявки");
   }
 });
 
+
 router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   const username = req.user ? req.user.name : null;
-  const { service, comments } = req.body; 
-  const recipientEmail = req.user.email; 
+  const { service, comments } = req.body;
+  const recipientEmail = req.user.email;
 
   const data = {
-      username: username,
-      title: "Новая заявка",
-      content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
-      imagePath: ""
+    user_id: req.user.id,
+    username: username,
+    title: "Новая заявка",
+    content: `Выбранная услуга: ${service}\n\nКомментарий: ${comments}`,
+    imagePath: ""
   };
 
   try {
-      const randomTicketNumber = generateRandomNumber();
-      const ticketNumber = req.session.ticketNumber || [];
-      ticketNumber.push(randomTicketNumber);
-      req.session.ticketNumber = ticketNumber;
-      
-      // Сохраняем информацию о выбранной услуге для этой заявки в объекте services
-      req.session.services = req.session.services || {};
-      req.session.services[randomTicketNumber] = service;
+    const randomTicketNumber = generateRandomNumber();
 
-      await Entry.create(data, recipientEmail, randomTicketNumber, service);
-   
-      res.redirect(`/profile?service=${encodeURIComponent(service)}`); 
+    // Сохраняем информацию о заявке в базе данных
+    await Entry.create(data, recipientEmail, randomTicketNumber, service, comments);
+
+    res.redirect(`/profile`);
   } catch (err) {
-      console.error("Error submitting service request:", err);
-      res.status(500).send("Ошибка при отправке заявки");
+    console.error("Error submitting service request:", err);
+    res.status(500).send("Ошибка при отправке заявки");
   }
 });
 
 router.post("/submit_contact_form", async (req, res) => {
   const { name, email, phone, message } = req.body;
   const { service, comments, recipientEmail } = req.body; 
-  // Создание транспортера для отправки писем
+ 
   const transporter = nodemailer.createTransport({    
     host: 'smtp.mail.ru',
     service: 'mail',
@@ -159,8 +151,8 @@ router.post("/submit_contact_form", async (req, res) => {
   // Настройка письма
   const mailOptions = {
     
-    from: "informserice1234@mail.ru", // От кого отправляется письмо
-      to: recipientEmail, // Кому отправляется письмо
+    from: "informserice1234@mail.ru", 
+      to: recipientEmail, 
     subject: 'Мы получили ваше сообщение',
     html: `
       <div style="color: #00000; font-weight: 400;">
@@ -177,7 +169,7 @@ router.post("/submit_contact_form", async (req, res) => {
   };
 
   try {
-    // Отправка письма
+   
     await transporter.sendMail(mailOptions, recipientEmail);
     res.status(200).send("Ваше сообщение отправлено нам на почту, с уважением Информ Сервис.");
   } catch (error) {
@@ -192,17 +184,20 @@ function generateRandomNumber() {
 
 router.get("/profile", ensureAuthenticated, async function(req, res) {
   try {
-      const ticketNumbers = req.session.ticketNumber || []; // Получаем массив номеров заявок из сессии
-      const services = req.session.services || {}; // Получаем объект с выбранными услугами для заявок
+   
+    Entry.getUserEntries(req.user.id, (err, entries) => {
+      if (err) {
+        console.error("Error fetching user entries:", err);
+        return res.status(500).send("Ошибка при получении заявок пользователя");
+      }
 
-      // Рендеринг страницы профиля с массивом номеров заявок и выбранными услугами
-      res.render("profile", { user: req.user, services: services, ticketNumbers: ticketNumbers, link: link }); 
+      res.render("profile", { user: req.user, entries: entries, link: link });
+    });
   } catch (err) {
-      console.error("Error fetching ticket number:", err);
-      res.status(500).send("Ошибка при получении номера заявки");
+    console.error("Error fetching ticket number:", err);
+    res.status(500).send("Ошибка при получении номера заявки");
   }
 });
-
 
 
 

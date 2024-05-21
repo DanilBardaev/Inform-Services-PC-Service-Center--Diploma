@@ -37,33 +37,43 @@
     </div>      
   </div>
 </div>
-<% ticketNumbers.forEach(function(ticketNumber) { %>
-  <div class="container mt-5">
-      <div class="row justify-content-center">
-          <div class="col-md-8"> 
-              <div class="card">
-                  <div class="card-header">
-                      Ваша Заявка
-                  </div>
-                  <div class="card-body">
-                      <p>Имя пользователя: <%= user.name %></p>
-                      <p>Номер заявки: <%= ticketNumber %></p>
-                      <% if (user.email) { %>
-                          <p>Электронная почта пользователя: <%= user.email %></p>
-                      <% } %>
-                      <% if (user.status) { %>
-                          <p>Статус заявки: <%= user.status %></p>
-                      <% } else { %>
-                          <p>Статус заявки: Подана</p>
-                      <% } %>
-                      <p>Выбранная услуга: <%= services[ticketNumber] %></p> <!-- Используйте ticketNumber для получения соответствующей услуги -->
-                  </div>
-              </div>
-          </div>
-      </div>
+<% if (entries.length === 0) { %>
+  <div class="container">
+    <div class="row justify-content-center ticket-container">
+        <div class="col-md-6">
+            <div class="card ticket-card">
+                <div class="card-body">
+                    <p class="ticket-info text-center" style="color:black">Вы еще не оставляли заявок!</p>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
-<% }) %>
-
+  <% } else { %>
+<% entries.forEach(function(entry) { %>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8"> 
+        <div class="card">
+          <div class="card-header">
+            Ваша Заявка
+          </div>
+          <div class="card-body">
+            <p>Имя пользователя: <%= entry.username %></p>
+            <p>Номер заявки: <%= entry.ticket %></p>
+            <% if (user.email) { %>
+              <p>Электронная почта пользователя: <%= user.email %></p>
+            <% } %>
+            <p>Статус заявки: <%= entry.status %></p>
+            <p>Выбранная услуга: <%= entry.content.split('\n\n')[0].split(': ')[1] %></p>
+            <p>Комментарий: <%= entry.content.split('\n\n')[1].split(': ')[1] %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+  <% } %>
 <footer class="pt-5"><%- include('./partials/footer')%></footer>
 <script>
   function triggerFileInput() {
