@@ -216,6 +216,18 @@ router.get("/pc", function(req, res) {
 router.get("/pc-service", function(req, res) {
   res.render("pc-service",{ link: link, messanger: messanger }); 
 });
+router.get("/apple", function(req, res) {
+  res.render("apple",{ link: link, messanger: messanger }); 
+});
+router.get("/mobile", function(req, res) {
+  res.render("mobile",{ link: link, messanger: messanger }); 
+});
+router.get("/tablet", function(req, res) {
+  res.render("tablet",{ link: link, messanger: messanger }); 
+});
+router.get("/internet", function(req, res) {
+  res.render("internet",{ link: link, messanger: messanger }); 
+});
 router.get("/laptop", function(req, res) {
   res.render("laptop",{ link: link, messanger: messanger }); 
 });

@@ -412,7 +412,7 @@ h5.uslugi-price-button {
     height: 550px;
     padding-right: 29px !important;
     border-right: 1px solid #D9D9D9 !important;
-}@media screen and (min-width: 1200px) {
+}@media screen and (max-width: 1200px) {
     .img-logo img {
         width: 30%;
     }
@@ -442,11 +442,18 @@ h5.uslugi-price-button {
         margin-left: 5%;
         margin-right: 5%;
     }
-    /* Другие стили для больших экранов */
+.footer-content {
+        display: none ;
+    }
+    .second-text-pc {
+        display: none;
+    }
 }
 
-/* Стили для смартфонов (720px на 1440px) */
 @media screen and (max-width: 720px) {
+    .second-text-pc {
+        display: none;
+    }
     .img-logo img {
         width: 70%;
     }
@@ -484,11 +491,12 @@ h5.uslugi-price-button {
     }
     .first-text-pc, .second-text-pc {
         width: 100% !important;
+        height: auto !important;;
         padding: 0 !important;
         border: none !important;
     }
     .cards-service-laptop {
-        width: 100%;
+        width: 400px;
         height: auto;
         border-bottom: 1px solid #D9D9D9 !important;
     }
@@ -498,6 +506,10 @@ h5.uslugi-price-button {
     }
     .text-center.pt-2 {
         font-size: 14px;
+    }
+    .uslugi-price-button {
+        font-size: 13px;
+       margin-bottom: 0px;
     }
     
 }
@@ -603,7 +615,7 @@ h5.uslugi-price-button {
                                     <label class="form-check">
                                         <input type="checkbox" class="form-check-input" name="service" value="Установка DVD привода">
                                         <h6 class="uslugi-price-button">Установка DVD привода</h6>
-                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 540 ₽</h5>
                                     </label>
                                 </div>
                                 <div class="cards-service-laptop">
@@ -624,28 +636,28 @@ h5.uslugi-price-button {
                                     <label class="form-check">
                                         <input type="checkbox" class="form-check-input" name="service" value="Ремонт и замена шлейфов">
                                         <h6 class="uslugi-price-button">Ремонт и замена шлейфов</h6>
-                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 600 ₽</h5>
                                     </label>
                                 </div>
                                 <div class="cards-service-laptop">
                                     <label class="form-check">
                                         <input type="checkbox" class="form-check-input" name="service" value="Ремонт и замена разъемов">
                                         <h6 class="uslugi-price-button">Ремонт и замена разъемов</h6>
-                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 800 ₽</h5>
                                     </label>
                                 </div>
                                 <div class="cards-service-laptop">
                                     <label class="form-check">
                                         <input type="checkbox" class="form-check-input" name="service" value="Реставрация или замена корпуса">
-                                        <h6 class="uslugi-price-button">Реставрация или замена корпуса</h6>
-                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                        <h6 class="uslugi-price-button">Реставрация,замена корпуса</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 800 ₽</h5>
                                     </label>
                                 </div>
                                 <div class="cards-service-laptop">
                                     <label class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="service" value="Устранение аппаратных неисправностей">
-                                        <h6 class="uslugi-price-button">Устранение аппаратных неисправностей</h6>
-                                        <h5 class="uslugi-price-button" style="float: right;">от 460 ₽</h5>
+                                        <input type="checkbox" class="form-check-input" name="service" value="Устранение неисправностей">
+                                        <h6 class="uslugi-price-button">Устранение неисправностей</h6>
+                                        <h5 class="uslugi-price-button" style="float: right;">от 700 ₽</h5>
                                     </label>
                                 </div>
                                 <button class="btn btn-primary mt-3" id="orderButton" data-bs-toggle="modal" data-bs-target="#confirmationModal">Заказать</button>
