@@ -213,7 +213,9 @@ router.post("/login", login.submit);
 router.get("/pc", function(req, res) {
   res.render("pc",{ link: link, messanger: messanger }); 
 });
-
+router.get("/pc-service", function(req, res) {
+  res.render("pc-service",{ link: link, messanger: messanger }); 
+});
 router.get("/laptop", function(req, res) {
   res.render("laptop",{ link: link, messanger: messanger }); 
 });

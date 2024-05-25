@@ -1,4 +1,3 @@
-// entry.js
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
@@ -39,25 +38,24 @@ class Entry {
     const selectEntriesSql = "SELECT * FROM entries WHERE user_id = ? ORDER BY timestamp DESC";
     db.all(selectEntriesSql, [userId], cb);
   }
-  // Метод для получения всех записей
+ 
   static selectAll(cb) {
     const selectAllSql = "SELECT * FROM entries ORDER BY timestamp DESC";
     db.all(selectAllSql, cb);
   }
 
-  // Метод для получения записи по идентификатору
   static getEntryById(id, cb) {
     const selectEntrySql = "SELECT * FROM entries WHERE id = ?";
     db.get(selectEntrySql, [id], cb);
   }
 
-  // Метод для удаления записи по идентификатору
+
   static deleteById(id, cb) {
     const deleteEntrySql = "DELETE FROM entries WHERE id = ?";
     db.run(deleteEntrySql, [id], cb);
   }
 
-  // Метод для обновления записи
+
   static updateById(id, updateInf, cb) {
     const updateEntrySql = `
       UPDATE entries
@@ -67,15 +65,13 @@ class Entry {
     db.run(updateEntrySql, [updateInf.title, updateInf.content, updateInf.imagePath, id], cb);
   }
 
-  // Метод для обновления статуса заявки
   static updateStatusById(id, status, cb) {
     const updateStatusSql = "UPDATE entries SET status = ? WHERE id = ?";
     db.run(updateStatusSql, [status, id], cb);
   }
 
-  // Метод для отправки уведомления о создании новой записи
   static sendNotificationEmail(username, title, recipientEmail, service,comments) {
-    // Настройка транспортера для отправки почты
+   
     const transporter = nodemailer.createTransport({    
       host: 'smtp.mail.ru',
       service: 'mail',
@@ -93,11 +89,10 @@ class Entry {
       }
     });
 
-    // Настройка письма
     const mailOptions = {
-      from: "informserice1234@mail.ru", // От кого отправляется письмо
-      to: recipientEmail, // Кому отправляется письмо
-      subject: "Заявка на услугу Информ Сервис", // Тема письма
+      from: "informserice1234@mail.ru", 
+      to: recipientEmail, 
+      subject: "Заявка на услугу Информ Сервис", 
       html: `
       <div style="color: #00000; font-weight: 400;">
       <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Ваше заявка отправлена нам на почту!</p>
@@ -112,7 +107,6 @@ class Entry {
     `,
     };
 
-    // Отправка письма
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.error("Error sending notification email:", err);
