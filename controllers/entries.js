@@ -2,7 +2,7 @@
 const Entry = require("../models/entry"); // Используем модель Entry
 const multer = require("multer");
 const link = "https://kappa.lol/OFmCl";
-const messanger = "https://kappa.lol/iSONv";
+const messanger = "https://kappa.lol/g-qSm";
 const path = require("path");
 const express = require("express");
 const router = express.Router();

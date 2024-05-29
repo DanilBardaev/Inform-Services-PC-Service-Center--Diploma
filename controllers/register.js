@@ -1,7 +1,7 @@
 const User = require("../models/user");
 
 const link = "https://kappa.lol/OFmCl";
-const messanger = "https://kappa.lol/iSONv";
+const messanger = "https://kappa.lol/g-qSm";
 const winston = require("winston");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();

@@ -11,7 +11,9 @@ const passport = require("passport");
 const ensureAuthenticated = require("../middleware/isAuthenticated");
 const nodemailer = require("nodemailer");
 const link = "https://kappa.lol/OFmCl";
-const messanger = "https://kappa.lol/iSONv";
+const messanger = "https://kappa.lol/g-qSm";
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database("test.sqlite");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
@@ -284,7 +286,17 @@ router.post("/admin/updateStatus/:id", ensureAuthenticated, ensureAdmin, async f
     res.status(500).send("Ошибка при обновлении статуса заявки");
   }
 });
-
+router.post('/deleteEntry', (req, res) => {
+  const ticket = req.body.ticket;
+  const deleteQuery = "DELETE FROM entries WHERE ticket = ?";
+  db.run(deleteQuery, [ticket], function(err) {
+    if (err) {
+      console.error("Ошибка при удалении заявки:", err);
+      return res.status(500).send("Ошибка сервера");
+    }
+    res.redirect('/profile'); 
+  });
+});
 
 router.get("/pc-service", function(req, res) {
   res.render("pc-service",{ link: link, messanger: messanger }); 

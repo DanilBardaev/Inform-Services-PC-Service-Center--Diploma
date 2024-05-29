@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 
 const session = require("express-session");
 
-const messanger = "https://kappa.lol/iSONv";
+const messanger = "https://kappa.lol/g-qSm";
 const link = "https://kappa.lol/OFmCl";
 const bodyParser = require("body-parser");
 

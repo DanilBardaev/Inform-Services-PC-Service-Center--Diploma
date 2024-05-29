@@ -69,13 +69,16 @@
                 <% if (entry.content.split('\n\n')[1].split(': ')[1]) { %>
                   <p>Комментарий: <%= entry.content.split('\n\n')[1].split(': ')[1] %></p>
                 <% } %>
-                
+                <form action="/deleteEntry" method="post" class="mt-3">
+                  <input type="hidden" name="ticket" value="<%= entry.ticket %>">
+                  <button type="submit" class="btn btn-danger">Отменить</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <% }) %>    
+    <% }) %>   
   <% } %>
 <footer class="pt-5"><%- include('./partials/footer')%></footer>
 <script>

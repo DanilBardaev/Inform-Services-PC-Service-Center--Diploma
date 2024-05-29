@@ -1,3 +1,5 @@
+
+
 .img-block img {
     width:100%;
     border-radius: 9px;
@@ -16,7 +18,7 @@
 form.p-3{
     margin-top: -35px;
     margin-left: 50px;
-   max-height: 650px;
+    max-height: 680px;
     min-width: 450px;
     border: rgba(0, 0, 0, 0.206) solid 1px;
     border-radius: 15px;
@@ -52,7 +54,7 @@ form.p-3 input {
 }
 .img-container h3.text-center {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 27px;
+    font-size: 27px;
 }
 a.text-decoration-none {
     color: black;
@@ -60,8 +62,7 @@ a.text-decoration-none {
    
 }
 a.text-decoration-none:hover {
-color:rgb(43, 92, 184);
-
+    color:rgb(43, 92, 184);
 }
 .btn {
     color:white;
@@ -75,26 +76,66 @@ color:rgb(43, 92, 184);
     transition: 0.3s;
 }
 
+.form-control {
+    width: 100%;
+}
+
 form.p-3.w{
     margin-top: 110px;
     margin-left: 50px;
-   max-height: 430px;
+   max-height: 450px;
     min-width: 450px;
     border: rgba(0, 0, 0, 0.206) solid 1px;
     border-radius: 15px;
    
 }
 
-.btn.login {
-    min-width: 182px
-}
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; display: none; }
-  }
-  
-  /* Применение CSS-анимации к сообщению об ошибке */
-  #error-message {
-    animation: fadeOut 1.5s ease-in-out 7s forwards;
-  }
 
+@media screen and (max-width: 1200px) {
+    form.p-3 {
+        margin-left: 10px;
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container-fluid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-block {
+        margin-top: 0;
+        text-align: center;
+    }
+    .img-block  {
+       display: none;
+    }
+    .img-block p {
+        min-width: unset;
+    }
+
+    form.p-3 {
+        margin-left: 10px;
+        min-width: 320px;
+        max-height: unset;
+    }
+
+    form.p-3 input {
+        min-width: 320px;
+        width: 80%;
+    }
+
+    .container.button {
+        margin-left: 10px;
+        min-width: 320px;
+    }
+
+    .img-container img {
+        width: 50%;
+    }
+
+    .img-container h3.text-center {
+        font-size: 20px;
+    }
+}

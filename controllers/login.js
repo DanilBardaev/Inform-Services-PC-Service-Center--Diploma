@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const validate = require("../middleware/validate");
-const messanger = "https://kappa.lol/iSONv";
+const messanger = "https://kappa.lol/g-qSm";
 
 const link = "https://kappa.lol/OFmCl";
 const jwt = require("jsonwebtoken");
