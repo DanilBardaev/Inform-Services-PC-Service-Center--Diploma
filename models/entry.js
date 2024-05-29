@@ -34,27 +34,30 @@ class Entry {
       }
     });
   }
+
   static getUserEntries(userId, cb) {
     const selectEntriesSql = "SELECT * FROM entries WHERE user_id = ? ORDER BY timestamp DESC";
     db.all(selectEntriesSql, [userId], cb);
   }
- 
+
   static selectAll(cb) {
-    const selectAllSql = "SELECT * FROM entries ORDER BY timestamp DESC";
+    const selectAllSql = `
+      SELECT entries.*, users.email 
+      FROM entries
+      JOIN users ON entries.user_id = users.id
+      ORDER BY entries.timestamp DESC
+    `;
     db.all(selectAllSql, cb);
   }
-
   static getEntryById(id, cb) {
     const selectEntrySql = "SELECT * FROM entries WHERE id = ?";
     db.get(selectEntrySql, [id], cb);
   }
 
-
   static deleteById(id, cb) {
     const deleteEntrySql = "DELETE FROM entries WHERE id = ?";
     db.run(deleteEntrySql, [id], cb);
   }
-
 
   static updateById(id, updateInf, cb) {
     const updateEntrySql = `
@@ -67,17 +70,26 @@ class Entry {
 
   static updateStatusById(id, status, cb) {
     const updateStatusSql = "UPDATE entries SET status = ? WHERE id = ?";
-    db.run(updateStatusSql, [status, id], cb);
+    db.run(updateStatusSql, [status, id], cb, function(err) {
+      if (!err) {
+        Entry.getEntryById(id, (err, entry) => {
+          if (!err && entry) {
+            entry.status = status;
+            entry.service = entry.content.split('\n\n')[0].split(': ')[1];
+            entry.comments = entry.content.split('\n\n')[1].split(': ')[1];
+            Entry.sendStatusUpdateEmail(entry.user_id, status, entry.service, entry.comments);
+          }
+        });
+      }
+    });
   }
 
-  static sendNotificationEmail(username, title, recipientEmail, service,comments) {
-   
+  static sendNotificationEmail(username, title, recipientEmail, service, comments) {
     const transporter = nodemailer.createTransport({    
       host: 'smtp.mail.ru',
       service: 'mail',
       port: 465,
       secure: true,
-   
       debug: true,
       secureConnection: false,
       auth: {
@@ -115,6 +127,59 @@ class Entry {
       }
     });
   }
+
+  static sendStatusUpdateEmail(userId, newStatus, service, comments) {
+    const userEmailQuery = "SELECT email, name AS username FROM users WHERE id = ?";
+    db.get(userEmailQuery, [userId], (err, user) => {
+      if (err) {
+        console.error("Error fetching user email:", err);
+        return;
+      }
+
+      if (user && user.email && user.username) {
+        const { email, username } = user; // Деструктурируем объект user
+
+        const transporter = nodemailer.createTransport({
+          host: 'smtp.mail.ru',
+          service: 'mail',
+          port: 465,
+          secure: true,
+          auth: {
+            user: "informserice1234@mail.ru",
+            pass: "nknihRYFEHpYEGpCmjcd",
+          },
+        });
+
+        const mailOptions = {
+          from: "informserice1234@mail.ru",
+          to: email,
+          subject: "Обновление статуса заявки",
+          html: `
+          <div style="color: #00000; font-weight: 400;">
+            <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Статус вашей заявки обновлен!</p>
+            <p style="color: #000000; font-size: 16x;">Дорогой ${username},</p>
+            <p style="color: #000000; font-size: 16x;">Ваша заявка на услугу Информ Сервис была обновлена.</p>
+            <p>Ваш статус заявки был изменен на: ${newStatus}</p>
+            <p style="color: #000000; font-size: 16x;">Услуга: ${service}.</p>
+            <p style="margin-top: 20px; color: #000000; font-size: 16x;">С уважением,</p>
+            <p style="color: #000000; font-size: 16x;">Информ Сервис</p>
+            <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
+          </div>`,
+        };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+          if (err) {
+            console.error("Error sending status update email:", err);
+          } else {
+            console.log("Status update email sent:", info.response);
+          }
+        });
+      }
+    });
+  }
+
+
+
 }
 
 module.exports = Entry;

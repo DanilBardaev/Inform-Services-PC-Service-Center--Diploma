@@ -213,6 +213,79 @@ router.post("/login", login.submit);
 router.get("/pc", function(req, res) {
   res.render("pc",{ link: link, messanger: messanger }); 
 });
+function ensureAdmin(req, res, next) {
+  if (req.isAuthenticated() && req.user && req.user.role === 'admin') {
+    return next();
+  } else {
+    res.redirect('/login'); // или другая страница ошибки
+  }
+}
+router.get("/admin", ensureAuthenticated, function(req, res) {
+  if (req.user.role !== 'admin') {
+    return res.status(403).send("Доступ запрещен");
+  }
+
+  Entry.selectAll((err, entries) => {
+    if (err) {
+      console.error("Error retrieving entries:", err);
+      return res.status(500).send("Ошибка при получении заявок");
+    }
+
+    res.render("admin", { link: link, entries: entries });
+  });
+});
+router.get("/admin", ensureAuthenticated, ensureAdmin, async function(req, res) {
+  try {
+    Entry.selectAll((err, entries) => {
+      if (err) {
+        console.error("Error fetching all entries:", err);
+        return res.status(500).send("Ошибка при получении всех заявок");
+      }
+      res.render("admin", { user: req.user, entries: entries });
+    });
+  } catch (err) {
+    console.error("Error fetching all entries:", err);
+    res.status(500).send("Ошибка при получении всех заявок");
+  }
+});
+
+router.post("/admin/delete/:id", ensureAuthenticated, ensureAdmin, async function(req, res) {
+  try {
+    const entryId = req.params.id;
+    Entry.deleteById(entryId, (err) => {
+      if (err) {
+        console.error("Error deleting entry:", err);
+        return res.status(500).send("Ошибка при удалении заявки");
+      }
+      res.redirect("/admin");
+    });
+  } catch (err) {
+    console.error("Error deleting entry:", err);
+    res.status(500).send("Ошибка при удалении заявки");
+  }
+});
+
+router.post("/admin/updateStatus/:id", ensureAuthenticated, ensureAdmin, async function(req, res) {
+  try {
+    const entryId = req.params.id;
+    const newStatus = req.body.status;
+    const userId = req.body.userId;
+
+    Entry.updateStatusById(entryId, newStatus, (err) => {
+      if (err) {
+        console.error("Error updating entry status:", err);
+        return res.status(500).send("Ошибка при обновлении статуса заявки");
+      }
+      Entry.sendStatusUpdateEmail(userId, newStatus); 
+      res.redirect("/admin");
+    });
+  } catch (err) {
+    console.error("Error updating entry status:", err);
+    res.status(500).send("Ошибка при обновлении статуса заявки");
+  }
+});
+
+
 router.get("/pc-service", function(req, res) {
   res.render("pc-service",{ link: link, messanger: messanger }); 
 });

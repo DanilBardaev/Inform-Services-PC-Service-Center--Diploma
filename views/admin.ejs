@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ Панель</title>
+  <script src="https://kit.fontawesome.com/5833c2855b.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+<%- include('./partials/header_post'); %>
+<div class="container mt-5">
+  <h1 class="text-center">Админ Панель</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <% entries.forEach(function(entry) { %>
+        <div class="card mb-3">
+          <div class="card-header">
+            Заявка №<%= entry.ticket %>
+          </div>
+          <div class="card-body">
+            <p>Имя пользователя: <%= entry.username %></p>
+            <p>Электронная почта пользователя: <%= entry.email %></p>
+            <p>Статус заявки: <%= entry.status %></p>
+            <p>Выбранная услуга: <%= entry.content.split('\n\n')[0].split(': ')[1] %></p>
+            <% if (entry.content.split('\n\n')[1].split(': ')[1]) { %>
+              <p>Комментарий: <%= entry.content.split('\n\n')[1].split(': ')[1] %></p>
+            <% } %>
+            <form action="/admin/updateStatus/<%= entry.id %>" method="post" class="d-inline">
+              <input type="hidden" name="userId" value="<%= entry.user_id %>">
+              <select name="status" class="form-select d-inline w-auto">
+                <option value="Подана" <%= entry.status === 'Подана' ? 'selected' : '' %>>Подана</option>
+                <option value="Принята" <%= entry.status === 'Принята' ? 'selected' : '' %>>Принята</option>
+                <option value="Отклонена" <%= entry.status === 'Отклонена' ? 'selected' : '' %>>Отклонена</option>
+                <option value="В работе" <%= entry.status === 'В работе' ? 'selected' : '' %>>В работе</option>
+                <option value="Завершена" <%= entry.status === 'Завершена' ? 'selected' : '' %>>Завершена</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Обновить статус</button>
+            </form>
+            <form action="/admin/delete/<%= entry.id %>" method="post" class="d-inline">
+              <button type="submit" class="btn btn-danger">Удалить</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+<footer class="pt-5"><%- include('./partials/footer')%></footer>
+<script>
+  $(document).ready(function() {
+    $('form').submit(function(e) {
+      e.preventDefault(); 
+
+      var form = $(this);
+      var url = form.attr('action');
+      var formData = form.serialize();
+
+      $.ajax({
+        type: 'POST',
+        url: url,
+        data: formData,
+        success: function(response) {
+          console.log('Статус успешно обновлен');
+        
+        },
+        error: function(xhr, status, error) {
+          console.error('Ошибка при обновлении статуса:', error);
+         
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

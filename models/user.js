@@ -3,24 +3,35 @@ const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("test.sqlite");
 const nodemailer = require("nodemailer");
 
-const sql =
-  "CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL, age INT NOT NULL, isAdmin INTEGER DEFAULT 0, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP, profile_img TEXT DEFAULT 'https://kappa.lol/Nykez')";
+const sql = `
+  CREATE TABLE IF NOT EXISTS users(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL,
+    age INT NOT NULL,
+    role TEXT DEFAULT 'user', 
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    profile_img TEXT DEFAULT 'https://kappa.lol/Nykez'
+  )
+`;
 
 db.run(sql);
 
 class User {
-  static create(username, email, password, age, isAdmin, recipientEmail, cb) {
+  static create(username, email, password, age, role, recipientEmail, cb) {
     bcrypt.hash(password, 10, (err, hashedPassword) => {
       if (err) return cb(err);
-      const insertUserQuery = "INSERT INTO users (name, email, password, age, isAdmin) VALUES (?, ?, ?, ?, ?)";
-      db.run(insertUserQuery, [username, email, hashedPassword, age, isAdmin], (err) => {
+      const insertUserQuery = "INSERT INTO users (name, email, password, age, role) VALUES (?, ?, ?, ?, ?)";
+      db.run(insertUserQuery, [username, email, hashedPassword, age, role], (err) => {
         if (err) return cb(err);
         this.sendNotificationEmail(username, "Теперь вам доступны наши услуги.", recipientEmail); // Отправка уведомления о создании нового пользователя
         cb(null); // Вызываем колбэк после завершения операции
       });
     });
   }
-  
+
   static findOneByEmail(email, cb) {
     const selectUserQuery = "SELECT * FROM users WHERE email = ?";
     db.get(selectUserQuery, [email], (err, user) => {
@@ -31,7 +42,7 @@ class User {
       cb(null, user); // Вызываем колбэк только если нет ошибок
     });
   }
-  
+
   static findOneByName(username, cb) {
     const selectUserQuery = "SELECT * FROM users WHERE name = ?";
     db.get(selectUserQuery, [username], (err, user) => {
@@ -42,7 +53,7 @@ class User {
       cb(null, user); // Вызываем колбэк только если нет ошибок
     });
   }
-  
+
   static updateProfile(userId, newData, cb) {
     const { profile_img } = newData;
     const updateProfileQuery = "UPDATE users SET profile_img = ? WHERE id = ?";
@@ -66,36 +77,32 @@ class User {
     });
   }
 
-  
-  static updateAdminStatus(id, isAdmin, cb) {
-    const updateAdminQuery = "UPDATE users SET isAdmin = ? WHERE id = ?";
-    db.run(updateAdminQuery, [isAdmin, id], cb);
+  static updateAdminStatus(id, role, cb) {
+    const updateAdminQuery = "UPDATE users SET role = ? WHERE id = ?";
+    db.run(updateAdminQuery, [role, id], cb);
   }
-  
+
   static sendNotificationEmail(username, subject, recipientEmail) {
-    // Настройка транспортера для отправки почты
-    const transporter = nodemailer.createTransport({    
+    const transporter = nodemailer.createTransport({
       host: 'smtp.mail.ru',
       service: 'mail',
       port: 465,
       secure: true,
-      
       debug: true,
       secureConnection: false,
       auth: {
         user: "informserice1234@mail.ru",
         pass: "nknihRYFEHpYEGpCmjcd",
       },
-      smtp:{
+      smtp: {
         rejectUnAuthorized: true,
       }
     });
 
-    // Настройка письма
     const mailOptions = {
-      from: "informserice1234@mail.ru", 
-      to: recipientEmail, 
-      subject: subject, 
+      from: "informserice1234@mail.ru",
+      to: recipientEmail,
+      subject: subject,
       html: `
         <div style="color: #00000; font-weight: 400;">
           <p style="font-size: 23px; color: #4280d6; font-weight: 500; margin-bottom: 25px;">Добро пожаловать в Информ Сервис!</p>
@@ -105,10 +112,9 @@ class User {
           <p style="color: #000000; font-size: 18x;">Информ Сервис</p>
           <img src="https://kappa.lol/S2vq6" alt="#" style="max-width: 120px; margin-bottom: 20px;">
         </div>
-      `, 
+      `,
     };
 
-    // Отправка письма
     transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.error("Error sending notification email:", err);
