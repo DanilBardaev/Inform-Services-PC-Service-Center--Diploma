@@ -3,7 +3,6 @@ const favicon = require("express-favicon");
 const fs = require("fs");
 const path = require("path");
 const ejs = require("ejs");
-const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
 const session = require("express-session");
@@ -14,10 +13,7 @@ const bodyParser = require("body-parser");
 
 const passport = require("passport");
 const passportFunction = require("./middleware/passport_jwt");
-const passportFunctionYandex = require("./middleware/passport_yandex");
-const passportFunctionGoogle = require("./middleware/passport_go");
-const passportFunctionGitHub = require("./middleware/passport_github");
-const passportFunctionVkontakte = require("./middleware/passport_vkontakte");
+
 
 const winston = require("winston");
 const app = express();
@@ -54,10 +50,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 passportFunctionJWT(passport);
-passportFunctionYandex(passport);
-passportFunctionGoogle(passport);
-passportFunctionGitHub(passport);
-passportFunctionVkontakte(passport);
+
 app.use(
   "/css/bootstrap.css",
   express.static(

@@ -92,7 +92,6 @@ router.post("/submit_request_service_request", ensureAuthenticated, async (req, 
   try {
     const randomTicketNumber = generateRandomNumber();
 
-    // Сохраняем информацию о заявке в базе данных
     await Entry.create(data, recipientEmail, randomTicketNumber, service, comments);
 
     res.redirect(`/profile`);
@@ -119,7 +118,7 @@ router.post("/submit_request", ensureAuthenticated, async (req, res) => {
   try {
     const randomTicketNumber = generateRandomNumber();
 
-    // Сохраняем информацию о заявке в базе данных
+  
     await Entry.create(data, recipientEmail, randomTicketNumber, service, comments);
 
     res.redirect(`/profile`);
@@ -219,7 +218,7 @@ function ensureAdmin(req, res, next) {
   if (req.isAuthenticated() && req.user && req.user.role === 'admin') {
     return next();
   } else {
-    res.redirect('/login'); // или другая страница ошибки
+    res.redirect('/login'); 
   }
 }
 router.get("/admin", ensureAuthenticated, function(req, res) {
@@ -348,49 +347,7 @@ router.put("/edit/:id", async (req, res, next) => {
   }
 });
 
-router.get(
-  "/auth/yandex",
-  passport.authenticate("yandex"),
-);
 
-router.get(
-  "/auth/yandex/callback",
-  passport.authenticate("yandex", { failureRedirect: "/login" }),
-  function (req, res) {
-    res.redirect("/index");
-  }
-);
-
-router.get('/auth/google',
-  passport.authenticate('google', { scope: [ 'email', 'profile' ] })
-);
-
-router.get( '/auth/google/callback',
-  passport.authenticate( 'google', { successRedirect: '/', failureRedirect: '/login' })
-);
-
-router.get(
-  "/auth/github",
-  passport.authenticate("github", { scope: ["user:email"] })
-);
-
-router.get(
-  "/auth/github/callback",
-  passport.authenticate("github", { failureRedirect: "/login" }),
-  function (req, res) {
-    res.redirect("/");
-  }
-);
-
-router.get("/auth/vkontakte", passport.authenticate("vkontakte"));
-
-router.get(
-  "/auth/vkontakte/callback",
-  passport.authenticate("vkontakte", {
-    successRedirect: "/",
-    failureRedirect: "/login",
-  })
-);
 
 router.get("/logout", login.logout);
 
