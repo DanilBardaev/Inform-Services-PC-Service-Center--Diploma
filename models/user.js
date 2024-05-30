@@ -26,8 +26,8 @@ class User {
       const insertUserQuery = "INSERT INTO users (name, email, password, age, role) VALUES (?, ?, ?, ?, ?)";
       db.run(insertUserQuery, [username, email, hashedPassword, age, role], (err) => {
         if (err) return cb(err);
-        this.sendNotificationEmail(username, "Теперь вам доступны наши услуги.", recipientEmail); // Отправка уведомления о создании нового пользователя
-        cb(null); // Вызываем колбэк после завершения операции
+        this.sendNotificationEmail(username, "Теперь вам доступны наши услуги.", recipientEmail);
+        cb(null); 
       });
     });
   }
@@ -37,9 +37,9 @@ class User {
     db.get(selectUserQuery, [email], (err, user) => {
       if (err) {
         console.error("Ошибка при поиске пользователя по email:", err);
-        return cb(err); // Вернем ошибку через колбэк, если произошла ошибка
+        return cb(err); 
       }
-      cb(null, user); // Вызываем колбэк только если нет ошибок
+      cb(null, user); 
     });
   }
 
@@ -48,9 +48,9 @@ class User {
     db.get(selectUserQuery, [username], (err, user) => {
       if (err) {
         console.error("Ошибка при поиске пользователя по имени:", err);
-        return cb(err); // Вернем ошибку через колбэк, если произошла ошибка
+        return cb(err);
       }
-      cb(null, user); // Вызываем колбэк только если нет ошибок
+      cb(null, user); 
     });
   }
 

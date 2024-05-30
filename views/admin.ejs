@@ -44,9 +44,9 @@
               </select>
               <button type="submit" class="btn btn-primary">Обновить статус</button>
             </form>
-            <form action="/admin/delete/<%= entry.id %>" method="post" class="d-inline">
+            <form action="/admin/delete/<%= entry.id %>" method="post" class="d-inline delete-form">
               <button type="submit" class="btn btn-danger">Удалить</button>
-            </form>
+          </form>          
           </div>
         </div>
       <% }) %>
@@ -55,8 +55,9 @@
 </div>
 <footer class="pt-5"><%- include('./partials/footer')%></footer>
 <script>
-  $(document).ready(function() {
-    $('form').submit(function(e) {
+ $(document).ready(function() {
+    // Обработчик для формы обновления статуса заявки
+    $('.update-form').submit(function(e) {
       e.preventDefault(); 
 
       var form = $(this);
@@ -68,12 +69,31 @@
         url: url,
         data: formData,
         success: function(response) {
-          console.log('Статус успешно обновлен');
-        
+          console.log('Запрос успешно выполнен');
+          location.reload(); 
         },
         error: function(xhr, status, error) {
-          console.error('Ошибка при обновлении статуса:', error);
-         
+          console.error('Ошибка при выполнении запроса:', error);
+        }
+      });
+    });
+
+    // Обработчик для формы удаления заявки
+    $('.delete-form').submit(function(e) {
+      e.preventDefault(); 
+
+      var form = $(this);
+      var url = form.attr('action');
+
+      $.ajax({
+        type: 'POST',
+        url: url,
+        success: function(response) {
+          console.log('Заявка успешно удалена');
+          location.reload(); 
+        },
+        error: function(xhr, status, error) {
+          console.error('Ошибка при удалении заявки:', error);
         }
       });
     });

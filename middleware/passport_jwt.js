@@ -1,9 +1,10 @@
 const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
-
-const {User} = require("../models/user"); // Подключите модель пользователя
-
+const passport = require("passport");
+const { User } = require("../models/user");
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database("test.sqlite");
 module.exports = function(passport) {
     passport.use(new JWTStrategy({
         jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
@@ -20,4 +21,18 @@ module.exports = function(passport) {
             return done(err, false);
         }
     }));
-};
+}
+ 
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+    passport.deserializeUser((id, done) => {
+        const selectUserQuery = "SELECT * FROM users WHERE id = ?";
+        db.get(selectUserQuery, [id], (err, user) => {
+            if (err) {
+                return done(err);
+            }
+            done(null, user);
+        });
+    });
+    

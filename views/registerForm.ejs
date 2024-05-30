@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/register.css" />
   <title>Регистрация</title>
+  <style>
+    .error-message {
+      margin-top: 10px;
+      color: #ee1f09;
+    }
+    .error .form-control {
+      border-color: #ee1f09;
+    }
+  </style>
 </head>
 <body>
   <header><%- include('./partials/header_main'); %></header>
@@ -20,7 +29,7 @@
         <p class="text-center">Зарегистрируйтесь для того чтобы видеть статусы ваших заявок и многое чего другого.</p>
         <img src="<%=messanger%>" alt="" />
       </div>
-      <form method="post" action="/register" class="p-3">
+      <form id="form" method="post" action="/register" class="p-3">
         <div class="img-container">
           <img src="<%=link%>" style="width: 100px" />
           <h3 class="text-center">Регистрация в Информ <br>Сервисный центр</h3>
@@ -28,43 +37,37 @@
         <div class="row g2">
           <div class="col-12 col-sm-12">
             <div class="form-floating mb-3">
-              <input type="text" id="name" name="name" placeholder="Имя" class="form-control" required />
+              <input type="text" id="name" name="name" placeholder="Имя" class="form-control" />
               <label for="name">Имя:</label>
+              <div class="error-message"></div>
             </div>
           </div>
         </div>
         <div class="row g-2 g-5">
           <div class="col-12 col-sm-12">
-            <div class="form-floating mb-3 error-message">
-              <input type="email" id="email" name="email" placeholder="Email" class="form-control" required />
+            <div class="form-floating mb-3">
+              <input type="email" id="email" name="email" placeholder="Email" class="form-control" />
               <input type="hidden" name="recipientEmail" id="recipientEmail" value="">
               <label for="email">Email:</label>
-              <% if (locals.errors && locals.errors.email) { %>
-              <div class="text-bg-light" id="error-message">
-                <h5 style="color: rgb(43, 92, 184); font-size: 18px"><%= locals.errors.email.msg2 %></h5>
-              </div>
-              <% } %>
+              <div class="error-message"></div>
             </div>
           </div>
         </div>
         <div class="row g2 g-5">
           <div class="col-12 col-sm-12">
             <div class="form-floating mb-3">
-              <input type="age" name="age" id="age" pattern="[0-9]*" class="form-control" placeholder="Возраст" title="Введите только цифры" required />
+              <input type="age" name="age" id="age" pattern="[0-9]*" class="form-control" placeholder="Возраст" title="Введите только цифры">
               <label for="age">Возраст:</label>
+              <div class="error-message"></div>
             </div>
           </div>
         </div>
         <div class="row g2 g-5">
           <div class="col-12 col-sm-12">
             <div class="form-floating mb-3">
-              <input type="password" id="password" name="password" class="form-control" placeholder="Пароль" pattern=".{8,}" required />
+              <input type="password" id="password" name="password" class="form-control" placeholder="Пароль" pattern=".{6,}" />
               <label for="password">Пароль:</label>
-              <% if (locals.errors && locals.errors.password) { %>
-              <div class="text-bg-light" id="error-message">
-                <h5 style="color: rgb(43, 92, 184); font-size: 18px"><%= locals.errors.password.msg %></h5>
-              </div>
-              <% } %>
+              <div class="error-message"></div>
             </div>
           </div>
         </div>
@@ -72,7 +75,6 @@
           <div class="col-12 col-sm-12">
             <button type="submit" class="btn">Зарегистрироваться</button>
           </div>
-         
           <div class="row g-2 g-5">
             <div class="col-12 p-1">
               <a href="login" class="text-center text-decoration-none">Уже зарегистрированны? Войти</a>
@@ -81,23 +83,78 @@
         </div>
       </form>
       <script>
-        const delay = 5000;
-
-        const errorMessage = document.getElementById("error-message");
-
-        if (errorMessage) {
-          setTimeout(() => {
-            errorMessage.style.opacity = "0";
-            setTimeout(() => {
-              errorMessage.style.display = "none";
-            }, 1000);
-          }, delay);
-        }
         document.addEventListener("DOMContentLoaded", function() {
-          const emailField = document.getElementById("email");
+          const form = document.getElementById("form");
+          const name = document.getElementById("name");
+          const email = document.getElementById("email");
+          const age = document.getElementById("age");
+          const password = document.getElementById("password");
           const recipientEmailField = document.getElementById("recipientEmail");
-          emailField.addEventListener("input", function() {
-            recipientEmailField.value = emailField.value;
+
+          email.addEventListener("input", function() {
+            recipientEmailField.value = email.value;
+          });
+
+          function showError(input, message) {
+            const formControl = input.closest(".form-floating");
+            const errorElement = formControl.querySelector(".error-message");
+            errorElement.innerText = message;
+            formControl.classList.add("error");
+          }
+
+          function showSuccess(input) {
+            const formControl = input.closest(".form-floating");
+            const errorElement = formControl.querySelector(".error-message");
+            errorElement.innerText = "";
+            formControl.classList.remove("error");
+          }
+
+          function checkEmail(input) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (re.test(input.value.trim())) {
+              showSuccess(input);
+            } else {
+              showError(input, "Адрес электронной почты имеет неверный формат");
+            }
+          }
+
+          function checkRequired(inputElements) {
+            let isRequired = false;
+            inputElements.forEach(function(input) {
+              if (input.value.trim() === "") {
+                showError(input, `Поле не может быть пустым`);
+                isRequired = true;
+              } else {
+                showSuccess(input);
+              }
+            });
+            return isRequired;
+          }
+
+          function checkLength(input, min, max) {
+            if (input.value.length < min) {
+              showError(input, `Поле должно быть длиной не менее ${min} символов`);
+            } else if (input.value.length > max) {
+              showError(input, `Поле не должно быть длиной более ${max} символов`);
+            } else {
+              showSuccess(input);
+            }
+          }
+
+          form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const isRequiredEmpty = checkRequired([name, email, age, password]);
+            checkLength(name, 3, 15);
+            checkLength(password, 6, 25);
+            checkEmail(email);
+
+            if (!isRequiredEmpty && 
+                name.value.length >= 3 && name.value.length <= 15 &&
+                password.value.length >= 6 && password.value.length <= 25 &&
+                email.value.trim().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+            ) {
+              form.submit();
+            }
           });
         });
       </script>
