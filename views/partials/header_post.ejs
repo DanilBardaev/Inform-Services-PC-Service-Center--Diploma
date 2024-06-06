@@ -1,159 +1,140 @@
 <style>
   * {
-  list-style-type: none !important;
-
-}
-.img-logo img{
-width: 45%;
-}
-.navbar-brand {
-  max-width: 240px;
-  max-height: 200px;
-}
-
-.nav-item a {
-  font-size: 14px;
-  font-weight: 400;
-  color: #8A8A8A;
-  font-family: Roboto, Arial, ArialRuble, sans-serif;
-}
-
-a.nav-link1.px-1 {
-  text-decoration: none;
-}
-a.nav-link1.px-1 i.fa-solid {
-  color: black;
-}
-a.nav-link1.px-1{
-  font-size: 16px;
-  font-weight: 400;
-  color: #8A8A8A;
-  font-family: Roboto, Arial, ArialRuble, sans-serif;
-}
-
-a.nav-link1.px-1:hover {
-  color: rgb(39, 38, 38);
-  font-weight: 500;  
-}   
-
-i.fa-solid:hover {
-transform: scale(1.06);
-}
-i.fa-solid {
-transition: transform 0.4s;
-}
-
-div.text-1 a.wireless-help {
-width: 100px;
-height: 100px;
-
-}
-
-li.mt-4 a {
-text-decoration: none;
-color:black;
-font-weight: 600;
-}
-
-li.mt-4 a:hover {
-color: #153070;
-}
-
-div.callback a.callback {
-line-height: 37px;
-  border-bottom: 1px dashed #153070;
-  color: #153070 !important;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  text-decoration: none;
-  cursor: pointer;  
-}
-
-.row.header{
-border: 1px solid #080b111a;
-border-radius: 15px;
-
-}
-
-
-
-.modal-content.c {
-
-height: 619px;
-color: white;
-background-color: #01123a00;
-border: 1px solid #0000000e;
-  border-radius: 8px;
-  box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-  -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-  -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
-}
-
-
-div.col-md-3 a.modal-link {
-border-bottom: 1px dashed #153070;
-color: white;
--webkit-transition: all 0.3s;
--moz-transition: all 0.3s;
-transition: all 0.3s;
-text-decoration: none;
-cursor: pointer; 
-}
-
-
+    list-style-type: none !important;
+  }
+  .img-logo img {
+    width: 45%;
+  }
+  .navbar-brand {
+    max-width: 240px;
+    max-height: 200px;
+  }
+  .nav-item a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8A8A8A;
+    font-family: Roboto, Arial, ArialRuble, sans-serif;
+  }
+  a.nav-link1.px-1 {
+    text-decoration: none;
+  }
+  a.nav-link1.px-1 i.fa-solid {
+    color: black;
+  }
+  a.nav-link1.px-1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8A8A8A;
+    font-family: Roboto, Arial, ArialRuble, sans-serif;
+  }
+  a.nav-link1.px-1:hover {
+    color: rgb(39, 38, 38);
+    font-weight: 500;  
+  }   
+  i.fa-solid:hover {
+    transform: scale(1.06);
+  }
+  i.fa-solid {
+    transition: transform 0.4s;
+  }
+  div.text-1 a.wireless-help {
+    width: 100px;
+    height: 100px;
+  }
+  li.mt-4 a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+  }
+  li.mt-4 a:hover {
+    color: #153070;
+  }
+  div.callback a.callback {
+    line-height: 37px;
+    border-bottom: 1px dashed #153070;
+    color: #153070 !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    cursor: pointer;  
+  }
+  .row.header {
+    border: 1px solid #080b111a;
+    border-radius: 15px;
+  }
+  .modal-content.c {
+    height: 619px;
+    color: white;
+    background-color: #01123a00;
+    border: 1px solid #0000000e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -webkit-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 4px 4px 4px rgba(0,0,0,0.21);
+  }
+  div.col-md-3 a.modal-link {
+    border-bottom: 1px dashed #153070;
+    color: white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    cursor: pointer; 
+  }
 </style>
+
 <header class="pb-2">
   <nav class="navbar navbar-expand-lg ">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li class="nav-item pe-3">
-              <div class="modal fade" id="myModal">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                  <div class="modal-content c">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Все услуги</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item pe-3">
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content c">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Все услуги</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
                     <div class="inf-services1 pb-4 ms-4" style="display: flex;">
                       <img width="40" src="https://kappa.lol/VrD5d">
                       <h1 class="text-center ms-3 mt-2" style="font-size: 22px;">Ремонт компьютеров</h1>
                     </div>
                     <div class="row modal1">
                       <div class="col-md-3">
-                        <p><a href=".../contacts" class="modal-link ">Ремонт компьютера</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Ремонт компьютера</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href=".../contacts" class="modal-link ">Настройка компютера</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Настройка компьютера</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Установка Windows</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Установка Windows</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Установка программ</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Установка программ</a></p>
+                      </div>
                     </div>
                     <div class="row modal1 pb-5">
                       <div class="col-md-3">
-                        <p><a href="/services.html" class="modal-link ">Ускорение работы</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Ускорение работы</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Профилактика и чистка</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Профилактика и чистка</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Ремонт комплектующих</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Ремонт комплектующих</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Модернизация и сборка</a></p>
-                      </div> 
+                        <p><a href="./pc" class="modal-link ">Модернизация и сборка</a></p>
+                      </div>
                     </div>
                     <div class="inf-services1 pb-4 ms-4" style="display: flex;">
                       <img src="https://kappa.lol/BqjRS">
@@ -161,31 +142,31 @@ cursor: pointer;
                     </div>
                     <div class="row modal1">
                       <div class="col-md-3">
-                        <p><a href="/services.html" class="modal-link ">Ремонт ноутбука</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Ремонт ноутбука</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Настройка ноутбука</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Настройка ноутбука</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Установка Windows</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Установка Windows</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Чистка ноутбука</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Чистка ноутбука</a></p>
+                      </div>
                     </div>
                     <div class="row modal1 pb-5">
                       <div class="col-md-3">
-                        <p><a href="/services.html" class="modal-link ">Замена экрана</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Замена экрана</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Замена клавиатуры</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Замена клавиатуры</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Замена разъемов</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Замена разъемов</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Модернизация ноутбука</a></p>
-                      </div> 
+                        <p><a href="./laptop" class="modal-link ">Модернизация ноутбука</a></p>
+                      </div>
                     </div>
                     <div class="inf-services1 pb-4 ms-4" style="display: flex;">
                       <img src="https://kappa.lol/pJOj-">
@@ -193,77 +174,76 @@ cursor: pointer;
                     </div>
                     <div class="row modal1">
                       <div class="col-md-3">
-                        <p><a href="/services.html" class="modal-link ">Настройка интернета</a></p>
-                      </div> 
+                        <p><a href="./internet" class="modal-link ">Настройка интернета</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Настройка роутера</a></p>
-                      </div> 
+                        <p><a href="./internet" class="modal-link ">Настройка роутера</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Настройка локальной сети</a></p>
-                      </div> 
+                        <p><a href="./internet" class="modal-link ">Настройка локальной сети</a></p>
+                      </div>
                       <div class="col-md-3 ">
-                        <p><a href="/services.html" class="modal-link ">Интернет в офис</a></p>
-                      </div> 
+                        <p><a href="./internet" class="modal-link ">Интернет в офис</a></p>
+                      </div>
                     </div>
                   </div>
-                    
-                  </div>
                 </div>
-                </div>
-              <a class="nav-link1 px-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-circle-chevron-down px-1"></i>Все услуги</a>
-            </li>
-            <li class="nav-item pe-3">
-              <i class="fa-solid fa-house"><a class="nav-link1 px-1" href="../index">Главная</a></i>
-            </li>
-            <li class="nav-item pe-3">
-              <i class="fa-solid fa-thumbs-up"><a class="nav-link1 px-1"  href="../discounts">Сотрудничество и скидки</a></i>
-            </li>
-            <li class="nav-item pe-3">
-              <i class="fa-solid fa-screwdriver-wrench"><a class="nav-link1 px-1" href="../service_request">Сервис</a></i>
-            </li>
-            <li class="nav-item pe-3" >
-              <i class="fa-solid fa-phone"><a class="nav-link1 px-1" href="../contacts">Контакты</a></i>
-            </li>
-      
-          </ul>
-              <li class="nav-item">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <div class="social-network pt-3">
-                      <li class="nav-item pe-3 fa">
-                        <a href="https://vk.com"><i class="fa-brands fa-vk"></i></a>
-                      </li>
-                      <li class="nav-item pe-3 fa">
-                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-square"></i></a>
-                      </li>
-                      <li class="nav-item pe-3 fa">
-                        <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
-                      </li>
-                    </div>
-
-                  <li class="nav-item dropdown">
-                    <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"> 
-                    <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail col-md-6" style="width: 40px; height: 40px;"> 
-                  </a>
-                    <ul class="dropdown-menu" aria-labelledy="navbarDropdown">
-                      <li class="text-center"><% if(locals.user) { %>  
-                        <%= locals.user.name %>
-                      <% } %></li>
-                      <li class="drop-down">
-                        <h4><a class="badge rounded-pill" href="../profile"><i class="fa-regular fa-user m-1"></i>Профиль</a></h4>
-                      </li>
-                      <li class="drop-down">
-                        <h4><a class="badge rounded-pill" href="/logout"><i class="fa-solid fa-right-from-bracket m-1"> </i>Выйти</a></h4>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              </div>
+            </div>
+            <a class="nav-link1 px-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-circle-chevron-down px-1"></i>Все услуги</a>
+          </li>
+          <li class="nav-item pe-3">
+            <i class="fa-solid fa-house"><a class="nav-link1 px-1" href="../index">Главная</a></i>
+          </li>
+          <li class="nav-item pe-3">
+            <i class="fa-solid fa-thumbs-up"><a class="nav-link1 px-1" href="../discounts">Сотрудничество и скидки</a></i>
+          </li>
+          <li class="nav-item pe-3">
+            <i class="fa-solid fa-screwdriver-wrench"><a class="nav-link1 px-1" href="../service_request">Сервис</a></i>
+          </li>
+          <li class="nav-item pe-3">
+            <i class="fa-solid fa-phone"><a class="nav-link1 px-1" href="../contacts">Контакты</a></i>
+          </li>
+          <% if (user && user.role === 'admin') { %>
+          <li class="nav-item pe-3">
+            <i class="fa-solid fa-toolbox"><a class="nav-link1 px-1" href="../admin">Админ панель</a></i>
+          </li>
+          <% } %>
+        </ul>
+        <li class="nav-item">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div class="social-network pt-3">
+              <li class="nav-item pe-3 fa">
+                <a href="https://vk.com"><i class="fa-brands fa-vk"></i></a>
+              </li>
+              <li class="nav-item pe-3 fa">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-square"></i></a>
+              </li>
+              <li class="nav-item pe-3 fa">
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
               </li>
             </div>
-          </div>
-      
-        </nav>
-    </header>
-</section>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> 
+                <img id="profileImg" src="<%= user.profile_img %>" onerror="this.onerror=null;this.src='https://kappa.lol/Nykez';" alt="фото" class="rounded-circle img-thumbnail col-md-6" style="width: 40px; height: 40px;">
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="text-center">
+                  <% if (user) { %>
+                    <%= user.name %>
+                  <% } %>
+                </li>
+                <li class="drop-down">
+                  <h4><a class="badge rounded-pill" href="../profile"><i class="fa-regular fa-user m-1"></i>Профиль</a></h4>
+                </li>
+                <li class="drop-down">
+                  <h4><a class="badge rounded-pill" href="/logout"><i class="fa-solid fa-right-from-bracket m-1"></i>Выйти</a></h4>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </nav>
+</header>
